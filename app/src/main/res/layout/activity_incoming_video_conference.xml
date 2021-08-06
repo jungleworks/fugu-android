@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black_opaque"
+    tools:context="com.skeleton.mvp.activity.IncomingVideoConferenceActivity">
+    <RelativeLayout
+        android:id="@+id/incomingCallLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/fugu_padding_35"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:id="@+id/llVideoCall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="70dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_fugu" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvCallTypeIncoming"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/fugu_padding_10"
+                android:layout_marginLeft="@dimen/fugu_padding_10"
+                android:text="@string/fugu_video_call"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.skyfishjy.library.RippleBackground
+                android:id="@+id/incomingRippleView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/llIncomingCallActions"
+                android:visibility="visible"
+                app:rb_color="@color/colorPrimary"
+                app:rb_duration="3500"
+                app:rb_radius="42dp"
+                app:rb_rippleAmount="9"
+                app:rb_scale="3">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivIncomingPersonImage"
+                    android:layout_width="170dp"
+                    android:layout_height="170dp"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="100dp"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/ic_team" />
+            </com.skyfishjy.library.RippleBackground>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="70dp"
+                android:gravity="center"
+                android:text="@string/fugu_conference_call"
+                android:textAppearance="@style/CustomTextAppearance.Semibold"
+                android:textColor="@color/white"
+                android:textSize="26sp" />
+
+            <TextView
+                android:id="@+id/tvIncomingPersonName"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="@string/amandeep_chauhan"
+                android:textAppearance="@style/CustomTextAppearance.Semibold"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/llIncomingCallActions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivRejectCall"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.33"
+                android:visibility="visible"
+                app:srcCompat="@drawable/ic_hung_up_call" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.33" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivAnswerCall"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.33"
+                android:visibility="visible"
+                android:rotation="-120"
+                app:srcCompat="@drawable/ic_pick_up_call" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

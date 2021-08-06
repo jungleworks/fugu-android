@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE resources [<!ENTITY appname "FuguChat">]>
+
+<resources>
+    <!-- Fcm service -->
+    <string name="log_fcm_message_id">"FCM Message Id: "</string>
+    <string name="log_fcm_notification_message">"FCM Notification Message: "</string>
+    <string name="log_fcm_data">"FCM Data: "</string>
+    <string name="log_fcm_data_message">"FCM Data Message: "</string>
+    <string name="notification_channel_default">Notifications</string>
+    <string name="notification_channel_description_default">Latest Updates</string>
+
+    <!-- Network error messages -->
+    <string name="error_unexpected_error">Something went wrong.</string>
+    <string name="error_bad_connection_try_again">Bad connectivity.</string>
+    <string name="error_remote_server_failed">Application server could not respond.</string>
+    <string name="error_paring">Parsing error</string>
+    <string name="error_internet_not_connected">Please check your internet connection.</string>
+    <string name="error_device_rooted">This device is rooted. We are not responsible for any kind of data loss and hack. Use it at your own risk!!</string>
+    <string name="error_session_expired">Session expired.</string>
+
+    <!-- Error messages -->
+
+    <!-- Image Chooser -->
+
+    <!-- Dialog -->
+    <string name="text_retry">Retry</string>
+    <string name="text_exit">Exit</string>
+    <string name="text_proceed">Proceed</string>
+    <string name="text_loading">Loading…</string>
+
+    <!-- Sign In -->
+    <string name="error_invalid_email">Please enter valid email address.</string>
+    <string name="error_invalid_password">Please enter valid password.</string>
+    <string name="text_start_tutorial_msg">Welcome to MVP Base Project.
+        \n\n<b>1.</b> Change applicationId in app gradle.
+        \n<b>2.</b> Change app name from app gradle.
+        \n<b>3.</b> Replace google-services.json file.
+    </string>
+
+
+    <!-- Notifications -->
+    <string name="title_notifications">Notifications</string>
+    <string name="no_notifications">You do not have any notifications yet</string>
+    <string name="tap_to_retry">\nTap to Retry</string>
+    <string name="back">Back</string>
+    <string name="welcome_to_officechat">Welcome to &appname;</string>
+    <string name="all_your_team_communication_in_one_place_instantly_searchable">All your team communications in one\nplace, instantly searchable.</string>
+    <string name="sign_in">Sign In</string>
+    <string name="continuee">Continue</string>
+    <string name="after_confirming_your_email_address_we_ll_use_it_to_n_create_your_account">After confirming your email address, we\'ll use it to create your account.</string>
+    <string name="your_business_name">Your Business Name</string>
+    <string name="workspace_url">Workspace URL</string>
+    <string name="https">https://</string>
+    <string name="your_domian_officechat_com">.fugu.chat</string>
+    <string name="error_please_enter_business_name">Please enter space name</string>
+    <string name="error_please_enter_workspace_url">Please enter workspace url</string>
+    <string name="invalid_otp">Invalid OTP</string>
+    <string name="password">Password</string>
+    <string name="your_workspaces">Your workspaces</string>
+    <string name="you_have_account_on_these_officechat_workspaces">You have account on these &appname; workspaces</string>
+    <string name="hint_your_domain">your-domain</string>
+    <string name="your_domain_password">Your Domain Password</string>
+    <string name="profile">Profile</string>
+    <string name="invide_members">Invite Members</string>
+    <string name="invite">Invite</string>
+    <string name="know_any_coworkers_who_should_join_officechat">Know any coworkers who should join &appname;?</string>
+    <string name="send">Send</string>
+    <string name="email_colon">Email :</string>
+    <string name="contacts">Contacts</string>
+    <string name="logout">Logout</string>
+    <string name="add_email">Add Email</string>
+    <string name="you_cannot_invite_more_than_five_people_at_a_time">You cannot invite more than five people at a time</string>
+    <string name="email_already_Added">Email already added</string>
+    <string name="group_name">Group Name</string>
+    <string name="create_group">Create Group</string>
+    <string name="add_member">Add Member</string>
+    <string name="please_enter_a_valid_group_name">Please enter a valid group name</string>
+    <string name="you_need_to_add_atleast_three_members_to_create_a_group">You need to add atleast 1 member to create a group</string>
+    <string name="your_full_name">Please enter your Full Name</string>
+    <string name="save">Save</string>
+    <string name="please_enter_your_full_name">Please enter your full name</string>
+
+</resources>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/spacing_medium"
+        android:paddingRight="@dimen/spacing_medium"
+        android:paddingTop="@dimen/font_large">
+
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+           <ImageView
+               android:id="@+id/sign_in_image"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:paddingEnd="@dimen/spacing_large"
+               android:paddingStart="@dimen/spacing_large"
+               android:paddingTop="@dimen/spacing_xxxlarge"
+               android:layout_centerHorizontal="true"
+               app:srcCompat="@drawable/ic_fugu_bg" />
+       </RelativeLayout>
+
+        <TextView
+            style="@style/CustomTextAppearance.Bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/img"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="@string/create_a_new_space"
+            android:textAppearance="@style/CustomTextAppearance.TitilliumWebSemiBold"
+            android:textColor="#333333"
+            android:textSize="@dimen/font_xxlarge" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/img"
+            android:layout_marginEnd="@dimen/font_xlarge"
+            android:layout_marginLeft="@dimen/font_xlarge"
+            android:layout_marginRight="@dimen/font_xlarge"
+            android:layout_marginStart="@dimen/font_xlarge"
+            android:gravity="center"
+            android:textAppearance="@style/CustomTextAppearance.TitilliumWeb"
+            android:text="@string/a_fugu_space_is_simply_a_group_of_people_using_fugu_together"
+            android:textColor="#333333"
+            android:textSize="@dimen/font_large" />
+
+
+
+        <EditText
+            android:id="@+id/etBusinessName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textAppearance="@style/CustomTextAppearance.TitilliumWeb"
+            android:background="@drawable/round_rectangle_border"
+            android:hint="@string/enter_your_space_name"
+            android:paddingLeft="@dimen/spacing_medium"
+            android:paddingStart="@dimen/spacing_medium" />
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round_rectangle_border"
+            android:hint="sapce.fugu.chat"
+            android:inputType="textPassword"
+            android:layout_marginTop="30dp"
+            android:visibility="gone"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/spacing_medium"
+            android:paddingStart="@dimen/spacing_medium">
+
+            <EditText
+                android:id="@+id/etWorksapceUrl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:hint="space" />
+
+            <TextView
+                style="@style/CustomTextAppearance.Bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=".fugu.chat"
+                android:textSize="@dimen/font_large" />
+
+
+
+        </LinearLayout>
+
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSignUp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/spacing_normal"
+            android:layout_marginTop="@dimen/spacing_xlarge"
+            android:textAppearance="@style/CustomTextAppearance.TitilliumWebSemiBold"
+            android:background="@drawable/curved_chiku_button"
+            android:text="Continue"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_xlarge"
+            tools:ignore="HardcodedText" />
+
+
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/main_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:fitsSystemWindows="true"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:id="@+id/collapsing_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="320dp"
+                android:fitsSystemWindows="true"
+                app:contentScrim="@color/white"
+                app:collapsedTitleTextAppearance="@style/CustomTextAppearance.TitilliumWebSemiBold"
+                app:expandedTitleTextAppearance="@style/CustomTextAppearance.TitilliumWebSemiBold"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_collapseMode="parallax">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivUserImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="320dp"
+                        android:scaleType="centerCrop"
+                        android:visibility="visible"
+                        android:src="@drawable/profile_placeholder" />
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:rotation="180"
+                        android:visibility="visible"
+                        android:background="@drawable/fugu_text_gradient" />
+                </RelativeLayout>
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="@android:color/transparent"
+                    app:layout_collapseMode="pin"
+                    app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+                   <LinearLayout
+                       android:id="@+id/llToolbar"
+                       android:visibility="gone"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:orientation="horizontal">
+                       <androidx.appcompat.widget.AppCompatTextView
+                           android:id="@+id/tvUserName2"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:textColor="@color/white"
+                           android:layout_marginStart="10dp"
+                           android:textAppearance="@style/CustomTextAppearance.TitilliumWebSemiBold"
+                           android:paddingTop="0dp"
+                           android:textSize="20sp"
+                           android:text="More Options"/>
+                   </LinearLayout>
+                </androidx.appcompat.widget.Toolbar>
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:overScrollMode="never"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/userProfile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/fugu_padding_5"
+                            android:layout_marginLeft="@dimen/fugu_padding_5"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/fugu_padding_10">
+
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="@dimen/fugu_padding_10"
+                                android:layout_marginLeft="@dimen/fugu_padding_10"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textAppearance="@style/CustomTextAppearance.Semibold"
+                                    android:textSize="16sp" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="View your profile"
+                                    android:textSize="14sp" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingBottom="80dp">
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#f9f9f9"
+                            android:orientation="horizontal">
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvUserName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="51dp"
+                                android:gravity="center_vertical"
+                                android:paddingStart="25dp"
+                                android:textSize="18sp"
+                                android:text="@string/amandeep_chauhan"
+                                android:textAppearance="@style/CustomTextAppearance.TitilliumWebSemiBold"/>
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/ivEdit"
+                                android:layout_width="44dp"
+                                android:layout_height="44dp"
+                                android:padding="10dp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginEnd="10dp"
+                                android:layout_centerVertical="true"
+                                android:src="@drawable/ic_edit_black_24dp"
+                                android:tint="@color/black"/>
+                        </RelativeLayout>
+                        <TextView
+                            android:id="@+id/account"
+                            style="@style/MoreOptionsTextView"
+                            android:drawableStart="@drawable/ic_account"
+                            android:drawableLeft="@drawable/ic_account"
+                            android:text="Account"
+                            android:textAppearance="@style/CustomTextAppearance.TitilliumWeb" />
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_marginStart="75dp"
+                            android:background="#f9f9f9"/>
+
+                        <TextView
+                            android:id="@+id/starredMessages"
+                            style="@style/MoreOptionsTextView"
+                            android:drawableStart="@drawable/ic_starred"
+                            android:drawableLeft="@drawable/ic_starred"
+                            android:text="@string/starred_messages"
+                            android:textAppearance="@style/CustomTextAppearance.TitilliumWeb" />
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_marginStart="75dp"
+                            android:background="#f9f9f9"/>
+                        <TextView
+                            android:id="@+id/inviteMembers"
+                            style="@style/MoreOptionsTextView"
+                            android:drawableStart="@drawable/invite"
+                            android:drawableLeft="@drawable/invite"
+                            android:text="@string/invite_members"
+                            android:textAppearance="@style/CustomTextAppearance.TitilliumWeb" />
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_marginStart="75dp"
+                            android:background="#f9f9f9"/>
+                        <TextView
+                            android:id="@+id/browseGroups"
+                            style="@style/MoreOptionsTextView"
+                            android:drawableStart="@drawable/browse_new"
+                            android:drawableLeft="@drawable/browse_new"
+                            android:text="@string/browse_group"
+                            android:textAppearance="@style/CustomTextAppearance.TitilliumWeb" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_marginStart="75dp"
+                            android:background="#f9f9f9"/>
+                        <TextView
+                            android:id="@+id/notificationSettings"
+                            style="@style/MoreOptionsTextView"
+                            android:drawableStart="@drawable/notification_new"
+                            android:drawableLeft="@drawable/notification_new"
+                            android:drawablePadding="14dp"
+                            android:text="@string/notification_settings"
+                            android:textAppearance="@style/CustomTextAppearance.TitilliumWeb" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_marginStart="75dp"
+                            android:background="#f9f9f9"/>
+                        <TextView
+                            android:id="@+id/mediaSetting"
+                            style="@style/MoreOptionsTextView"
+                            android:drawableStart="@drawable/media"
+                            android:drawableLeft="@drawable/media"
+                            android:text="@string/media_settings"
+                            android:textAppearance="@style/CustomTextAppearance.TitilliumWeb" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_marginStart="75dp"
+                            android:background="#f9f9f9"/>
+                        <TextView
+                            android:id="@+id/help"
+                            style="@style/MoreOptionsTextView"
+                            android:drawableStart="@drawable/ic_conversation"
+                            android:drawableLeft="@drawable/ic_conversation"
+                            android:text="@string/help"
+                            android:visibility="gone" />
+
+
+                        <TextView
+                            android:id="@+id/exitSpace"
+                            style="@style/MoreOptionsTextView"
+                            android:drawableStart="@drawable/exit"
+                            android:drawableLeft="@drawable/exit"
+                            android:text="@string/exit_space"
+                            android:textAppearance="@style/CustomTextAppearance.TitilliumWeb" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_marginStart="75dp"
+                            android:background="#f9f9f9"/>
+                        <TextView
+                            android:id="@+id/logout"
+                            style="@style/MoreOptionsTextView"
+                            android:drawableStart="@drawable/logout_new"
+                            android:drawableLeft="@drawable/logout_new"
+                            android:text="@string/logout"
+                            android:textAppearance="@style/CustomTextAppearance.TitilliumWeb" />
+                    </LinearLayout>
+                </ScrollView>
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</RelativeLayout>
+

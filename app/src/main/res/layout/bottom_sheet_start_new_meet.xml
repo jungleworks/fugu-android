@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/curved_white_bg"
+    android:paddingHorizontal="15dp">
+
+    <TextView
+        android:id="@+id/tv_heading"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Start a New Meeting"
+        android:textAppearance="@style/CustomTextAppearance.TitilliumWebSemiBold"
+        android:textColor="#000000"
+        android:textSize="@dimen/font_xxlarge"
+        app:layout_constraintEnd_toStartOf="@+id/iv_close"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_close"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_toEndOf="@id/tv_heading"
+        android:src="@drawable/ic_close"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_heading"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_heading"
+        app:tint="@color/black" />
+
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/tv_participants"-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginTop="21dp"-->
+    <!--        android:text="10 participants"-->
+    <!--        android:textAppearance="@style/CustomTextAppearance.TitilliumWebSemiBold"-->
+    <!--        android:textColor="@color/grayish"-->
+    <!--        android:textSize="17sp"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="@+id/tv_heading"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/tv_heading" />-->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvMeetMembers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tv_heading"
+        app:layout_constraintTop_toBottomOf="@+id/tv_heading"
+        tools:layoutManager="LinearLayoutManager"
+        tools:listitem="@layout/meet_selected_member_item"
+        tools:orientation="horizontal" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_participants"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Rajat, Amandeep, Sumeet and 6 others will join the meeting."
+        android:textAppearance="@style/CustomTextAppearance.TitilliumWeb"
+        android:textColor="@color/grayish"
+        android:textSize="@dimen/font_large"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tv_heading"
+        app:layout_constraintTop_toBottomOf="@+id/rvMeetMembers" />
+
+    <View
+        android:id="@+id/lower_divider"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="20dp"
+        android:background="#f2f2f2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_participants" />
+
+    <ImageView
+        android:id="@+id/iv_audio"
+        android:layout_width="52dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="87dp"
+        android:layout_marginTop="31dp"
+        android:layout_marginEnd="40dp"
+        android:adjustViewBounds="true"
+        android:minWidth="52dp"
+        android:minHeight="52dp"
+        app:layout_constraintEnd_toStartOf="@+id/iv_video"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lower_divider"
+        app:srcCompat="@drawable/meet_audio_on" />
+
+    <ImageView
+        android:id="@+id/iv_video"
+        android:layout_width="52dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="31dp"
+        android:layout_marginEnd="87dp"
+        android:adjustViewBounds="true"
+        android:minWidth="52dp"
+        android:minHeight="52dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/iv_audio"
+        app:layout_constraintTop_toBottomOf="@+id/lower_divider"
+        app:srcCompat="@drawable/meet_video_on" />
+
+    <TextView
+        android:id="@+id/tv_audio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Mic On"
+        android:textAppearance="@style/CustomTextAppearance.TitilliumWebSemiBold"
+        app:layout_constraintEnd_toEndOf="@+id/iv_audio"
+        app:layout_constraintStart_toStartOf="@+id/iv_audio"
+        app:layout_constraintTop_toBottomOf="@+id/iv_audio" />
+
+    <TextView
+        android:id="@+id/tv_video"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Video On"
+        android:textAppearance="@style/CustomTextAppearance.TitilliumWebSemiBold"
+        app:layout_constraintEnd_toEndOf="@+id/iv_video"
+        app:layout_constraintStart_toStartOf="@+id/iv_video"
+        app:layout_constraintTop_toBottomOf="@+id/iv_video" />
+
+
+    <Button
+        android:id="@+id/btn_start_meet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="37dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/curved_chiku_button"
+        android:text="Start"
+        android:textAllCaps="false"
+        android:textAppearance="@style/CustomTextAppearance.TitilliumWebSemiBold"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_xlarge"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_audio"
+        tools:layout_editor_absoluteX="15dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/llRoot"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="end"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/llMainMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:layout_marginLeft="35dp"
+            android:gravity="end"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/llForward"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginEnd="@dimen/fugu_margin_5"
+                android:layout_marginRight="@dimen/fugu_margin_5"
+                android:background="@drawable/circle_black_blur"
+                android:gravity="center"
+                android:visibility="visible">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    custom:srcCompat="@drawable/ic_forward" />
+            </LinearLayout>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/llMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/chat_bubble_self"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/llFile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:orientation="horizontal"
+                    android:paddingTop="@dimen/fugu_margin_10"
+                    android:paddingBottom="@dimen/fugu_margin_5">
+
+                    <RelativeLayout
+                        android:layout_width="30dp"
+                        android:layout_height="30dp">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ivFileImage"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginStart="@dimen/fugu_margin_5"
+                            android:src="@drawable/file_model" />
+                        <!--                        android:tint="#b3bec9"-->
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvFileExt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="7dp"
+                            android:gravity="center"
+                            android:paddingStart="2dp"
+                            android:text="AMAN"
+                            android:textColor="@android:color/white"
+                            android:textSize="7sp"
+                            android:visibility="gone" />
+
+                    </RelativeLayout>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/fugu_margin_5"
+                        android:layout_marginLeft="@dimen/fugu_margin_5"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvFileName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_marginTop="-5dp"
+                                android:maxLength="20"
+                                android:maxLines="1"
+                                android:minWidth="160dp"
+                                android:text="invoice invoice invoice.pdf"
+                                android:textAppearance="@style/CustomTextAppearance.TitilliumWeb"
+                                android:textColor="#2f2f2f"
+                                android:textSize="16sp" />
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:id="@+id/llImages"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/fugu_margin_15"
+                                android:layout_marginLeft="@dimen/fugu_margin_15"
+                                android:layout_toEndOf="@+id/tvFileName"
+                                android:layout_toRightOf="@+id/tvFileName">
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:id="@+id/ivFilePlay"
+                                    android:layout_width="19dp"
+                                    android:layout_height="19dp"
+                                    android:src="@drawable/music_player"
+                                    android:tint="#b3bec9"
+                                    android:visibility="gone" />
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:id="@+id/ivFileDownload"
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp"
+                                    android:tint="#b3bec9"
+                                    android:visibility="gone"
+                                    custom:srcCompat="@drawable/ic_down_arrow_new_down" />
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:id="@+id/ivFileUpload"
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp"
+                                    android:tint="#b3bec9"
+                                    android:visibility="gone"
+                                    custom:srcCompat="@drawable/ic_up_arrow" />
+
+                                <com.github.lzyzsd.circleprogress.DonutProgress
+                                    android:id="@+id/circle_progress"
+                                    android:layout_width="27dp"
+                                    android:layout_height="27dp"
+                                    android:layout_marginTop="-2dp"
+                                    android:visibility="gone"
+                                    custom:donut_finished_color="@color/office_chat_color"
+                                    custom:donut_finished_stroke_width="4dp"
+                                    custom:donut_progress="0"
+                                    custom:donut_text_color="#939393"
+                                    custom:donut_text_size="0dp"
+                                    custom:donut_unfinished_color="@color/fugu_attachment_dialog_text_pressed"
+                                    custom:donut_unfinished_stroke_width="4dp" />
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+                        </RelativeLayout>
+
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvFileSize"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentLeft="true"
+                                android:text="89kb"
+                                android:textAppearance="@style/CustomTextAppearance.TitilliumWeb"
+                                android:textColor="#b3bec9"
+                                android:textSize="@dimen/fugu_text_size_small" />
+
+                            <View
+                                android:layout_width="3dp"
+                                android:layout_height="3dp"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="@dimen/fugu_margin_5"
+                                android:layout_marginRight="@dimen/fugu_margin_5"
+                                android:background="@drawable/ring_grey"
+                                android:visibility="visible" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvFileExtension"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="jpg"
+                                android:textAllCaps="true"
+                                android:textAppearance="@style/CustomTextAppearance.TitilliumWeb"
+                                android:textColor="#b3bec9"
+                                android:textSize="@dimen/fugu_text_size_small"
+                                android:visibility="visible" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="end"
+                                android:gravity="end|center_vertical"
+                                android:orientation="horizontal"
+                                android:paddingStart="@dimen/fugu_padding_5">
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:id="@+id/ivStar"
+                                    android:layout_width="18dp"
+                                    android:layout_height="18dp"
+                                    android:paddingStart="@dimen/fugu_margin_5"
+                                    android:src="@drawable/ic_star_black_24dp"
+                                    android:tint="@color/colorPrimary"
+                                    android:visibility="visible" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvFileTime"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="end"
+                                    android:paddingEnd="2dp"
+                                    android:paddingRight="2dp"
+                                    android:text="6:59"
+                                    android:textAllCaps="true"
+                                    android:textAppearance="@style/CustomTextAppearance.TitilliumWeb"
+                                    android:textColor="#b3bec9"
+                                    android:textSize="@dimen/fugu_text_size_small"
+                                    android:visibility="visible"
+                                    tools:ignore="RtlSymmetry" />
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:id="@+id/ivMessageState"
+                                    android:layout_width="10dp"
+                                    android:layout_height="10dp"
+                                    android:layout_marginTop="@dimen/fugu_margin_2"
+                                    android:visibility="visible"
+                                    custom:srcCompat="@drawable/ic_single_tick" />
+                            </LinearLayout>
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="-8dp">
+
+            <include
+                layout="@layout/emoji_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <include layout="@layout/reply_layout" />
+</androidx.appcompat.widget.LinearLayoutCompat>

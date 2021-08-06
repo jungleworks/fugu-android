@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/fugu_margin_20"
+        android:layout_marginStart="@dimen/fugu_margin_20"
+        android:background="@drawable/round_rectangle"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:src="@drawable/video_conference" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvConfInvitation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:layout_marginEnd="@dimen/fugu_margin_5"
+            android:layout_marginStart="@dimen/fugu_margin_5"
+            android:textSize="20sp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/fugu_margin_10"
+            android:gravity="center"
+            android:layout_marginEnd="@dimen/fugu_margin_5"
+            android:layout_marginStart="@dimen/fugu_margin_5"
+            android:text="Get started by clicking on join button."
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/fugu_margin_10"
+            android:layout_marginBottom="@dimen/fugu_margin_20"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/join"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="@dimen/fugu_margin_20"
+                android:background="@drawable/rectangle_chiku_button"
+                android:text="Join"
+                android:textSize="18sp"
+                android:textColor="@color/white" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/cancel"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="@dimen/fugu_margin_20"
+                android:background="@drawable/rectangle_negative_chiku_button"
+                android:text="Cancel"
+                android:textSize="18sp"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/llRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="start"
+    android:background="@color/black"
+    android:orientation="vertical">
+
+
+    <FrameLayout
+        android:id="@+id/flMessageLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true">
+
+
+        <ja.burhanrashid52.photoeditor.PhotoEditorView
+            android:id="@+id/photoEditorView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"/>
+
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="65dp"
+           android:gravity="end">
+           <View
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:rotation="180"
+               android:background="@drawable/fugu_text_gradient"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/fugu_margin_20"
+            android:layout_marginEnd="@dimen/fugu_margin_20"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivUndo"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_marginEnd="@dimen/fugu_margin_25"
+                android:visibility="gone"
+                android:src="@drawable/undo" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_crop"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_marginEnd="@dimen/fugu_margin_25"
+                android:src="@drawable/image_crop_on_send_png" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivText"
+                android:layout_width="26dp"
+                android:layout_height="24dp"
+                android:layout_marginEnd="@dimen/fugu_margin_25"
+                android:src="@drawable/lettert" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivEmoji"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_marginTop="-1dp"
+                android:layout_marginEnd="@dimen/fugu_margin_25"
+                android:src="@drawable/smile" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivEdit"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:src="@drawable/pencil_edit_button" />
+
+        </LinearLayout>
+       </RelativeLayout>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/llMessageLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="35dp"
+            android:background="#CC000000"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <com.skeleton.mvp.util.EmojiGifEditText
+                android:id="@+id/etMsg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:cursorVisible="true"
+                android:hint="Add a caption..."
+                android:inputType="textCapSentences|textMultiLine"
+                android:maxHeight="110dp"
+                android:paddingStart="@dimen/fugu_margin_10"
+                android:paddingTop="@dimen/fugu_margin_12"
+                android:paddingEnd="50dp"
+                android:paddingBottom="18dp"
+                android:scrollbars="vertical"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textCursorDrawable="@null" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivSend"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="end|bottom"
+            android:layout_marginEnd="@dimen/fugu_margin_5"
+            android:layout_marginBottom="65dp"
+            android:background="@drawable/ring_greyy"
+            android:paddingStart="8dp"
+            android:paddingTop="@dimen/fugu_margin_12"
+            android:paddingBottom="@dimen/fugu_margin_12"
+            android:src="@drawable/ic_send_button"
+            android:visibility="visible" />
+        <ProgressBar
+            android:id="@+id/imageProgress"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="end|bottom"
+            android:layout_marginEnd="@dimen/fugu_margin_5"
+            android:layout_marginBottom="65dp"
+
+            android:visibility="gone"/>
+
+        <include
+            layout="@layout/layout_users_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="55dp" />
+    </FrameLayout>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

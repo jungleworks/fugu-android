@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llPreview"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/fugu_margin_5"
+    android:layout_marginTop="@dimen/fugu_margin_5"
+    android:orientation="vertical"
+    android:clickable="true"
+    android:focusable="true"
+    android:background="@drawable/fugu_bg_preview">
+
+    <include layout="@layout/fugu_preview_layout" />
+
+</LinearLayout>

@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context="com.skeleton.mvp.ui.fcinvite.InviteOnboardActivity">
+
+    <androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="30dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/spacing_tiny"
+                android:visibility="gone"
+                android:tint="@color/black"
+                app:srcCompat="@drawable/ic_arrow_back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/spacing_medium"
+                android:layout_weight="0.5"
+                android:gravity="center_vertical"
+                android:text="Invite Members"
+                android:textAppearance="@style/CustomTextAppearance.TitilliumWebSemiBold"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font_xxlarge" />
+
+            <TextView
+                android:id="@+id/tvSkip"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/spacing_medium"
+                android:layout_marginEnd="@dimen/spacing_medium"
+                android:layout_weight="0.5"
+                android:gravity="center_vertical|end"
+                android:textAppearance="@style/CustomTextAppearance.TitilliumWebSemiBold"
+                android:text="Skip"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font_xxlarge" />
+
+
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/spacing_medium"
+            android:paddingTop="@dimen/font_large"
+            android:paddingRight="@dimen/spacing_medium">
+
+            <TextView
+                android:id="@+id/tvSendInvitationsText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/fugu_margin_5"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="Send invitations"
+                android:textAppearance="@style/CustomTextAppearance.TitilliumWebSemiBold"
+                android:textColor="#333333"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tvOnboardText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/fugu_margin_7"
+                android:gravity="left"
+                android:maxLines="2"
+                android:text="Let's onboard your team members from others spaces"
+                android:textAppearance="@style/CustomTextAppearance.TitilliumWeb"
+                android:textColor="#333333"
+                android:textSize="16sp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvSelectedGroups"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <View
+                android:id="@+id/vRvSeperator"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="3dp"
+                android:background="@color/gray_light"
+                android:visibility="gone" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvInviteOnBoard"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:background="@drawable/rectangle_border_recycler" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="@dimen/fugu_margin_7"
+                android:gravity="left"
+                android:text="@string/know_a_few_friends_who_d_like_to_explore_fugu_with_you"
+                android:textAppearance="@style/CustomTextAppearance.TitilliumWeb"
+                android:textColor="#333333"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:id="@+id/llEmails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/round_rectangle_border_layout"
+                    android:orientation="horizontal">
+
+                    <com.hbb20.CountryCodePicker
+                        android:id="@+id/etCountryCode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/fugu_margin_8"
+                        android:layout_marginLeft="@dimen/fugu_margin_8"
+                        android:layout_marginTop="-9dp"
+                        android:visibility="gone"
+                        app:ccp_autoDetectCountry="true"
+                        app:ccp_showFlag="false"
+                        app:ccp_showNameCode="false" />
+
+                    <com.skeleton.mvp.util.ExtendedEditText
+                        android:id="@+id/etOne"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/transparent"
+                        android:hint="Email Address/Phone Number"
+                        android:imeOptions="actionGo"
+                        android:textAppearance="@style/CustomTextAppearance.TitilliumWeb"
+                        android:inputType="textEmailAddress"
+                        android:maxLines="1"
+                        android:paddingStart="@dimen/fugu_margin_15"
+                        android:paddingTop="@dimen/fugu_margin_7"
+                        android:paddingEnd="@dimen/fugu_margin_7"
+                        android:paddingBottom="@dimen/fugu_margin_7"
+                        android:singleLine="true" />
+                    <!--<EditText-->
+                    <!--android:id="@+id/etEmail"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:background="@color/transparent"-->
+                    <!--android:hint="Email Address/Phone Number"-->
+                    <!--android:inputType="textEmailAddress" />-->
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/fugu_margin_10"
+                    android:background="@drawable/round_rectangle_border_layout"
+                    android:orientation="horizontal">
+
+                    <com.hbb20.CountryCodePicker
+                        android:id="@+id/etCountryCode2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/fugu_margin_8"
+                        android:layout_marginTop="-9dp"
+                        android:visibility="gone"
+                        app:ccp_autoDetectCountry="true"
+                        app:ccp_showFlag="false"
+                        app:ccp_showNameCode="false" />
+
+                    <com.skeleton.mvp.util.ExtendedEditText
+                        android:id="@+id/etTwo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/transparent"
+                        android:hint="Email Address/Phone Number"
+                        android:imeOptions="actionGo"
+                        android:inputType="textEmailAddress"
+                        android:textAppearance="@style/CustomTextAppearance.TitilliumWeb"
+                        android:maxLines="1"
+                        android:paddingStart="@dimen/fugu_margin_15"
+                        android:paddingTop="@dimen/fugu_margin_7"
+                        android:paddingEnd="@dimen/fugu_margin_7"
+                        android:paddingBottom="@dimen/fugu_margin_7"
+                        android:singleLine="true" />
+                    <!--<EditText-->
+                    <!--android:id="@+id/etEmail"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:background="@color/transparent"-->
+                    <!--android:hint="Email Address/Phone Number"-->
+                    <!--android:inputType="textEmailAddress" />-->
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tvInviteMultiple"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/fugu_padding_10"
+                    android:drawableStart="@drawable/ic_email_blue_24dp"
+                    android:drawablePadding="@dimen/fugu_margin_5"
+                    android:textAppearance="@style/CustomTextAppearance.TitilliumWeb"
+                    android:text="@string/invite_multiple_people"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/fugu_margin_30"
+                android:gravity="center"
+                android:text="* Invitation will expire after 30 days"
+                android:visibility="gone" />
+
+
+            <LinearLayout
+                android:id="@+id/llCheckBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_medium"
+                android:background="#e5e5e5"
+                android:padding="@dimen/spacing_small"
+                android:visibility="gone">
+
+                <CheckBox
+                    android:id="@+id/cbInvite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/checkbox_selector"
+                    android:checked="false"
+                    android:padding="@dimen/spacing_small"
+                    android:text="@string/prefix_email"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_normal" />
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnSendInvite"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_xxxlarge"
+                android:layout_marginTop="@dimen/spacing_large"
+                android:layout_marginEnd="@dimen/spacing_xxxlarge"
+                android:layout_marginBottom="@dimen/fugu_margin_20"
+                android:background="@drawable/curved_chiku_button"
+                android:textAppearance="@style/CustomTextAppearance.TitilliumWeb"
+                android:text="Send Invitations"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_xlarge" />
+
+            <TextView
+                android:id="@+id/tvSeeInvites"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/fugu_margin_30"
+                android:gravity="center"
+                android:textAppearance="@style/CustomTextAppearance.TitilliumWeb"
+                android:text="@string/see_pending_and_accepted_invites"
+                android:textColor="@color/colorPrimary"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

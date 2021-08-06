@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/testTeamUI"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/fugu_margin_15">
+
+    <EditText
+        android:id="@+id/EnterCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter the code"
+        android:inputType="number"
+        />
+
+    <Button
+        android:id="@+id/codeSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/EnterCode"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="@dimen/fugu_margin_30"
+        android:layout_marginRight="@dimen/fugu_margin_30"
+        android:layout_marginTop="@dimen/fugu_margin_10"
+        android:layout_marginBottom="@dimen/fugu_margin_10"
+        android:background="@drawable/curved_chiku_button"
+        android:text="Submit"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_xlarge" />
+
+</RelativeLayout>

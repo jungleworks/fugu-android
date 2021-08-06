@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/fugu_margin_5"
+    android:background="@color/white"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="@dimen/fugu_margin_2">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/fugu_padding_10"
+        android:paddingEnd="@dimen/fugu_margin_5"
+        android:paddingLeft="@dimen/fugu_margin_5"
+        android:paddingRight="@dimen/fugu_margin_5"
+        android:paddingStart="@dimen/fugu_margin_5"
+        android:paddingTop="@dimen/fugu_padding_10">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivEmail"
+                android:layout_width="25dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/fugu_margin_7"
+                android:layout_marginStart="@dimen/fugu_margin_7"
+                android:src="@drawable/email" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/fugu_padding_10"
+                    android:layout_marginStart="@dimen/fugu_padding_10"
+                    android:gravity="center_horizontal"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textAppearance="@style/CustomTextAppearance.TitilliumWeb"
+                    android:text="roshankumarroshi@gmail.com"
+                    android:textSize="18sp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/fugu_padding_10"
+                        android:layout_marginStart="@dimen/fugu_padding_10"
+                        android:layout_marginTop="@dimen/fugu_margin_2"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:textAppearance="@style/CustomTextAppearance.TitilliumWeb"
+                        android:text="Invited: 23 Feb, 2016"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:id="@+id/ivArrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_gravity="end"
+                        android:tint="@color/gray_dark"
+                        app:srcCompat="@drawable/ic_keyboard_arrow_down_white_24dp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llInviteManipulation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/fugu_padding_10"
+            android:layout_marginRight="@dimen/fugu_padding_10"
+            android:layout_marginTop="@dimen/fugu_padding_10"
+            android:gravity="end"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tvResend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/fugu_padding_20"
+                android:layout_marginRight="@dimen/fugu_padding_20"
+                android:text="RESEND"
+                android:background="?attr/selectableItemBackground"
+                android:textAppearance="@style/CustomTextAppearance.Semibold"
+                android:textColor="#26A69A" />
+
+            <TextView
+                android:id="@+id/tvRevoke"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="REVOKE"
+                android:background="?attr/selectableItemBackground"
+                android:textAppearance="@style/CustomTextAppearance.Semibold"
+                android:textColor="#e57373" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/llRoot"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="start"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/tvUserName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginTop="5dp"
+        android:breakStrategy="simple"
+        android:gravity="start"
+        android:singleLine="true"
+        android:text="@string/amandeep_chauhan"
+        android:visibility="gone"
+        android:textAppearance="@style/CustomTextAppearance.TitilliumWebSemiBold"
+        android:textColor="@color/fugu_secondary_text_msg_from_name"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:id="@+id/llMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:orientation="horizontal">
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/llImageMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/chat_bubble_other"
+            android:gravity="start"
+            android:orientation="vertical"
+            android:padding="@dimen/fugu_margin_5">
+            <RelativeLayout
+                android:id="@+id/rlImageMessage"
+                android:layout_width="300dp"
+                android:layout_height="260dp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivImageMsg"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/placeholder" />
+
+                <!--<com.github.lzyzsd.circleprogress.DonutProgress-->
+                    <!--android:id="@+id/circle_progress"-->
+                    <!--android:layout_width="50dp"-->
+                    <!--android:layout_height="50dp"-->
+                    <!--android:layout_centerInParent="true"-->
+                    <!--android:visibility="gone"-->
+                    <!--custom:donut_finished_color="@color/office_chat_color"-->
+                    <!--custom:donut_finished_stroke_width="4dp"-->
+                    <!--custom:donut_progress="0"-->
+                    <!--custom:donut_text_color="#939393"-->
+                    <!--custom:donut_text_size="0dp"-->
+                    <!--custom:donut_unfinished_color="@color/fugu_attachment_dialog_text_pressed"-->
+                    <!--custom:donut_unfinished_stroke_width="4dp" />-->
+                <LinearLayout
+                    android:id="@+id/llDownloadImage"
+                    android:layout_width="110dp"
+                    android:layout_height="45dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/fugu_retry_btn_selector"
+                    android:gravity="center"
+                    android:padding="@dimen/fugu_margin_5"
+                    android:visibility="gone">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_file_download_black_24dp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvImageSize"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="100.9 KB"
+                        android:textColor="@color/white"
+                        android:textAppearance="@style/CustomTextAppearance.Semibold"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <ProgressBar
+                    android:id="@+id/pbDownloading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:visibility="gone" />
+                <RelativeLayout
+                    android:layout_width="110dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/tiangle_bg"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivStar"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_marginStart="25dp"
+                        android:layout_marginTop="28dp"
+                        android:src="@drawable/ic_star_black_24dp"
+                        android:tint="@color/colorPrimary"
+                        android:visibility="visible" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvImageTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="45dp"
+                        android:layout_marginTop="@dimen/fugu_margin_20"
+                        android:paddingBottom="@dimen/fugu_margin_5"
+                        android:paddingTop="@dimen/fugu_margin_10"
+                        android:text="@string/dummy_time"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvImgWithText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingEnd="@dimen/fugu_margin_2"
+                android:paddingStart="@dimen/fugu_margin_8"
+                android:paddingTop="@dimen/fugu_margin_8"
+                android:paddingBottom="@dimen/fugu_dp_8"
+                android:textAppearance="@style/CustomTextAppearance.TitilliumWeb"
+                android:textColorLink="@color/black"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:visibility="gone"
+
+                />
+
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <LinearLayout
+            android:id="@+id/llForward"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/fugu_margin_5"
+            android:layout_marginStart="@dimen/fugu_margin_5"
+            android:background="@drawable/circle_black_blur"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_forward" />
+        </LinearLayout>
+    </LinearLayout>
+<include
+    layout="@layout/emoji_layout"/>
+    <include
+        layout="@layout/reply_layout"/>
+</androidx.appcompat.widget.LinearLayoutCompat>

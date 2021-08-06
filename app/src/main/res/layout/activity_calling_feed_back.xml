@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black_opaque_50"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/fugu_margin_35"
+        android:layout_marginEnd="@dimen/fugu_margin_35"
+        android:background="@drawable/round_rectangle"
+        android:orientation="vertical"
+        android:animateLayoutChanges="true"
+        android:padding="0dp">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/bottom_round_rectangle"
+            android:padding="@dimen/fugu_margin_15"
+            android:backgroundTint="#f0f4f8"
+            android:text="@string/please_rate_the_quality_of_your_fugu_call"
+            android:textAppearance="@style/CustomTextAppearance.TitilliumWebSemiBold"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvRating"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/fugu_margin_10"
+            android:gravity="center"
+            android:padding="@dimen/fugu_margin_5"
+            android:textColor="@color/black"
+            android:visibility="gone"
+            android:textSize="18sp" />
+
+        <com.skeleton.mvp.ui.customview.CustomRatingBar
+            android:id="@+id/ratingBar"
+            style="@style/RatingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="65dp"
+            android:layout_gravity="center"
+            android:isIndicator="true"
+            android:numStars="5"
+            app:halfStars="false"
+            android:padding="@dimen/fugu_margin_15"
+            android:progressTint="@color/colorPrimary"
+            app:starPadding="@dimen/fugu_margin_5" />
+
+        <EditText
+            android:id="@+id/etFeedback"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_margin="@dimen/fugu_margin_15"
+            android:background="@drawable/round_small_rectangle_border_layout"
+            android:gravity="start|top"
+            android:hint="Tell us more (optional)"
+            android:padding="@dimen/fugu_margin_10"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/fugu_margin_10"
+            android:gravity="end"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnNotNow"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:background="@color/transparent"
+                android:text="NOT NOW"
+                android:textAppearance="@style/CustomTextAppearance.TitilliumWebSemiBold"
+                android:textColor="@color/colorPrimary" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnSubmit"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:background="@color/transparent"
+                android:text="SUBMIT"
+                android:textAppearance="@style/CustomTextAppearance.TitilliumWebSemiBold"
+                android:textColor="@color/colorPrimary" />
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

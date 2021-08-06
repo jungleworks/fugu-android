@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rlRoot"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingBottom="@dimen/fugu_padding_12"
+        android:paddingLeft="@dimen/fugu_padding_12"
+        android:paddingRight="@dimen/fugu_padding_12"
+        android:paddingTop="@dimen/fugu_padding_12">
+
+        <RelativeLayout
+            android:id="@+id/rlChannelIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/fugu_padding_12">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivChannelIcon"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_centerInParent="true"
+                app:srcCompat="@drawable/fugu_ic_channel_icon" />
+
+            <TextView
+                android:id="@+id/tvChannelIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="A"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/fugu_text_size_very_large"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvName"
+            style="@style/CustomTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/fugu_margin_2"
+            android:layout_toRightOf="@+id/rlChannelIcon"
+            android:singleLine="true"
+            android:textColor="@color/fugu_text_color_primary"
+            android:textSize="@dimen/fugu_text_size_normal"
+            tools:text="Channel Name" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvName"
+            android:layout_marginTop="@dimen/fugu_margin_2"
+            android:layout_toRightOf="@+id/rlChannelIcon"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvEmail"
+                style="@style/CustomTextAppearance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/fugu_text_color_primary"
+                android:textSize="@dimen/fugu_text_size_intermediate"
+                tools:text="Message dhfcd oig rwrw  " />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/viewDivider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/fugu_border_color" />
+</RelativeLayout>

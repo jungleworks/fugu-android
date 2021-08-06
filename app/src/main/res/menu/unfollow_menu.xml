@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.home.HomeActivity">
+    <item
+        android:id="@+id/action_settings"
+        android:icon="@drawable/ic_more_vert_black_24dp"
+        android:orderInCategory="100"
+        android:title="Unfollow"
+        app:showAsAction="ifRoom">
+        <menu>
+            <item
+                android:id="@+id/unfollow"
+                android:orderInCategory="100"
+                android:title="Unfollow Thread"
+                app:showAsAction="never" />
+        </menu>
+    </item>
+</menu>

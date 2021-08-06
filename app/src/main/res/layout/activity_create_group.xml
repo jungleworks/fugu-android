@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.skeleton.mvp.ui.creategroup.CreateGroupActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="15dp"
+                app:srcCompat="@drawable/ic_arrow_back"
+                app:tint="@color/black" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="20dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/spacing_small"
+                    android:gravity="center_vertical"
+                    android:text="@string/new_group"
+                    android:textColor="@color/black"
+                    android:textAppearance="@style/CustomTextAppearance.TitilliumWebSemiBold"
+                    android:textSize="22sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/spacing_small"
+                    android:gravity="center_vertical"
+                    android:text="@string/add_subject"
+                    android:textColor="@color/black"
+                    android:textAppearance="@style/CustomTextAppearance.TitilliumWeb"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="end|center_vertical">
+
+                <TextView
+                    android:id="@+id/tvSkipAndCreate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|center_vertical"
+                    android:layout_marginEnd="@dimen/spacing_small"
+                    android:layout_marginStart="@dimen/spacing_small"
+                    android:text="@string/skip"
+                    android:textAppearance="@style/CustomTextAppearance.TitilliumWebSemiBold"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_xlarge" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="190dp"
+                android:elevation="@dimen/fugu_margin_5"
+                app:cardBackgroundColor="@color/white">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingTop="@dimen/fugu_padding_10">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginEnd="@dimen/fugu_margin_10"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/fugu_margin_20"
+                            android:layout_weight="0.8"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tvPrivate"
+                                style="@style/CustomTextAppearance.TitilliumWebSemiBold"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/private_text"
+                                android:textColor="@color/black"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:id="@+id/tvSubPrivate"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="@style/CustomTextAppearance.TitilliumWeb"
+                                android:text="@string/private_groups_are_invite_only_and_do_not_show_up_in_the_group_browser_list"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+
+                        <androidx.appcompat.widget.SwitchCompat
+                            android:id="@+id/sPrivate"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.2"
+                            android:checked="true" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/gray_light" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_medium"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/spacing_small">
+
+                        <ImageView
+                            android:id="@+id/ivGroupPhoto"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            app:srcCompat="@drawable/camera_oval_small" />
+
+                        <EditText
+                            android:id="@+id/etGroupName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/spacing_small"
+                            android:layout_marginTop="-5dp"
+                            android:textAppearance="@style/CustomTextAppearance.TitilliumWeb"
+                            android:hint="@string/enter_group_name_optional"
+                            android:inputType="textCapWords"
+                            android:maxLength="30"
+                            android:singleLine="true" />
+
+                        <EditText
+                            android:id="@+id/etGroupName2"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_marginStart="@dimen/spacing_small"
+                            android:hint="@string/type_your_group_name_here"
+                            android:inputType="textCapWords"
+                            android:maxLength="30"
+                            android:singleLine="true" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="75dp"
+                        android:layout_marginTop="-25dp"
+                        android:textAppearance="@style/CustomTextAppearance.TitilliumWeb"
+                        android:text="@string/provide_a_group_name_and_group_icon"
+                        android:textSize="12sp" />
+
+                    <LinearLayout
+                        android:id="@+id/llAddMembers"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_small"
+                        android:orientation="horizontal"
+                        android:paddingBottom="@dimen/spacing_small"
+                        android:paddingEnd="@dimen/spacing_small"
+                        android:paddingLeft="@dimen/spacing_small"
+                        android:paddingRight="@dimen/spacing_small"
+                        android:paddingStart="@dimen/spacing_small"
+                        android:paddingTop="@dimen/spacing_small"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:padding="@dimen/spacing_tiny"
+                            app:srcCompat="@drawable/ic_person_add_blue_24dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/fugu_margin_10"
+                            android:layout_marginTop="5dp"
+                            android:text="@string/add_members"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fabCreateGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginBottom="@dimen/fugu_padding_10"
+                android:layout_marginEnd="@dimen/fugu_margin_20"
+                android:layout_marginTop="165dp"
+                android:background="@color/colorPrimaryDark"
+                app:borderWidth="0dp"
+                app:srcCompat="@drawable/fab_done" />
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/tvMembers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/fugu_margin_10"
+            android:layout_marginTop="@dimen/fugu_margin_10"
+            android:paddingStart="25dp"
+            android:text="@string/participants_10"
+            android:textAppearance="@style/CustomTextAppearance.TitilliumWebSemiBold"
+            android:visibility="gone" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvSearchResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:listitem="@layout/multiadd_group_item"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:spanCount="5"
+            android:padding="@dimen/fugu_margin_5"
+            android:visibility="visible" />
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/curved_white_bg"
+    android:paddingHorizontal="15dp">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvMeetTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Start a New Meeting"
+        android:textAppearance="@style/CustomTextAppearance.TitilliumWebSemiBold"
+        android:textColor="#000000"
+        android:textSize="@dimen/font_xxlarge"
+        app:layout_constraintEnd_toStartOf="@+id/iv_edit"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_edit"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="5dp"
+        android:src="@drawable/ic_edit_black_24dp"
+        android:tint="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/tvMeetTitle"
+        app:layout_constraintEnd_toStartOf="@+id/iv_close"
+        app:layout_constraintStart_toEndOf="@id/tvMeetTitle"
+        app:layout_constraintTop_toTopOf="@+id/tvMeetTitle" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_close"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="5dp"
+        android:src="@drawable/ic_close"
+        android:tint="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/tvMeetTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/iv_edit"
+        app:layout_constraintTop_toTopOf="@+id/tvMeetTitle" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvMeetTimings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="09:00 AM - 09:20AM"
+        android:textColor="@color/grayish"
+        android:textSize="@dimen/font_xlarge"
+        app:layout_constraintStart_toStartOf="@+id/tvMeetTitle"
+        app:layout_constraintTop_toBottomOf="@+id/tvMeetTitle" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvOngoing"
+        style="@style/CustomTextAppearance.TitilliumWeb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_rect_grey_border_2dp"
+        android:backgroundTint="#ff8f47"
+        android:paddingHorizontal="5dp"
+        android:paddingVertical="1dp"
+        android:text="ONGOING"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_large"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/tvMeetTimings"
+        app:layout_constraintEnd_toEndOf="@+id/iv_close"
+        app:layout_constraintTop_toTopOf="@+id/tvMeetTimings" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvMeetMembers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tvMeetTitle"
+        app:layout_constraintTop_toBottomOf="@+id/tvMeetTimings"
+        tools:layoutManager="LinearLayoutManager"
+        tools:listitem="@layout/meet_selected_member_item"
+        tools:orientation="horizontal" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_participants"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Rajat, Amandeep, Sumeet and 6 others will join the meeting."
+        android:textAppearance="@style/CustomTextAppearance.TitilliumWeb"
+        android:textColor="@color/grayish"
+        android:textSize="@dimen/font_large"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tvMeetTitle"
+        app:layout_constraintTop_toBottomOf="@+id/rvMeetMembers" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivShare"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="@+id/rvMeetMembers"
+        app:layout_constraintTop_toBottomOf="@id/tv_participants"
+        app:srcCompat="@drawable/ic_share" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvShareLink"
+        style="@style/CustomTextAppearance.TitilliumWebSemiBold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="Share Link"
+        android:textColor="@color/colorPrimary"
+        android:textSize="20sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/ivShare"
+        app:layout_constraintStart_toEndOf="@id/ivShare"
+        app:layout_constraintTop_toTopOf="@+id/ivShare" />
+
+    <View
+        android:id="@+id/lower_divider"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="29dp"
+        android:background="#f2f2f2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivShare" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_audio"
+        android:layout_width="52dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="87dp"
+        android:layout_marginTop="31dp"
+        android:layout_marginEnd="40dp"
+        android:adjustViewBounds="true"
+        android:minWidth="52dp"
+        android:minHeight="52dp"
+        app:layout_constraintEnd_toStartOf="@+id/iv_video"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lower_divider"
+        app:srcCompat="@drawable/meet_audio_on" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_video"
+        android:layout_width="52dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="31dp"
+        android:layout_marginEnd="87dp"
+        android:adjustViewBounds="true"
+        android:minWidth="52dp"
+        android:minHeight="52dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/iv_audio"
+        app:layout_constraintTop_toBottomOf="@+id/lower_divider"
+        app:srcCompat="@drawable/meet_video_on" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_audio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Mic On"
+        android:textAppearance="@style/CustomTextAppearance.TitilliumWebSemiBold"
+        app:layout_constraintEnd_toEndOf="@+id/iv_audio"
+        app:layout_constraintStart_toStartOf="@+id/iv_audio"
+        app:layout_constraintTop_toBottomOf="@+id/iv_audio" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_video"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Video On"
+        android:textAppearance="@style/CustomTextAppearance.TitilliumWebSemiBold"
+        app:layout_constraintEnd_toEndOf="@+id/iv_video"
+        app:layout_constraintStart_toStartOf="@+id/iv_video"
+        app:layout_constraintTop_toBottomOf="@+id/iv_video" />
+
+
+    <Button
+        android:id="@+id/btnJoinScheduledMeet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="37dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/curved_chiku_button"
+        android:text="Join"
+        android:textAllCaps="false"
+        android:textAppearance="@style/CustomTextAppearance.TitilliumWebSemiBold"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_xlarge"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_audio"
+        tools:layout_editor_absoluteX="15dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

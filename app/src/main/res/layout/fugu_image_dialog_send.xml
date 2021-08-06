@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center"
+    android:background="@android:color/black">
+
+    <com.github.chrisbanes.photoview.PhotoView
+        android:id="@+id/ivImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/placeholder"
+        android:layout_centerInParent="true" />
+
+
+    <FrameLayout
+        android:id="@+id/flMessageLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/llMessageLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:focusableInTouchMode="true"
+            android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvTypeMessage"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/fugu_dp_6"
+                android:layout_marginEnd="@dimen/fugu_dp_6"
+                android:layout_marginLeft="@dimen/fugu_dp_6"
+                android:layout_marginRight="@dimen/fugu_dp_6"
+                android:layout_marginStart="@dimen/fugu_dp_6"
+                android:layout_weight="0.85"
+                app:cardCornerRadius="20dp">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/llimagewithmessgae"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:focusableInTouchMode="true"
+                    android:padding="@dimen/fugu_padding_7">
+
+
+                    <com.skeleton.mvp.util.EmojiGifEditText
+                        android:id="@+id/etMsg"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/fugu_margin_10"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:cursorVisible="true"
+                        android:hint="Add a caption..."
+                        android:inputType="textCapSentences|textMultiLine"
+                        android:maxHeight="100dp"
+                        android:paddingBottom="@dimen/fugu_padding_5"
+                        android:paddingRight="@dimen/fugu_padding_5"
+                        android:paddingTop="@dimen/fugu_padding_5"
+                        android:scrollbars="vertical"
+                        android:textColor="#fff"
+                        android:textCursorDrawable="@null" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivSend"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginEnd="@dimen/fugu_margin_5"
+                android:layout_marginRight="@dimen/fugu_margin_5"
+                android:layout_weight="0.10"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:visibility="visible"
+                app:srcCompat="@drawable/ivsend" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <include
+            layout="@layout/layout_users_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="55dp" />
+    </FrameLayout>
+
+
+
+</RelativeLayout>

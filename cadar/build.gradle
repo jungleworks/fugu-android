@@ -1,0 +1,157 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.jfrog.bintray'
+apply plugin: 'com.github.dcendents.android-maven'
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.7'
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:1.4.1'
+    }
+}
+
+group = 'io.github.memfis19'
+version = '0.4.8'
+
+ext {
+    PUBLISH_GROUP_ID = 'io.github.memfis19'
+    PUBLISH_ARTIFACT_ID = 'cadar'
+    PUBLISH_VERSION = '0.4.8'
+    PUBLISH_VERSION_CODE = 17
+    TARGET_SDK = 29
+    MIN_SDK = 21
+    BUILD_TOOLS = "29.0.2"
+}
+
+configurations {
+    compile.exclude group: 'commons-logging'
+}
+
+repositories {
+    jcenter()
+    maven { url "http://repo1.maven.org/maven2/" }
+}
+
+android {
+    compileSdkVersion TARGET_SDK
+    buildToolsVersion BUILD_TOOLS
+
+    dexOptions {
+        preDexLibraries = false
+    }
+    defaultConfig {
+        minSdkVersion MIN_SDK
+        targetSdkVersion TARGET_SDK
+        versionCode PUBLISH_VERSION_CODE
+        versionName PUBLISH_VERSION
+    }
+    lintOptions {
+        abortOnError false
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    packagingOptions {
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude('org/apache/commons/codec/language/bm/*.txt')
+    }
+}
+
+task generateSourcesJar(type: Jar) {
+    from android.sourceSets.main.java.srcDirs
+    classifier 'sources'
+}
+
+task generateJavadocs(type: Javadoc) {
+    failOnError false
+    source = android.sourceSets.main.java.srcDirs
+    classpath += project.files(android.getBootClasspath()
+            .join(File.pathSeparator))
+}
+
+task generateJavadocsJar(type: Jar) {
+    from generateJavadocs.destinationDir
+    classifier 'javadoc'
+}
+
+generateJavadocsJar.dependsOn generateJavadocs
+
+artifacts {
+    archives generateSourcesJar
+    archives generateJavadocsJar
+}
+
+install {
+    repositories.mavenInstaller {
+        pom.project {
+            name 'io.github.memfis19'
+            description 'Android solution which represents month and list calendar representations.'
+            url 'https://github.com/memfis19/Cadar'
+            inceptionYear '2016'
+
+            packaging 'aar'
+            version PUBLISH_VERSION
+
+            scm {
+                connection 'https://github.com/memfis19/Cadar.git'
+                url 'https://github.com/memfis19/Cadar'
+
+            }
+            developers {
+                developer {
+                    name 'memfis19'
+                }
+            }
+        }
+    }
+}
+
+bintray {
+    Properties properties = new Properties()
+    properties.load(project.rootProject.file('local.properties').newDataInputStream())
+    user = properties.getProperty('bintray.user')
+    key = properties.getProperty('bintray.apikey')
+    configurations = ['archives']
+    pkg {
+        repo = 'io.github.memfis19'
+        name = 'cadar'
+        userOrg = 'm-e-m-f-i-s'
+        desc = 'Android solution which represents month and list calendar representations.'
+        licenses = ['MIT']
+        labels = ['android', 'calendar', 'month', 'list']
+        websiteUrl = 'https://github.com/memfis19/Cadar'
+        issueTrackerUrl = 'https://github.com/memfis19/Cadar/issues'
+        vcsUrl = 'https://github.com/memfis19/Cadar.git'
+        version {
+            name = PUBLISH_VERSION
+            vcsTag = PUBLISH_VERSION
+            desc = 'Hot fix: process onEventClick.'
+            released = new Date()
+
+        }
+    }
+}
+
+dependencies {
+    api fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'joda-time:joda-time:2.8.2'
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.gridlayout:gridlayout:1.0.0'
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.4'
+}

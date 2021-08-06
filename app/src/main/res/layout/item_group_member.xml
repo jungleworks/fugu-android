@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/rlChannelIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp">
+
+            <ImageView
+                android:id="@+id/ivContactImage"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/user" />
+
+            <ImageView
+                android:id="@+id/ivContactImageBlur"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ring_blur"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tvContactIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="A"
+                android:textAppearance="@style/CustomTextAppearance.Semibold"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/fugu_margin_5"
+            android:layout_marginLeft="@dimen/fugu_margin_5"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="5dp"
+                android:layout_weight="0.75"
+                android:gravity="center|start"
+                android:singleLine="true"
+                android:textSize="15sp"
+                android:textAppearance="@style/CustomTextAppearance.TitilliumWebSemiBold"
+                android:textColor="@color/black"
+                tools:text="Member Name" />
+
+            <TextView
+                android:id="@+id/tvAdmin"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="24dp"
+                android:layout_weight="0.25"
+                android:background="@drawable/rectangle_border_round_blue"
+                android:gravity="center"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:text="Admin"
+                android:textColor="#3bd5b2"
+                android:textSize="12sp"
+                android:visibility="visible" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/vLine"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#f3f3f3"
+        android:visibility="gone" />
+</LinearLayout>

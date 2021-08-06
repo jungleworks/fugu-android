@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>org.jitsi.react</groupId>
+  <artifactId>jitsi-meet-sdk</artifactId>
+  <versioning>
+    <release>2.5.0</release>
+    <versions>
+      <version>2.5.0</version>
+    </versions>
+    <lastUpdated>20200918114050</lastUpdated>
+  </versioning>
+</metadata>

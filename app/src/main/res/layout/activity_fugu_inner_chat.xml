@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rlRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.skeleton.mvp.activity.FuguInnerChatActivity">
+
+
+
+    <androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="25dp"
+                android:layout_height="match_parent"
+                android:tint="@color/black"
+                app:srcCompat="@drawable/ic_arrow_back" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/fugu_margin_10"
+                android:layout_marginLeft="@dimen/fugu_margin_10"
+                android:textAppearance="@style/CustomTextAppearance.TitilliumWebSemiBold"
+                android:text="Message"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:id="@+id/swipeRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/my_toolbar"
+        android:layout_above="@+id/llMessageLayout"
+        >
+
+            <LinearLayout
+                android:id="@+id/llRoot"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rvMessages"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:animateLayoutChanges="false"
+                            android:paddingBottom="@dimen/fugu_margin_5" />
+                        <View
+                            android:id="@+id/viewTranslucent"
+                            android:layout_width="match_parent"
+                            android:visibility="gone"
+                            android:layout_height="match_parent"/>
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rvEmoji"
+                            android:layout_width="match_parent"
+                            android:layout_marginEnd="@dimen/fugu_margin_10"
+                            android:layout_marginStart="@dimen/fugu_margin_10"
+                            android:background="@drawable/ring_black"
+                            android:visibility="gone"
+                            android:layout_height="50dp"/>
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/my_relative_layout"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp" />
+            </LinearLayout>
+    </LinearLayout>
+
+    <include
+        layout="@layout/layout_users_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/llMessageLayout"
+        android:layout_gravity="bottom" />
+
+    <LinearLayout
+        android:id="@+id/llMessageLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:background="#f9f9f9"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:id="@+id/cvTypeMessage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/fugu_dp_6"
+            android:layout_marginLeft="@dimen/fugu_dp_6"
+            android:layout_marginTop="@dimen/fugu_margin_4"
+            android:layout_marginEnd="@dimen/fugu_dp_6"
+            android:layout_marginRight="@dimen/fugu_dp_6"
+            android:layout_marginBottom="@dimen/fugu_dp_6"
+            android:layout_weight="0.85">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/fugu_padding_7">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingLeft="-4dp">
+
+                    <ImageView
+                        android:id="@+id/ivAttachment"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="bottom"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:onClick="onClick"
+                        android:padding="@dimen/fugu_padding_4"
+                        android:visibility="visible"
+                        app:srcCompat="@drawable/ic_attach" />
+
+                    <ImageView
+                        android:id="@+id/ivCancelEdit"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="bottom"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:onClick="onClick"
+                        android:padding="@dimen/fugu_padding_4"
+                        android:visibility="gone"
+                        app:srcCompat="@drawable/ic_close" />
+                </LinearLayout>
+
+                <com.skeleton.mvp.util.EmojiGifEditText
+                    android:id="@+id/etMsg"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/fugu_margin_10"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:cursorVisible="true"
+                    android:hint="@string/fugu_send_message"
+                    android:inputType="textCapSentences|textMultiLine"
+                    android:maxHeight="100dp"
+                    android:paddingTop="@dimen/fugu_padding_5"
+                    android:paddingRight="@dimen/fugu_padding_5"
+                    android:paddingBottom="@dimen/fugu_padding_5"
+                    android:scrollbars="vertical"
+                    android:textColor="@android:color/black"
+                    android:textCursorDrawable="@null" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:paddingLeft="-4dp">
+
+                    <ImageView
+                        android:id="@+id/ivEmoji"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="bottom"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:onClick="onClick"
+                        android:padding="@dimen/fugu_padding_4"
+                        android:visibility="visible"
+                        app:srcCompat="@drawable/ic_emoji"  />
+                </LinearLayout>
+
+                <ProgressBar
+                    android:id="@+id/pbSendingImage"
+                    style="@android:style/Widget.ProgressBar"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/fugu_margin_10"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/ivSend"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginEnd="@dimen/fugu_margin_5"
+            android:layout_marginRight="@dimen/fugu_margin_5"
+            android:layout_weight="0.10"
+            android:alpha="0.5"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:onClick="onClick"
+            app:srcCompat="@drawable/send_message"
+            android:visibility="visible" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/tvCannotReply"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/fugu_chat_bg"
+        android:paddingTop="@dimen/fugu_margin_5"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rectangle_border"
+            android:gravity="center"
+            android:padding="@dimen/fugu_margin_15"
+            android:text="You cannot reply to this conversation"
+            android:textColor="@color/gray_dark"
+            android:visibility="visible" />
+    </LinearLayout>
+    <ProgressBar
+        android:id="@+id/pbLoading"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"
+        android:layout_marginTop="60dp"/>
+</RelativeLayout>

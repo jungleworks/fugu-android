@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item>
+        <shape xmlns:android="http://schemas.android.com/apk/res/android"
+            android:shape="oval">
+            <gradient
+                android:angle="360"
+                android:centerColor="@color/gradient_middle"
+                android:endColor="@color/gradient_end"
+                android:startColor="@color/gradient_start" />
+        </shape>
+
+    </item>
+    <item android:gravity="center">
+        <bitmap
+            android:gravity="fill_horizontal"
+            android:src="@drawable/ic_search" />
+    </item>
+
+</layer-list>

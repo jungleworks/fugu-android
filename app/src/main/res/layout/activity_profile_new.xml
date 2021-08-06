@@ -1,0 +1,558 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/ivProfile"
+        android:layout_width="match_parent"
+        android:layout_height="320dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/profile_placeholder"
+        app:layout_collapseMode="parallax" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:overScrollMode="never"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:id="@+id/ivImage"
+                android:layout_width="match_parent"
+                android:layout_height="260dp" />
+
+            <LinearLayout
+                android:id="@+id/ivImageEdit"
+                android:layout_width="match_parent"
+                android:layout_height="320dp"
+                android:background="#59000000"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/edit_profile_image"
+                    android:textAppearance="@style/CustomTextAppearance.TitilliumWebSemiBold"
+                    android:textColor="@color/white"
+                    android:textSize="20dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="320dp"
+                android:orientation="vertical"
+                android:paddingBottom="30dp">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="51dp"
+                    android:background="#f9f9f9"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/tvName"
+                            style="@style/CustomTextAppearance.TitilliumWebSemiBold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/fugu_margin_20"
+                            android:layout_marginTop="@dimen/spacing_small"
+                            android:layout_marginEnd="@dimen/fugu_margin_10"
+                            android:gravity="center_vertical"
+                            android:inputType="textNoSuggestions"
+                            android:singleLine="true"
+
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/font_xxlarge"
+                            tools:text="@string/amandeep_chauhan" />
+
+                        <TextView
+                            android:id="@+id/tvGuest"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:singleLine="true"
+                            android:text="@string/guest"
+                            android:textAppearance="@style/CustomTextAppearance.TitilliumWeb"
+                            android:textSize="@dimen/font_large"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tvSave"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="10dp"
+                        android:background="@drawable/curved_bg_button"
+                        android:paddingLeft="@dimen/spacing_small"
+                        android:paddingTop="3dp"
+                        android:paddingRight="@dimen/spacing_small"
+                        android:paddingBottom="3dp"
+                        android:text="@string/save"
+                        android:textAppearance="@style/CustomTextAppearance.TitilliumWebSemiBold"
+                        android:textColor="@android:color/white"
+                        android:textSize="13sp"
+                        android:visibility="gone" />
+
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/fugu_margin_5"
+                    android:background="@drawable/round_rectangle_border_dm"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="16dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_fugu" />
+
+                    <TextView
+                        android:id="@+id/tvDm"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="3dp"
+                        android:gravity="center"
+                        android:text="@string/direct_message" />
+
+                    <View
+                        android:id="@+id/buttonSeperator"
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="@dimen/fugu_padding_10"
+                        android:layout_marginLeft="@dimen/fugu_padding_10"
+                        android:layout_marginEnd="@dimen/fugu_padding_10"
+                        android:layout_marginRight="@dimen/fugu_padding_10"
+                        android:background="@color/gray_light" />
+
+                    <ImageView
+                        android:layout_width="16dp"
+                        android:layout_height="match_parent"
+                        android:visibility="visible"
+                        app:srcCompat="@drawable/ic_person_add_blue_24dp" />
+
+                    <TextView
+                        android:id="@+id/tvCg"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="3dp"
+                        android:gravity="center"
+                        android:text="@string/create_group"
+                        android:visibility="visible" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llMedia"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/fugu_margin_10"
+                    android:layout_marginTop="@dimen/fugu_margin_10"
+                    android:layout_marginEnd="@dimen/fugu_margin_10"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/fugu_margin_5"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:layout_marginBottom="@dimen/fugu_margin_2"
+                            android:layout_weight="0.75"
+                            android:text="@string/media"
+                            android:textColor="@color/office_chat_color"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvMedia"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:overScrollMode="never"
+                        android:paddingTop="@dimen/fugu_margin_2"
+                        android:paddingBottom="@dimen/fugu_margin_2" />
+
+                    <LinearLayout
+                        android:id="@+id/tvShowMore"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:layout_marginTop="@dimen/fugu_margin_5"
+                            android:text="@string/media"
+                            android:textSize="16sp"
+                            android:visibility="visible" />
+
+                        <ImageView
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                            android:layout_marginStart="@dimen/fugu_margin_2"
+                            android:layout_marginTop="@dimen/fugu_margin_6"
+                            android:src="@drawable/angle_right" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:paddingStart="20dp"
+                    android:paddingTop="14dp">
+
+                    <LinearLayout
+                        android:id="@+id/llEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="3dp"
+                            android:text="@string/email"
+                            android:textAppearance="@style/CustomTextAppearance.TitilliumWebSemiBold"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="12sp" />
+
+                        <EditText
+                            android:id="@+id/tvEmail"
+                            android:layout_width="match_parent"
+                            android:layout_height="38dp"
+                            android:focusable="false"
+                            android:inputType="textNoSuggestions"
+                            android:textAppearance="@style/CustomTextAppearance.TitilliumWebSemiBold"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            tools:text="Email" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llPhone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="-10dp"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="22dp"
+                            android:paddingStart="3dp"
+                            android:text="@string/phone"
+                            android:textAppearance="@style/CustomTextAppearance.TitilliumWebSemiBold"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="12sp" />
+
+                        <EditText
+                            android:id="@+id/tvPhone"
+                            android:layout_width="match_parent"
+                            android:layout_height="38dp"
+                            android:focusable="false"
+                            android:inputType="textNoSuggestions"
+                            android:textAppearance="@style/CustomTextAppearance.TitilliumWebSemiBold"
+                            android:textColor="@color/black"
+
+                            android:textSize="16sp"
+                            tools:text="Email" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llLocation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="-10dp"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="22dp"
+                            android:paddingStart="3dp"
+                            android:text="@string/location"
+                            android:textAppearance="@style/CustomTextAppearance.TitilliumWebSemiBold"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="12sp" />
+
+                        <EditText
+                            android:id="@+id/tvLocation"
+                            android:layout_width="match_parent"
+                            android:layout_height="42dp"
+                            android:inputType="textNoSuggestions"
+                            android:singleLine="true"
+                            android:textAppearance="@style/CustomTextAppearance.TitilliumWebSemiBold"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            tools:text="Email" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llDesignation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="-10dp"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="22dp"
+                            android:paddingStart="3dp"
+                            android:text="@string/designation"
+                            android:textAppearance="@style/CustomTextAppearance.TitilliumWebSemiBold"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="12sp" />
+
+                        <EditText
+                            android:id="@+id/tvDesignation"
+                            android:layout_width="match_parent"
+                            android:layout_height="38dp"
+                            android:focusable="false"
+                            android:inputType="textNoSuggestions"
+                            android:singleLine="true"
+                            android:textAppearance="@style/CustomTextAppearance.TitilliumWebSemiBold"
+                            android:textColor="@color/black"
+
+                            android:textSize="16sp"
+                            tools:text="Email" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llDepartment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="-10dp"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="22dp"
+                            android:text="@string/department"
+                            android:textAppearance="@style/CustomTextAppearance.TitilliumWebSemiBold"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="12sp" />
+
+                        <EditText
+                            android:id="@+id/tvDepartment"
+                            android:layout_width="match_parent"
+                            android:layout_height="38dp"
+                            android:focusable="false"
+                            android:inputType="textNoSuggestions"
+                            android:paddingStart="3dp"
+                            android:textAppearance="@style/CustomTextAppearance.TitilliumWebSemiBold"
+                            android:textColor="@color/black"
+
+                            android:textSize="16sp"
+                            tools:text="Email" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llManager"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="-10dp"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="22dp"
+                            android:paddingStart="3dp"
+                            android:text="@string/manager"
+                            android:textAppearance="@style/CustomTextAppearance.TitilliumWebSemiBold"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="12sp" />
+
+                        <AutoCompleteTextView
+                            android:id="@+id/tvManager"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:ellipsize="end"
+                            android:focusable="false"
+                            android:inputType="textCapWords|textNoSuggestions"
+                            android:maxLines="1"
+                            android:textAppearance="@style/CustomTextAppearance.Bold"
+                            android:textColor="@color/blue_color_picker"
+                            android:textSize="16sp"
+                            tools:text="Chandigarh" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnDeactivate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/btnSignIn"
+                    android:layout_margin="@dimen/spacing_small"
+                    android:layout_marginTop="@dimen/spacing_medium"
+                    android:background="@drawable/curved_button_red"
+                    android:text="@string/deactivate_profile"
+                    android:textAppearance="@style/CustomTextAppearance.TitilliumWebSemiBold"
+                    android:textColor="@color/red"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llDirectMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="255dp"
+                android:layout_marginEnd="20dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivDm"
+                    android:layout_width="52dp"
+                    android:layout_height="60dp"
+                    android:background="@color/gradient_middle"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp"
+                    android:src="@drawable/ic_white" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivCg"
+                    android:layout_width="52dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/gradient_profile"
+                    android:paddingTop="18dp"
+                    android:paddingBottom="18dp"
+                    android:src="@drawable/group_logo"
+                    android:tint="@color/white" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:visibility="visible"
+        app:layout_collapseMode="parallax">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/fugu_text_gradient"
+            android:rotation="180" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:background="@drawable/fugu_text_gradient"
+                android:rotation="180" />
+
+            <LinearLayout
+                android:id="@+id/llToolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivBack"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="0.07"
+                    app:srcCompat="@drawable/ic_arrow_back" />
+
+                <TextView
+                    android:id="@+id/tvTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="0.84"
+                    android:gravity="center|start"
+                    android:text="@string/profile"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivEdit"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="0.10"
+                    android:padding="7dp"
+                    android:visibility="visible"
+                    app:srcCompat="@drawable/ic_edit_black_24dp" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/tvEditProfile"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="100dp"
+            android:gravity="center"
+            android:paddingStart="4dp"
+            android:paddingTop="2dp"
+            android:paddingEnd="6dp"
+            android:paddingBottom="2dp"
+            android:src="@drawable/camera_profile"
+            android:text="@string/edit"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvVersion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="@dimen/fugu_margin_10"
+        android:gravity="end" />
+</RelativeLayout>

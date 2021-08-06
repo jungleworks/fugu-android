@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llFileDetails"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tvFileSize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:text="25 MB "
+        android:textColor="@color/fugu_secondary_text_msg_from"
+        android:textSize="@dimen/fugu_text_size_small" />
+
+    <View
+        android:layout_width="3dp"
+        android:layout_height="3dp"
+        android:layout_marginLeft="@dimen/fugu_margin_5"
+        android:layout_marginRight="@dimen/fugu_margin_5"
+        android:background="@drawable/ring_grey"
+        android:layout_gravity="center"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/tvExtension"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/fugu_pdf"
+        android:textAllCaps="true"
+        android:textColor="@color/fugu_secondary_text_msg_from"
+        android:textSize="@dimen/fugu_text_size_small"
+        android:visibility="visible" />
+</LinearLayout>

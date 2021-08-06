@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- font sizes -->
+    <dimen name="font_xxxlarge">20sp</dimen>
+    <dimen name="font_xxlarge">16sp</dimen>
+    <dimen name="font_xlarge">14sp</dimen>
+    <dimen name="font_large">12sp</dimen>
+    <dimen name="font_medium">11sp</dimen>
+    <dimen name="font_normal">10sp</dimen>
+
+
+    <!-- typical spacing between two views -->
+    <dimen name="spacing_xxxlarge">30dp</dimen>
+    <dimen name="spacing_xxlarge">60dp</dimen>
+    <dimen name="spacing_xlarge">40dp</dimen>
+    <dimen name="spacing_large">24dp</dimen>
+    <dimen name="spacing_slarge">30dp</dimen>
+    <dimen name="spacing_medium">20dp</dimen>
+    <dimen name="spacing_normal">14dp</dimen>
+    <dimen name="spacing_small">10dp</dimen>
+    <dimen name="spacing_xsmall">8dp</dimen>
+    <dimen name="spacing_tiny">2dp</dimen>
+    <dimen name="spacing_very_tiny">2dp</dimen>
+
+
+    <!-- Custom views dimen -->
+    <dimen name="toolbar_elevation">4dp</dimen>
+    <dimen name="recycler_progress_dimen">50dp</dimen>
+
+    <!--met editext-->
+    <dimen name="default_padding_top">8dp</dimen>
+    <dimen name="default_padding_bottom">8dp</dimen>
+    <dimen name="inner_padding_left">0dp</dimen>
+    <dimen name="inner_padding_right">0dp</dimen>
+    <dimen name="floating_label_text_size">12sp</dimen>
+    <dimen name="bottom_text_size">12sp</dimen>
+    <dimen name="inner_components_spacing">8dp</dimen>
+    <dimen name="bottom_ellipsis_height">4dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="design_fab_image_size" tools:override="true">56dp</dimen>
+
+</resources>

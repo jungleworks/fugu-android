@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.skeleton.mvp.utils.SquareLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:layout_marginBottom="@dimen/fugu_margin_5"
+        app:cardCornerRadius="@dimen/fugu_margin_5"
+        app:cardElevation="@dimen/fugu_margin_2">
+
+        <ImageView
+            android:id="@+id/thumbnail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/placeholder"
+            android:visibility="gone" />
+        <!--<ImageView-->
+        <!--android:id="@+id/ivPlay"-->
+        <!--android:layout_width="25dp"-->
+        <!--android:layout_height="25dp"-->
+        <!--android:layout_centerInParent="true"-->
+        <!--android:visibility="gone"-->
+        <!--android:layout_gravity="center"-->
+        <!--app:srcCompat="@drawable/ic_play_video" />-->
+
+        <!--<ImageView-->
+        <!--android:id="@+id/ivDownload"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="center"-->
+        <!--android:src="@drawable/ic_file_download_black_24dp" />-->
+        <LinearLayout
+            android:id="@+id/llDownload"
+            android:layout_width="110dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:background="@drawable/fugu_retry_btn_selector"
+            android:gravity="center"
+            android:padding="@dimen/fugu_margin_5"
+            android:visibility="gone">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_file_download_black_24dp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvSize"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="100.9 KB"
+                android:textAppearance="@style/CustomTextAppearance.Semibold"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/pbDownloading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/llFile"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+
+                <RelativeLayout
+                    android:layout_width="45dp"
+                    android:layout_height="45dp">
+
+                    <ImageView
+                        android:id="@+id/ivFile"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:src="@drawable/file_model" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvFileExt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="9dp"
+                        android:gravity="center"
+                        android:paddingEnd="4dp"
+                        android:text="AMAN"
+                        android:textColor="@android:color/white"
+                        android:textSize="10sp"
+                        android:visibility="visible" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tvFile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginTop="@dimen/fugu_margin_2"
+                    android:gravity="center"
+                    android:text="PDF"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:id="@+id/llFileDownload"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="@dimen/fugu_margin_15"
+                    android:layout_marginLeft="@dimen/fugu_margin_15"
+                    android:layout_marginEnd="@dimen/fugu_margin_15"
+                    android:layout_marginRight="@dimen/fugu_margin_15"
+                    android:background="@drawable/curved_chiku_button"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/ivFileDownload"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:src="@drawable/ic_file_download_black_24dp"
+                        android:visibility="visible" />
+
+                    <TextView
+                        android:id="@+id/tvFileSizeOpen"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/spacing_tiny"
+                        android:layout_marginLeft="@dimen/spacing_tiny"
+                        android:text="100.9 KB"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:visibility="visible" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llOpen"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="@dimen/fugu_margin_15"
+                    android:layout_marginLeft="@dimen/fugu_margin_15"
+                    android:layout_marginEnd="@dimen/fugu_margin_15"
+                    android:layout_marginRight="@dimen/fugu_margin_15"
+                    android:background="@drawable/curved_chiku_button"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvOpenFile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/spacing_tiny"
+                        android:layout_marginLeft="@dimen/spacing_tiny"
+                        android:text="Open"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+                </LinearLayout>
+            </LinearLayout>
+            <!--<LinearLayout-->
+            <!--android:id="@+id/llFileDownload"-->
+            <!--android:layout_width="110dp"-->
+            <!--android:layout_height="45dp"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:background="@drawable/fugu_retry_btn_selector"-->
+            <!--android:gravity="center"-->
+            <!--android:layout_centerInParent="true"-->
+            <!--android:padding="@dimen/fugu_margin_5"-->
+            <!--android:visibility="visible">-->
+
+            <!--<android.support.v7.widget.AppCompatImageView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:src="@drawable/ic_file_download_black_24dp" />-->
+
+            <!--<android.support.v7.widget.AppCompatTextView-->
+            <!--android:id="@+id/tvFileSize"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="100.9 KB"-->
+            <!--android:textColor="@color/white"-->
+            <!--android:textAppearance="@style/CustomTextAppearance.Semibold"-->
+            <!--android:textSize="15sp" />-->
+            <!--</LinearLayout>-->
+
+            <ProgressBar
+                android:id="@+id/pbFileDownloading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:visibility="gone" />
+        </RelativeLayout>
+        <!--<LinearLayout-->
+        <!--android:id="@+id/llFile"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:gravity="center"-->
+        <!--android:orientation="vertical"-->
+        <!--android:visibility="visible">-->
+
+        <!--&lt;!&ndash;<LinearLayout&ndash;&gt;-->
+        <!--&lt;!&ndash;android:id="@+id/llFileDownload"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_width="110dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_height="45dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_gravity="center"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:background="@drawable/fugu_retry_btn_selector"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:gravity="center"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:padding="@dimen/fugu_margin_5"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:visibility="visible">&ndash;&gt;-->
+
+        <!--&lt;!&ndash;<android.support.v7.widget.AppCompatImageView&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:src="@drawable/ic_file_download_black_24dp" />&ndash;&gt;-->
+
+        <!--&lt;!&ndash;<android.support.v7.widget.AppCompatTextView&ndash;&gt;-->
+        <!--&lt;!&ndash;android:id="@+id/tvFileSize"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:text="100.9 KB"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:textColor="@color/white"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:textAppearance="@style/CustomTextAppearance.Semibold"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:textSize="15sp" />&ndash;&gt;-->
+        <!--&lt;!&ndash;</LinearLayout>&ndash;&gt;-->
+
+        <!--<ProgressBar-->
+        <!--android:id="@+id/pbFileDownloading"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="center"-->
+        <!--android:visibility="gone" />-->
+
+        <!--<ImageView-->
+        <!--android:id="@+id/ivFile"-->
+        <!--android:layout_width="45dp"-->
+        <!--android:layout_height="45dp"-->
+        <!--android:src="@drawable/pdf" />-->
+
+        <!--<TextView-->
+        <!--android:id="@+id/tvFile"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginLeft="1dp"-->
+        <!--android:layout_marginStart="1dp"-->
+        <!--android:layout_marginTop="@dimen/fugu_margin_2"-->
+        <!--android:gravity="center"-->
+        <!--android:text="PDF"-->
+        <!--android:textSize="16sp" />-->
+
+        <!--<LinearLayout-->
+        <!--android:id="@+id/llOpen"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="30dp"-->
+        <!--android:layout_marginEnd="@dimen/fugu_margin_15"-->
+        <!--android:layout_marginLeft="@dimen/fugu_margin_15"-->
+        <!--android:layout_marginRight="@dimen/fugu_margin_15"-->
+        <!--android:layout_marginStart="@dimen/fugu_margin_15"-->
+        <!--android:background="@drawable/curved_chiku_button"-->
+        <!--android:gravity="center"-->
+        <!--android:orientation="horizontal">-->
+
+        <!--<ImageView-->
+        <!--android:layout_width="16dp"-->
+        <!--android:layout_height="16dp"-->
+        <!--android:src="@drawable/download"-->
+        <!--android:visibility="gone" />-->
+
+        <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginLeft="@dimen/spacing_tiny"-->
+        <!--android:layout_marginStart="@dimen/spacing_tiny"-->
+        <!--android:text="Open"-->
+        <!--android:textColor="@color/white"-->
+        <!--android:textSize="12sp" />-->
+        <!--</LinearLayout>-->
+
+        <!--</LinearLayout>-->
+    </androidx.cardview.widget.CardView>
+</com.skeleton.mvp.utils.SquareLayout>

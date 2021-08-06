@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="SelectedUsersViewModel"
+            type="com.skeleton.mvp.groupTasks.selectedTaskUsers.SelectedUsersViewModel" />
+    </data>
+
+    <androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="com.skeleton.mvp.groupTasks.SelectGroupMemberDialogFragment">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/fugu_margin_5"
+            android:layout_marginTop="@dimen/fugu_margin_15"
+            android:layout_marginEnd="@dimen/fugu_margin_5"
+            android:layout_marginBottom="@dimen/padding_10"
+            app:cardCornerRadius="@dimen/fugu_margin_5"
+            app:cardElevation="@dimen/fugu_margin_5"
+            app:contentPadding="@dimen/fugu_margin_10">
+
+            <EditText
+                android:id="@+id/etSearchMembers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:drawableStart="@drawable/ic_search_black_24dp"
+                android:drawableLeft="@drawable/ic_search_black_24dp"
+                android:drawablePadding="@dimen/padding_5"
+                android:hint="Search"
+                android:text="@={SelectedUsersViewModel.searchText}"
+                android:textColor="@color/black" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvMembersList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:paddingTop="@dimen/list_item_spacing_half"
+            android:paddingBottom="@dimen/list_item_spacing_half"
+            tools:listitem="@layout/select_group_member_list_item" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

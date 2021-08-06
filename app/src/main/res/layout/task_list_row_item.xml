@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFFFFF"
+    android:padding="10dp">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivTaskStatusIcon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:srcCompat="@drawable/ic_task_completed" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvTaskTitle"
+        style="@style/CustomTextAppearance.TitilliumWebSemiBold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@id/ivTaskStatusIcon"
+        android:maxLines="1"
+        android:text="Task Title"
+        android:textColor="@color/black"
+        android:textSize="15sp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvTaskStatus"
+        style="@style/CustomTextAppearance.TitilliumWeb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvTaskTitle"
+        android:layout_alignStart="@id/tvTaskTitle"
+        android:layout_toEndOf="@id/ivTaskStatusIcon"
+        android:maxLines="1"
+        android:text="Completed On 10 July 2020"
+        android:textColor="@color/grayish"
+        android:textSize="14sp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvTaskDescription"
+        style="@style/CustomTextAppearance.TitilliumWeb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvTaskStatus"
+        android:layout_alignStart="@id/tvTaskTitle"
+        android:layout_marginTop="5dp"
+        android:layout_toEndOf="@id/ivTaskStatusIcon"
+        android:maxLines="3"
+        android:text="This will be the description of the task. What needs to be done?"
+        android:textColor="@color/black"
+        android:textSize="14sp" />
+
+</RelativeLayout>

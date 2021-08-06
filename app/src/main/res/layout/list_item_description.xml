@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/llContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvHeader"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.55"
+            android:textSize="@dimen/fugu_text_size_normal"
+            android:gravity="start|center_vertical"
+            android:paddingStart="@dimen/fugu_margin_10"
+            android:paddingEnd="@dimen/fugu_margin_10"
+            android:paddingLeft="@dimen/fugu_margin_10"
+            android:paddingRight="@dimen/fugu_margin_10"
+            android:paddingTop="@dimen/fugu_padding_5"
+            android:paddingBottom="@dimen/fugu_padding_5"
+            tools:text="Order Amount"/>
+
+        <TextView
+            android:id="@+id/tvContent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.45"
+            android:gravity="end|center_vertical"
+            android:textSize="@dimen/fugu_text_size_normal"
+            android:textStyle="bold"
+            android:paddingStart="@dimen/fugu_margin_10"
+            android:paddingEnd="@dimen/fugu_margin_10"
+            android:paddingLeft="@dimen/fugu_margin_10"
+            android:paddingRight="@dimen/fugu_margin_10"
+            android:paddingTop="@dimen/fugu_padding_5"
+            android:paddingBottom="@dimen/fugu_padding_5"
+            tools:text="Rs1000000000"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

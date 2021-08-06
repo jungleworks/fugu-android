@@ -1,0 +1,509 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/meetToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/white"
+            android:visibility="visible">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="start|center"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:maxLength="20"
+                    android:text="@string/fugu_meet"
+                    android:textAppearance="@style/CustomTextAppearance.TitilliumWebSemiBold"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_xxlarge" />
+
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/llLinkGoogleAccount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/meetToolbar"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/ic_blue_abstract"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="15dp"
+                app:srcCompat="@drawable/ic_link_google" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/CustomTextAppearance.TitilliumWeb"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/link_your_google_account_to_create_google_meeting"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/font_xxlarge" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvLinkGoogleAccount"
+                    style="@style/CustomTextAppearance.TitilliumWebSemiBold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="10dp"
+                    android:background="@drawable/curved_white_border"
+                    android:paddingHorizontal="30dp"
+                    android:paddingVertical="10dp"
+                    android:text="@string/link"
+                    android:textColor="@android:color/white" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <RelativeLayout
+            android:id="@+id/llGoogleMeetContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/llLinkGoogleAccount"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/round_rect_grey"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/ivGoogleIcon"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="15dp"
+                app:srcCompat="@drawable/ic_google_square" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/ivGoogleIcon"
+                android:layout_alignBottom="@+id/ivGoogleIcon"
+                android:layout_toEndOf="@id/ivGoogleIcon"
+                android:gravity="center"
+                android:text="@string/google_meeting"
+                android:textAppearance="@style/CustomTextAppearance.TitilliumWebSemiBold"
+                android:textSize="@dimen/font_xxlarge" />
+
+            <LinearLayout
+                android:id="@+id/llGoogleMeet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ivGoogleIcon"
+                android:layout_gravity="center"
+                android:layout_margin="15dp"
+                android:background="@drawable/curved_green_background"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/fugu_margin_7"
+                android:paddingBottom="@dimen/fugu_margin_7">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/fugu_margin_7"
+                    android:adjustViewBounds="true"
+                    app:srcCompat="@drawable/ic_google_meet" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="7dp"
+                    android:gravity="center"
+                    android:text="@string/create_a_google_meeting"
+                    android:textAppearance="@style/CustomTextAppearance.TitilliumWebSemiBold"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_xxlarge" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llSwitchAccount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/llGoogleMeet"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/curved_white_bg_5dp"
+                android:orientation="horizontal"
+                android:paddingVertical="10dp"
+                android:visibility="visible">
+
+                <TextView
+                    style="@style/CustomTextAppearance.TitilliumWeb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/font_medium"
+                    android:text="@string/switch_google_account"
+                    android:textSize="@dimen/font_xxlarge" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/fugu_margin_7"
+                    android:layout_marginEnd="@dimen/fugu_margin_17"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/ic_arrow_right_grey" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_meeting_actions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/llGoogleMeetContainer"
+            android:layout_marginTop="15dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/fugu_margin_15"
+                android:layout_marginEnd="@dimen/fugu_margin_7"
+                android:layout_weight="1"
+                android:background="@drawable/round_rect_grey"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="@dimen/fugu_margin_17"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/fugu_margin_7"
+                    android:text="@string/create_a_new_conference_meeting"
+                    android:textAppearance="@style/CustomTextAppearance.TitilliumWebSemiBold"
+                    android:textSize="@dimen/font_xlarge" />
+
+                <LinearLayout
+                    android:id="@+id/btn_new_meeting"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/curved_chiku_button"
+                    android:orientation="horizontal"
+                    android:paddingTop="@dimen/fugu_margin_7"
+                    android:paddingBottom="@dimen/fugu_margin_7">
+
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/fugu_margin_7"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/ic_new_meet" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="7dp"
+                        android:gravity="center"
+                        android:text="@string/new_meeting"
+                        android:textAppearance="@style/CustomTextAppearance.TitilliumWebSemiBold"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font_xxlarge" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/fugu_margin_7"
+                android:layout_marginEnd="@dimen/fugu_margin_15"
+                android:layout_weight="1"
+                android:background="@drawable/round_rect_grey"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/fugu_margin_17"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/fugu_margin_7"
+                    android:text="@string/have_a_meeting_id_or_link_join_the_meeting"
+                    android:textAppearance="@style/CustomTextAppearance.TitilliumWebSemiBold"
+                    android:textSize="@dimen/font_xlarge" />
+
+                <LinearLayout
+                    android:id="@+id/btn_join_meeting"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/round_rect_grey_border"
+                    android:orientation="horizontal"
+                    android:paddingTop="@dimen/fugu_margin_7"
+                    android:paddingBottom="@dimen/fugu_margin_7">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="17dp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/fugu_margin_7"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/ic_meet_link" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="7dp"
+                        android:gravity="center"
+                        android:text="@string/meeting_id_link"
+                        android:textAppearance="@style/CustomTextAppearance.TitilliumWebSemiBold"
+                        android:textColor="@color/light_blue_meet"
+                        android:textSize="@dimen/font_xxlarge" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!--    <LinearLayout-->
+        <!--        android:id="@+id/llLiveVideo"-->
+        <!--        android:layout_width="match_parent"-->
+        <!--        android:layout_height="wrap_content"-->
+        <!--        android:layout_below="@id/ll_meeting_actions"-->
+        <!--        android:layout_gravity="center"-->
+        <!--        android:layout_marginHorizontal="@dimen/fugu_margin_15"-->
+        <!--        android:layout_marginTop="15dp"-->
+        <!--        android:background="@drawable/round_rect_grey_border"-->
+        <!--        android:gravity="center"-->
+        <!--        android:orientation="horizontal"-->
+        <!--        android:paddingVertical="@dimen/fugu_margin_10"-->
+        <!--        android:visibility="gone">-->
+
+        <!--        <ImageView-->
+        <!--            android:layout_width="23dp"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_gravity="center"-->
+        <!--            android:layout_marginRight="@dimen/fugu_margin_7"-->
+        <!--            android:adjustViewBounds="true"-->
+        <!--            android:src="@drawable/ic_live_png" />-->
+
+        <!--        <TextView-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_gravity="center_vertical"-->
+        <!--            android:layout_marginRight="7dp"-->
+        <!--            android:text="Start Live Video"-->
+        <!--            android:textAppearance="@style/CustomTextAppearance.TitilliumWebSemiBold"-->
+        <!--            android:textColor="@color/light_blue_meet"-->
+        <!--            android:textSize="@dimen/x18sp" />-->
+
+        <!--    </LinearLayout>-->
+
+        <!--    <LinearLayout-->
+        <!--        android:id="@+id/llGoogleMeet"-->
+        <!--        android:layout_width="match_parent"-->
+        <!--        android:layout_height="wrap_content"-->
+        <!--        android:layout_below="@id/llLiveVideo"-->
+        <!--        android:layout_gravity="center"-->
+        <!--        android:layout_marginHorizontal="@dimen/fugu_margin_15"-->
+        <!--        android:layout_marginTop="15dp"-->
+        <!--        android:background="@drawable/round_rect_grey_border"-->
+        <!--        android:gravity="center"-->
+        <!--        android:orientation="horizontal"-->
+        <!--        android:paddingVertical="@dimen/fugu_margin_10"-->
+        <!--        android:visibility="visible">-->
+
+        <!--        <ImageView-->
+        <!--            android:id="@+id/ivGoogleMeet"-->
+        <!--            android:layout_width="23dp"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_gravity="center"-->
+        <!--            android:layout_marginEnd="@dimen/fugu_margin_7"-->
+        <!--            android:adjustViewBounds="true"-->
+        <!--            android:src="@drawable/ic_hangouts_meet" />-->
+
+        <!--        <TextView-->
+        <!--            android:id="@+id/tvGoogleMeet"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_gravity="center_vertical"-->
+        <!--            android:layout_marginEnd="7dp"-->
+        <!--            android:text="Create New Google Meeting"-->
+        <!--            android:textAppearance="@style/CustomTextAppearance.TitilliumWebSemiBold"-->
+        <!--            android:textColor="@color/light_blue_meet"-->
+        <!--            android:textSize="@dimen/x18sp" />-->
+
+        <!--    </LinearLayout>-->
+
+        <!--    <LinearLayout-->
+        <!--        android:id="@+id/llSwitchAccount"-->
+        <!--        android:layout_width="match_parent"-->
+        <!--        android:layout_height="wrap_content"-->
+        <!--        android:layout_below="@id/llGoogleMeet"-->
+        <!--        android:layout_gravity="center"-->
+        <!--        android:layout_marginHorizontal="@dimen/fugu_margin_15"-->
+        <!--        android:layout_marginTop="15dp"-->
+        <!--        android:background="@drawable/round_rect_grey_border"-->
+        <!--        android:gravity="center"-->
+        <!--        android:orientation="horizontal"-->
+        <!--        android:paddingVertical="@dimen/fugu_margin_10"-->
+        <!--        android:visibility="gone">-->
+
+        <!--        <ImageView-->
+        <!--            android:id="@+id/ivSwitchAccount"-->
+        <!--            android:layout_width="23dp"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_gravity="center"-->
+        <!--            android:layout_marginRight="@dimen/fugu_margin_7"-->
+        <!--            android:adjustViewBounds="true"-->
+        <!--            android:src="@drawable/ic_google" />-->
+
+        <!--        <TextView-->
+        <!--            android:id="@+id/tvSwitchAccount"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_gravity="center_vertical"-->
+        <!--            android:layout_marginRight="7dp"-->
+        <!--            android:text="Switch Google Account"-->
+        <!--            android:textAppearance="@style/CustomTextAppearance.TitilliumWebSemiBold"-->
+        <!--            android:textColor="@color/light_blue_meet"-->
+        <!--            android:textSize="@dimen/x18sp" />-->
+
+        <!--    </LinearLayout>-->
+
+        <View
+            android:id="@+id/upper_divider"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@id/ll_meeting_actions"
+            android:layout_marginHorizontal="@dimen/fugu_margin_15"
+            android:layout_marginTop="@dimen/fugu_margin_20"
+            android:background="#f2f2f2"
+            android:visibility="visible" />
+
+        <LinearLayout
+            android:id="@+id/ll_schedule_meeting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/upper_divider"
+            android:orientation="horizontal"
+            android:paddingVertical="@dimen/fugu_padding_15"
+            android:visibility="visible">
+
+            <ImageView
+                android:layout_width="@dimen/fugu_margin_35"
+                android:layout_height="@dimen/fugu_margin_35"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/fugu_margin_17"
+                android:layout_marginEnd="@dimen/fugu_margin_12"
+                android:src="@drawable/ic_schedule_meet" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/schedule_a_meeting"
+                android:textSize="@dimen/font_xxlarge" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/fugu_margin_7"
+                android:layout_marginEnd="@dimen/fugu_margin_17"
+                android:adjustViewBounds="true"
+                android:src="@drawable/ic_arrow_right_grey" />
+
+        </LinearLayout>
+
+
+        <View
+            android:id="@+id/lower_divider"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@id/ll_schedule_meeting"
+            android:background="#f2f2f2"
+            android:visibility="visible" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvScheduledMeetings"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/lower_divider"
+            android:visibility="gone"
+            tools:listitem="@layout/scheduled_meet_row_item" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/llNoScheduleMeetings"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/lower_divider"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingVertical="40dp"
+            android:visibility="visible">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivNoScheduledMeetings"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/no_meetings" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvNoScheduledMeetings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/fugu_margin_20"
+                android:gravity="center"
+                android:text="@string/no_scheduled_meetings"
+                android:textColor="@color/grayish"
+                android:textSize="@dimen/font_xlarge" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </RelativeLayout>
+
+</ScrollView>

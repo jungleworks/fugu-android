@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="ConversationDialogTextView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingStart">@dimen/fugu_margin_10</item>
+        <item name="android:paddingLeft">@dimen/fugu_margin_10</item>
+        <item name="android:paddingRight">@dimen/fugu_margin_5</item>
+        <item name="android:paddingEnd">@dimen/fugu_margin_5</item>
+        <item name="android:paddingTop">@dimen/fugu_margin_10</item>
+        <item name="android:paddingBottom">@dimen/fugu_margin_10</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+</resources>

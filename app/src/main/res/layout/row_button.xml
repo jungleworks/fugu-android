@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.AppCompatButton xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/button"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/fugu_margin_5"
+    android:textAllCaps="false"
+    android:textSize="18sp"
+    android:background="@drawable/success_rectangular_button_empty"
+    android:text="Confirm">
+
+</androidx.appcompat.widget.AppCompatButton>

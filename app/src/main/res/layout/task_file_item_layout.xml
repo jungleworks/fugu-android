@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rlSubmittedFile"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#f5fbff">
+
+    <RelativeLayout
+        android:id="@+id/rlFileIcon"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginHorizontal="5dp"
+        android:layout_marginVertical="10dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivFileImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/file_model" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvFileExt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="8.5dp"
+            android:gravity="center"
+            android:paddingEnd="7dp"
+            android:text="FILE"
+            android:textColor="@android:color/white"
+            android:textSize="11sp"
+            android:visibility="visible" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlFileInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginVertical="5dp"
+        android:layout_toEndOf="@id/rlFileIcon">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvFileName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@id/rlDownload"
+            android:maxLines="2"
+            android:minWidth="145dp"
+            android:text="Amandeep Chauhan.pptx"
+            android:textAppearance="@style/CustomTextAppearance.TitilliumWeb"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvFileSize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvFileName"
+            android:text="12 MB"
+            android:textColor="#9fadbf"
+            android:textSize="14sp" />
+
+        <View
+            android:id="@+id/viewGreenDot"
+            android:layout_width="6dp"
+            android:layout_height="6dp"
+            android:layout_below="@id/tvFileName"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="5dp"
+            android:layout_marginTop="7dp"
+            android:layout_toEndOf="@id/tvFileSize"
+            android:background="@drawable/ring_grey"
+            android:visibility="visible" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvSubmissionDateTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvFileName"
+            android:layout_marginEnd="5dp"
+            android:layout_toEndOf="@id/viewGreenDot"
+            android:text="12/07/2020 12:34 PM"
+            android:textColor="#9fadbf"
+            android:textSize="14sp" />
+
+        <RelativeLayout
+            android:id="@+id/rlDownload"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginHorizontal="5dp"
+            android:gravity="center"
+            android:visibility="invisible">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivFileDownload"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerInParent="true"
+                android:visibility="visible"
+                app:srcCompat="@drawable/ic_cloud_download_24" />
+
+            <com.github.lzyzsd.circleprogress.DonutProgress
+                android:id="@+id/progressCircle"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_centerInParent="true"
+                android:visibility="gone"
+                app:donut_finished_color="@color/colorPrimary"
+                app:donut_finished_stroke_width="4dp"
+                app:donut_max="100"
+                app:donut_progress="0"
+                app:donut_text_color="#939393"
+                app:donut_text_size="0dp"
+                app:donut_unfinished_color="@color/fugu_attachment_dialog_text_pressed"
+                app:donut_unfinished_stroke_width="4dp" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/llToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/fugu_theme_color_primary"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_weight="0.07"
+                app:srcCompat="@drawable/ic_arrow_back_black_24dp" />
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_weight="0.53"
+
+                android:gravity="center|start"
+                android:text="@string/group_details"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tvLeave"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="0.40"
+                android:gravity="center|end"
+                android:text="@string/leave"
+
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="2dp"
+        app:cardElevation="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:padding="@dimen/fugu_padding_10">
+
+            <RelativeLayout
+                android:layout_width="54dp"
+                android:layout_height="52dp">
+
+                <ImageView
+                    android:id="@+id/ivGroupPhoto"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:visibility="visible"
+                    app:srcCompat="@drawable/group_purple" />
+
+                <com.skeleton.mvp.utils.CircleLinearLayout
+                    android:id="@+id/llCircle"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    app:diameter="50dp">
+
+                    <RelativeLayout
+                        android:id="@+id/rlOne"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:id="@+id/ivOne"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/test"
+                            android:visibility="visible" />
+
+                        <TextView
+                            android:id="@+id/tvOne"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="R"
+                            android:textAppearance="@style/CustomTextAppearance.Semibold"
+                            android:textColor="@color/white"
+                            android:textSize="20dp"
+                            android:visibility="visible" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llRight"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:paddingStart="1dp"
+                        android:paddingEnd="0dp">
+
+                        <RelativeLayout
+                            android:id="@+id/rlTwo"
+                            android:layout_width="26dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="0.5"
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:id="@+id/ivTwo"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/test"
+                                android:visibility="visible" />
+
+                            <TextView
+                                android:id="@+id/tvTwo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="@dimen/fugu_margin_5"
+                                android:text="R"
+                                android:textAppearance="@style/CustomTextAppearance.Semibold"
+                                android:textColor="@color/white"
+                                android:textSize="14sp"
+                                android:visibility="visible" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rlThree"
+                            android:layout_width="26dp"
+                            android:layout_height="0dp"
+                            android:layout_marginTop="1dp"
+                            android:layout_weight="0.5"
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:id="@+id/ivThree"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/test"
+                                android:visibility="visible" />
+
+                            <TextView
+                                android:id="@+id/tvThree"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="@dimen/fugu_margin_5"
+                                android:text="R"
+                                android:textAppearance="@style/CustomTextAppearance.Semibold"
+                                android:textColor="@color/white"
+                                android:textSize="14sp"
+                                android:visibility="visible" />
+                        </RelativeLayout>
+                    </LinearLayout>
+                </com.skeleton.mvp.utils.CircleLinearLayout>
+
+                <com.skeleton.mvp.utils.CornerLabel
+                    android:id="@+id/viewImage"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    app:tl_background="@color/gray_dark_blur"
+                    app:tl_label="......"
+                    app:tl_labelColor="@color/gray_dark_blur"
+                    app:tl_labelSize="6sp"
+                    app:tl_position="bottomRight" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tvGroupName"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/fugu_margin_10"
+                    android:gravity="center_vertical"
+                    android:maxLength="30"
+                    android:text="@string/group_name"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/fugu_text_size_very_large" />
+
+                <com.skeleton.mvp.utils.CornerLabel
+                    android:id="@+id/viewGroupName"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    app:tl_background="@color/gray_dark_blur"
+                    app:tl_label="......"
+                    app:tl_labelColor="@color/gray_dark_blur"
+                    app:tl_labelSize="6sp"
+                    app:tl_position="bottomRight" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/llSave"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="end|center"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tvSave"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/curved_bg_button"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="4dp"
+                    android:paddingRight="5dp"
+                    android:paddingBottom="4dp"
+                    android:text="@string/save"
+                    android:textColor="@android:color/white"
+                    android:textSize="13sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!--<android.support.v4.widget.NestedScrollView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_marginTop="@dimen/fugu_margin_20">-->
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="2dp"
+        app:cardElevation="5dp"
+        app:contentPaddingLeft="@dimen/fugu_margin_10"
+        app:contentPaddingRight="@dimen/fugu_margin_10"
+        app:contentPaddingTop="@dimen/fugu_margin_5">
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/llMute"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/fugu_margin_5"
+                    android:layout_marginEnd="@dimen/fugu_margin_5"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/fugu_margin_5"
+                        android:layout_marginTop="@dimen/fugu_margin_5"
+                        android:layout_marginEnd="@dimen/fugu_margin_5"
+                        android:layout_weight="0.85"
+                        android:text="@string/mute_group"
+                        android:textColor="@color/office_chat_color"
+                        android:textSize="16sp" />
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/isMuted"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.15"
+                        android:gravity="end"
+                        android:textColor="@android:color/tab_indicator_text" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/fugu_margin_5"
+                    android:layout_marginEnd="@dimen/fugu_margin_5"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.85"
+                        android:text="@string/you_won_t_receive_notifications_from_muted_group"
+                        android:textSize="12sp" />
+
+                    <!--<android.support.v7.widget.SwitchCompat-->
+                    <!--android:id="@+id/isMuted"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_weight="0.15"-->
+                    <!--android:gravity="end"-->
+                    <!--android:textColor="@android:color/tab_indicator_text" />-->
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/fugu_margin_5"
+                    android:layout_marginBottom="@dimen/fugu_margin_5"
+                    android:background="@drawable/fugu_text_gradient" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llMedia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/fugu_margin_5"
+                android:layout_marginEnd="@dimen/fugu_margin_5"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/fugu_margin_5"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_marginBottom="@dimen/fugu_margin_5"
+                        android:layout_weight="0.75"
+                        android:text="@string/media"
+                        android:textColor="@color/office_chat_color"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvMedia"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    android:orientation="horizontal"
+                    tools:listitem="@layout/gallery_thumbnail"
+                    android:nestedScrollingEnabled="false"
+                    android:overScrollMode="never"
+                    android:paddingTop="@dimen/fugu_margin_2"
+                    android:paddingBottom="@dimen/fugu_margin_2" />
+
+                <LinearLayout
+                    android:id="@+id/tvShowMore"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginTop="@dimen/fugu_margin_5"
+                        android:text="@string/show_more"
+                        android:textSize="16sp"
+                        android:visibility="visible" />
+
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:layout_marginStart="@dimen/fugu_margin_2"
+                        android:layout_marginTop="@dimen/fugu_margin_6"
+                        android:src="@drawable/angle_right" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/fugu_margin_15"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/llIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start">
+
+                    <ImageView
+                        android:id="@+id/ivAdd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="start"
+                        android:layout_marginStart="@dimen/fugu_margin_5"
+                        android:layout_marginEnd="@dimen/fugu_margin_5"
+                        app:srcCompat="@drawable/ic_person_add_blue_24dp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvAddMember"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="5dp"
+                    android:gravity="center|start"
+                    android:text="@string/add_member"
+                    android:textColor="@color/office_chat_color"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/tvCoworkers"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/fugu_size_2"
+                    android:textSize="12sp"
+                    tools:text="(120 Members)" />
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvMembers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/fugu_margin_5"
+                tools:listitem="@layout/item_group_member"
+                android:layout_marginTop="@dimen/fugu_dp_8"
+                android:layout_marginEnd="@dimen/fugu_margin_5"
+                android:overScrollMode="never" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+    <!--</android.support.v4.widget.NestedScrollView>-->
+</LinearLayout>

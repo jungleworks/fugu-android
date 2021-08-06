@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/normal_bg_color"
+    tools:context="com.skeleton.mvp.ui.intro.IntroActivity">
+<ScrollView
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/viewContainer">
+            <ImageView
+                android:id="@+id/sign_in_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingEnd="@dimen/spacing_large"
+                android:paddingStart="@dimen/spacing_large"
+                android:paddingTop="@dimen/spacing_xxxlarge"
+                android:layout_centerHorizontal="true"
+                app:srcCompat="@drawable/ic_fugu_bg" />
+
+            <ImageView
+                android:layout_width="62dp"
+                android:layout_height="58dp"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:paddingBottom="15dp"
+                app:srcCompat="@drawable/ic_fugu" />
+
+            <ImageView
+                android:id="@+id/leftView"
+                android:layout_width="100dp"
+                android:layout_height="62dp"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="40dp" />
+
+            <ImageView
+                android:id="@+id/rightView"
+                android:layout_width="100dp"
+                android:layout_height="62dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="40dp" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvWelcome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_xxxlarge"
+            android:gravity="center"
+            android:text="@string/welcome_to_officechat"
+            android:textColor="@color/black"
+            android:textAppearance="@style/CustomTextAppearance.TitilliumWeb"
+            android:textSize="@dimen/font_xxxlarge"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_small"
+            android:gravity="center"
+            android:textAppearance="@style/CustomTextAppearance.TitilliumWeb"
+            android:text="@string/all_your_team_communication_in_one_place_instantly_searchable"
+            android:textColor="#b3bec9" />
+
+
+        <LinearLayout
+            android:layout_marginTop="40dp"
+            android:id="@+id/sign_in_button"
+            android:layout_width="match_parent"
+            android:layout_marginEnd="@dimen/fugu_margin_30"
+            android:layout_marginStart="@dimen/fugu_margin_30"
+            android:layout_height="45dp"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:background="@drawable/curved_chiku_button"
+            android:paddingBottom="@dimen/fugu_margin_7"
+            android:paddingEnd="@dimen/fugu_margin_7"
+            android:paddingLeft="@dimen/fugu_margin_15"
+            android:paddingRight="@dimen/fugu_margin_7"
+            android:paddingStart="@dimen/fugu_margin_15"
+            android:paddingTop="@dimen/fugu_margin_7">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_google_white"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Continue with Google"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:textAppearance="@style/CustomTextAppearance.TitilliumWebSemiBold"
+                android:textColor="@color/white"
+                />
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rlOrDivider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/fugu_margin_20"
+            android:layout_marginStart="@dimen/fugu_margin_20"
+            android:layout_marginTop="20dp">
+
+            <View
+                android:id="@+id/viewOne"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/text"
+                android:layout_toStartOf="@id/text"
+                android:background="@color/gray_light" />
+
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:paddingEnd="@dimen/fugu_padding_10"
+                android:paddingLeft="@dimen/fugu_padding_10"
+                android:paddingRight="@dimen/fugu_padding_10"
+                android:paddingStart="@dimen/fugu_padding_10"
+                android:text="OR" />
+
+            <View
+                android:id="@+id/viewTwo"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/text"
+                android:layout_toRightOf="@+id/text"
+                android:background="@color/gray_light" />
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round_rectangle_border_layout"
+            android:orientation="horizontal"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp">
+
+            <com.hbb20.CountryCodePicker
+                android:id="@+id/etCountryCode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/fugu_margin_8"
+                android:layout_marginStart="@dimen/fugu_margin_8"
+                android:layout_marginTop="-9dp"
+                android:visibility="gone"
+                app:ccp_autoDetectCountry="true"
+                app:ccp_showFlag="false"
+                app:ccp_showNameCode="false" />
+
+            <EditText
+                android:id="@+id/etEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:hint="Email Address/Phone Number"
+                android:inputType="textEmailAddress"
+                android:textAppearance="@style/CustomTextAppearance.TitilliumWeb"
+                android:paddingBottom="@dimen/fugu_margin_7"
+                android:paddingEnd="@dimen/fugu_margin_7"
+                android:paddingLeft="@dimen/fugu_margin_15"
+                android:paddingRight="@dimen/fugu_margin_7"
+                android:paddingStart="@dimen/fugu_margin_15"
+                android:paddingTop="@dimen/fugu_margin_7"
+                />
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_xlarge"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/curved_chiku_button"
+            android:text="Login or Create a Space"
+            android:textAllCaps="false"
+            android:textAppearance="@style/CustomTextAppearance.TitilliumWebSemiBold"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_xlarge"
+            android:layout_marginBottom="10dp"/>
+
+
+    </LinearLayout>
+</ScrollView>
+
+
+    <LinearLayout
+        android:id="@+id/llButtons"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnGetStarted"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:background="@color/colorPrimary"
+            android:text="Get Started"
+            android:textColor="@color/white"
+            android:visibility="visible" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/white" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSignIn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:background="@color/colorPrimary"
+            android:text="@string/sign_in"
+            android:textColor="@color/white" />
+    </LinearLayout>
+</RelativeLayout>

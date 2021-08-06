@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rlCheckBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:id="@+id/llCheckBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/fugu_padding_5"
+            android:background="@drawable/rectangle_border_radio_gray"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/cbOption"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.8"
+                android:minHeight="40dp"
+                android:text="Yes ebfeuibfie ieiefeifno3ienfeoi foienfoienoifneoifnoienfoienf oieniofneoinfoei nofenoifneoifneoinfioenoienoineoifn" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/cbVotes"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"
+                android:gravity="end"
+                android:layout_marginEnd="4dp"
+                android:text="0 votes" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/cbView"
+            android:layout_width="100dp"
+            android:layout_height="38dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/rectangle_border_radio_blue_filled"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlRadioButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/llRadio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/fugu_padding_5"
+            android:background="@drawable/rectangle_border_radio_gray"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radioOption"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.8"
+                android:minHeight="40dp"
+                android:padding="@dimen/fugu_padding_5"
+                android:text="Yes" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/radioVotes"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"
+                android:gravity="end"
+                android:layout_marginEnd="4dp"
+                android:text="0 votes" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/radioView"
+            android:layout_width="0dp"
+            android:layout_height="38dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/rectangle_border_radio_blue_filled"
+            android:visibility="gone" />
+    </RelativeLayout>
+</LinearLayout>

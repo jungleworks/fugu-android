@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cvSeenBy"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/llSeenByLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#EFEFF4"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/fugu_margin_10"
+            android:paddingTop="@dimen/fugu_margin_6"
+            android:paddingBottom="@dimen/fugu_margin_6">
+
+            <TextView
+                android:id="@+id/tvNoOne"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:visibility="gone"
+                android:text="No one has read this message yet!"
+                android:textColor="@color/gray_dark"
+                android:textSize="18sp" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivStatus"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                android:src="@drawable/ic_double_tick" />
+
+            <TextView
+                android:id="@+id/tvSeenBy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingStart="@dimen/fugu_margin_5"
+                android:singleLine="true"
+                android:maxLines="1"
+                android:text="SEEN BY"
+                android:textAppearance="@style/CustomTextAppearance.TitilliumWebSemiBold"
+                android:visibility="gone"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/viewDivider"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/gray_light" />
+    </LinearLayout>
+</LinearLayout>

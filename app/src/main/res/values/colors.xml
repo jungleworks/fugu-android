@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#00c8fe</color>
+    <color name="colorPrimaryAlpha">#332296ff</color>
+    <color name="colorPrimaryAlpha2">#402296ff</color>
+    <color name="colorPrimaryDark">@color/white</color>
+    <color name="colorPrimaryLight">#E1F5FE</color>
+    <color name="colorAccent">#2496ff</color>
+
+    <color name="mentionAndLinks">#00c8fe</color>
+    <color name="seaBlue">#0f67f8</color>
+
+    <color name="picker_primary_color">@color/colorPrimary</color>
+    <color name="light_blue_meet">#29C1FF</color>
+
+    <color name="gradient_start">#60B4FE</color>
+    <color name="gradient_middle">#00C8FE</color>
+    <color name="gradient_end">#00C8FE</color>
+
+    <!-- grayscale -->
+    <color name="white">#FFFFFF</color>
+    <color name="whiteBlur">#80FFFFFF</color>
+    <color name="grayish">#99a8ba</color>
+    <color name="gray_light">#DBDBDB</color>
+    <color name="gray_lighter">#f0f0f0</color>
+    <color name="gray_light_blur">#40DBDBDB</color>
+    <color name="gray_dark">#805F5F5F</color>
+    <color name="gray_dark_blur">#605F5F5F</color>
+    <color name="gray_dark_overlay">#99000000</color>
+    <color name="divider_color">#EBEBF1</color>
+    <color name="black">#000</color>
+    <color name="black_opaque">#CC000000</color>
+    <color name="black_opaque_50">#80000000</color>
+    <color name="black_opaque_bar">#99000000</color>
+    <color name="pure_black">#000000</color>
+    <color name="transparent">#00000000</color>
+
+    <color name="fugu_icon_light_green">#6FC37B</color>
+    <color name="fugu_icon_dark_green">#41AD8D</color>
+
+
+    <color name="button_color_normal">@color/colorPrimary</color>
+    <color name="button_color_pressed">@color/colorPrimaryDark</color>
+    <color name="fugu_action_bar_bg">#2496ff</color>
+    <color name="fugu_bg_msg_from">#e8ecfc</color>
+    <color name="fugu_primary_text_msg_you">#2c2333</color>
+    <color name="fugu_primary_text_msg_from">#2c2333</color>
+    <color name="fugu_secondary_text_msg_you">#8e8e8e</color>
+    <color name="fugu_secondary_text_msg_from">#8e8e8e</color>
+    <color name="fugu_secondary_text_msg_from_name">#2496ff</color>
+    <color name="fugu_drawable_color">#8c8c8c</color>
+    <color name="fugu_text_color_primary">#2c2333</color>
+    <color name="fugu_channel_date_text">#88838c</color>
+    <color name="fugu_chat_bg">#f1f3f8</color>
+    <color name="fugu_border_color">#dce0e6</color>
+    <color name="fugu_chat_date_text">#b3bec9</color>
+    <color name="fugu_theme_color_primary">#2496ff</color>
+    <color name="fugu_action_divider_color">#979797</color>
+
+
+    <!--> unread message counter text and background colors<!-->
+    <color name="red">#d0021b</color>
+    <color name="missed_call_color">#da2929</color>
+    <!-->End Here<!-->
+
+    <color name="fugu_attachment_dialog_text">#3f3f3f</color>
+    <color name="fugu_attachment_dialog_text_pressed">#773f3f3f</color>
+    <color name="fugu_connected">#00FF00</color>
+    <color name="teal">#009688</color>
+    <color name="office_chat_color">#00c8fe</color>
+    <color name="office_chat_color_blur">#10627de3</color>
+    <color name="office_chat_color_opaque">#1976D2</color>
+    <color name="color_tag">@color/black</color>
+    <color name="normal_bg_color">#f9f9f9</color>
+    <color name="deleted_message_color">#a7a5b5</color>
+    <color name="deleted_message_color_other">#CCffffff</color>
+
+    <color name="blue_color_picker">#0066FF</color>
+    <color name="brown_color_picker">#AF593E</color>
+    <color name="green_color_picker">#01A368</color>
+    <color name="orange_color_picker">#FF861F</color>
+    <color name="red_color_picker">#ED0A3F</color>
+    <color name="red_orange_color_picker">#FF3F34</color>
+    <color name="sky_blue_color_picker">#76D7EA</color>
+    <color name="violet_color_picker">#8359A3</color>
+    <color name="yellow_color_picker">#FBE870</color>
+    <color name="yellow_green_color_picker">#C5E17A</color>
+    <color name="tool_bg">#151414</color>
+    <color name="seen_by_color">#EFEFF4</color>
+</resources>

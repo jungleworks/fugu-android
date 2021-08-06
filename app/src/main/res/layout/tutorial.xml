@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llTutorial"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#66000000"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvSkip"
+        android:layout_marginTop="50dp"
+        android:padding="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Skip"
+        android:textSize="16.3sp"
+        android:textColor="#ffffff"
+        android:layout_gravity="end" />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <include
+        android:id="@+id/clChats"
+        layout="@layout/tutorial_chats" />
+
+    <include
+        android:id="@+id/clMeet"
+        android:visibility="gone"
+        layout="@layout/tutorial_meet" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp">
+
+        <LinearLayout
+            android:id="@+id/llChatsTab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:paddingLeft="4dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingVertical="7dp">
+
+            <ImageView
+                android:id="@+id/ivChatsTab"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginBottom="3dp"
+                android:src="@drawable/ic_chat_active" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="Chats"
+                android:textColor="#000000"
+                android:textSize="13.4sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llMeetTab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingLeft="8dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingVertical="7dp">
+
+            <ImageView
+                android:id="@+id/ivMeetTab"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginBottom="3dp"
+                android:src="@drawable/ic_meet_inactive" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="Meet"
+                android:textColor="#000000"
+                android:textSize="13.4sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingVertical="7dp">
+
+            <ImageView
+                android:id="@+id/ivSettingsTab"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginBottom="3dp"
+                android:src="@drawable/ic_settings_inactive" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="Settings"
+                android:textColor="#000000"
+                android:textSize="13.4sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    tools:context="com.skeleton.mvp.groupTasks.ViewGroupTasksActivity">
+
+    <Toolbar
+        android:id="@+id/groupTaskToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingHorizontal="10dp"
+                android:src="@drawable/fugu_ic_arrow_back" />
+
+            <TextView
+                android:id="@+id/tvScreenTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="start|center"
+                android:layout_toRightOf="@id/ivBack"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLength="20"
+                android:text="Tasks Assigned"
+                android:textAppearance="@style/CustomTextAppearance.TitilliumWebSemiBold"
+                android:textColor="@color/black"
+                android:textSize="19.2sp" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivFilterTasks"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:paddingHorizontal="10dp"
+                android:tint="@color/black"
+                app:srcCompat="@drawable/ic_filter_list_24" />
+
+        </RelativeLayout>
+    </Toolbar>
+
+    <LinearLayout
+        android:id="@+id/llFilterOptions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/groupTaskToolbar"
+        android:background="#f7fbfc"
+        android:orientation="horizontal"
+        android:paddingHorizontal="15dp"
+        android:paddingVertical="20dp"
+        android:visibility="gone">
+
+        <Spinner
+            android:id="@+id/spinnerTaskType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@color/transparent"
+            android:entries="@array/task_type"
+            android:paddingVertical="5dp"
+            android:paddingStart="5dp"
+            android:paddingEnd="20dp"
+            android:spinnerMode="dropdown"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_xxlarge" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivFilterArrow"
+            android:layout_width="20dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginEnd="5dp"
+            app:srcCompat="@drawable/ic_down_arrow_round" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_gravity="center"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/round_rect_grey_border"
+            android:orientation="horizontal">
+
+            <Spinner
+                android:id="@+id/spinnerMonth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@color/transparent"
+                android:entries="@array/months"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="5dp"
+                android:spinnerMode="dialog"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font_xxlarge" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginVertical="5dp"
+                android:background="#d2d8e0" />
+
+            <Spinner
+                android:id="@+id/spinnerYear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@color/transparent"
+                android:entries="@array/year"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="5dp"
+                android:spinnerMode="dialog"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font_xxlarge" />
+
+        </LinearLayout>
+
+        <!--        <View-->
+        <!--            android:layout_width="0dp"-->
+        <!--            android:layout_height="1dp"-->
+        <!--            android:layout_gravity="center"-->
+        <!--            android:layout_weight="1" />-->
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvApplyFilter"
+            style="@style/CustomTextAppearance.TitilliumWebSemiBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/llFilterOptions"
+            android:layout_gravity="center"
+            android:background="@drawable/round_rect_grey_border"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="5dp"
+            android:text="Apply"
+            android:textColor="#49c4ff"
+            android:textSize="@dimen/font_large" />
+
+    </LinearLayout>
+
+    <!--    <View-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="2dp"-->
+    <!--        android:layout_marginVertical="5dp"-->
+    <!--        android:layout_below="@id/llFilterOptions"-->
+    <!--        android:background="#f7f7f7" />-->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvGroupTasks"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/llFilterOptions"
+        android:visibility="gone"
+        tools:listitem="@layout/task_list_row_item" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvNoTasks"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rvGroupTasks"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="No tasks available for this month"
+        android:textColor="@color/black"
+        android:textSize="20dp" />
+
+</RelativeLayout>

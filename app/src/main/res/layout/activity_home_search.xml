@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/llRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.skeleton.mvp.activity.HomeSearchActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/llBackground"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+        </LinearLayout>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            app:tabGravity="fill"
+            app:tabIndicatorColor="@color/black"
+            app:tabIndicatorHeight="3dp"
+            app:tabMode="fixed"
+            app:tabTextAppearance="@style/CustomTextAppearance.TitilliumWeb"
+            app:tabSelectedTextColor="@color/black"
+            app:tabTextColor="@color/gray_dark" />
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/vDim"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#1A000000"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/fugu_margin_10"
+            android:layout_marginBottom="@dimen/fugu_margin_5"
+            android:orientation="vertical"
+            android:background="#f9f9f9">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivBack"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.07"
+                    android:paddingStart="@dimen/fugu_margin_5"
+                    android:paddingLeft="@dimen/fugu_margin_5"
+                    android:tint="@color/gray_dark"
+                    app:srcCompat="@drawable/ic_arrow_back_black_24dp" />
+
+                <EditText
+                    android:id="@+id/etSearchMembers"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.8"
+                    android:background="@android:color/transparent"
+                    android:hint="Search"
+                    android:imeOptions="actionSearch"
+                    android:maxLines="1"
+                    android:paddingStart="@dimen/fugu_margin_20"
+                    android:paddingLeft="@dimen/fugu_margin_20"
+                    android:paddingTop="@dimen/fugu_margin_12"
+                    android:paddingBottom="@dimen/fugu_margin_12"
+                    android:textAppearance="@style/CustomTextAppearance.TitilliumWeb"
+                    android:singleLine="true" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivCross"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="@dimen/fugu_margin_5"
+                    android:layout_marginRight="@dimen/fugu_margin_5"
+                    android:layout_weight="0.07"
+                    android:tint="@color/gray_dark"
+                    app:srcCompat="@drawable/ic_close_black_24dp" />
+
+                <com.wang.avi.AVLoadingIndicatorView
+                    android:id="@+id/avi"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="@dimen/fugu_margin_5"
+                    android:layout_marginRight="@dimen/fugu_margin_5"
+                    android:layout_weight="0.1"
+                    android:visibility="gone"
+                    app:indicatorColor="@color/colorPrimary" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llAdvancedSearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/fugu_margin_10"
+            android:paddingBottom="@dimen/fugu_margin_5"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_weight="0.28"
+                android:textSize="14sp"
+                android:text="Advanced Search"
+                android:textAppearance="@style/CustomTextAppearance.TitilliumWebSemiBold"
+                android:textColor="@color/black" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="14dp"
+                android:layout_weight="0.05"
+                android:rotation="90"
+                android:src="@drawable/angle_right"
+                android:tint="@color/black" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="0.62"/>
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvConversation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/fugu_padding_10"
+            android:layout_marginLeft="@dimen/fugu_padding_10"
+            android:layout_marginTop="@dimen/fugu_margin_3"
+            android:layout_marginEnd="@dimen/fugu_padding_10"
+            android:layout_marginRight="@dimen/fugu_padding_10"
+            android:layout_marginBottom="@dimen/fugu_margin_5"
+            android:visibility="gone"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="@dimen/fugu_margin_2">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.07"
+                    android:paddingStart="@dimen/fugu_margin_5"
+                    android:paddingLeft="@dimen/fugu_margin_5"
+                    android:tint="@color/gray_dark"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/ic_arrow_back_black_24dp" />
+
+                <com.skeleton.mvp.util.ExtendedEditText
+                    android:id="@+id/etSearchConversation"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.8"
+                    android:background="@android:color/transparent"
+                    android:hint="Posted In: All Conversations (optional)"
+                    android:imeOptions="actionSearch"
+                    android:textAppearance="@style/CustomTextAppearance.TitilliumWeb"
+                    android:maxLines="1"
+                    android:paddingStart="@dimen/fugu_margin_20"
+                    android:paddingLeft="@dimen/fugu_margin_20"
+                    android:paddingTop="@dimen/fugu_margin_12"
+                    android:paddingBottom="@dimen/fugu_margin_12"
+                    android:singleLine="true" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivCrossConversation"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="@dimen/fugu_margin_5"
+                    android:layout_marginRight="@dimen/fugu_margin_5"
+                    android:layout_weight="0.07"
+                    android:tint="@color/gray_dark"
+                    android:visibility="invisible"
+                    app:srcCompat="@drawable/ic_close_black_24dp" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</FrameLayout>

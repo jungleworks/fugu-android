@@ -1,0 +1,285 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowContentTransitions" tools:ignore="NewApi">true</item>
+        <item name="coordinatorLayoutStyle">@style/Widget.Support.CoordinatorLayout</item>
+        <item name="colorPrimaryDark" tools:targetApi="23">@color/colorPrimaryDark</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="23">true</item>
+    </style>
+
+    <style name="AppThemeGroup" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowContentTransitions" tools:ignore="NewApi">true</item>
+        <item name="coordinatorLayoutStyle">@style/Widget.Support.CoordinatorLayout</item>
+    </style>
+
+    <style name="AppThemeImages" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorPrimaryDark">@color/black</item>
+        <item name="android:windowContentTransitions" tools:ignore="NewApi">true</item>
+        <item name="coordinatorLayoutStyle">@style/Widget.Support.CoordinatorLayout</item>
+    </style>
+    <!-- Base application theme. -->
+
+    <style name="GroupInfo" parent="AppTheme">
+        <item name="colorPrimary">@color/gray_light</item>
+    </style>
+
+    <style name="CustomTextAppearance" parent="android:TextAppearance">
+        <item name="android:textStyle">normal</item>
+        <!-- Custom Attr-->
+        <item name="fontPath">@string/fontPathRegular</item>
+    </style>
+
+    <!--Custom bold text appearance-->
+    <style name="CustomTextAppearance.Bold" parent="CustomTextAppearance">
+        <!-- Custom Attr-->
+        <item name="fontPath">@string/fontPathSemiBold</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="CustomTextAppearance.Italic" parent="CustomTextAppearance">
+        <!-- Custom Attr-->
+        <item name="fontPath">@string/fontPathItalic</item>
+        <item name="android:textStyle">italic</item>
+    </style>
+
+    <!--Custom semibold text appearance-->
+    <style name="CustomTextAppearance.Semibold" parent="CustomTextAppearance">
+        <item name="fontPath">@string/fontPathSemiBold</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="CustomTextAppearance.DinRegular" parent="CustomTextAppearance">
+        <item name="fontPath">@string/fontPathRegular</item>
+    </style>
+
+    <style name="CustomTextAppearance.DinMediumRegular" parent="CustomTextAppearance">
+        <item name="fontPath">@string/fontPathSemiBold</item>
+    </style>
+
+    <style name="CustomTextAppearance.TitilliumWeb" parent="CustomTextAppearance">
+        <item name="fontPath">@string/fontPathRegular</item>
+    </style>
+
+    <style name="CustomTextAppearance.TitilliumWebSemiBold" parent="CustomTextAppearance">
+        <item name="fontPath">@string/fontPathSemiBold</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="CustomTextAppearance.HelveticaSemiBold" parent="CustomTextAppearance">
+        <item name="fontPath">@string/fontPathSemiBold</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="primary_button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/background_button_selector_primary_color</item>
+        <item name="android:textAppearance">@style/CustomTextAppearance</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/font_xlarge</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="CustomProgressBar" parent="ThemeOverlay.AppCompat.Light">
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!-- Base application theme. -->
+    <style name="FuguTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <!--Progress Dialog styles-->
+    <style name="Theme.AppCompat.Translucent">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation</item>
+    </style>
+
+    <style name="FuguDialogTheme" parent="Theme.AppCompat.Translucent">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@android:color/black</item>
+        <item name="colorPrimaryDark">@android:color/black</item>
+        <item name="colorAccent">@android:color/black</item>
+        <item name="android:windowIsFloating">true</item>
+
+    </style>
+
+    <!-- Dialog  application theme. -->
+    <style name="AVLoadingIndicatorView">
+        <item name="minWidth">30dp</item>
+        <item name="maxWidth">30dp</item>
+        <item name="minHeight">30dp</item>
+        <item name="maxHeight">30dp</item>
+        <item name="indicatorName">com.fugu.utils.beatAnimation.BallPulseIndicator</item>
+    </style>
+    <!-- beat animation styles -->
+    <style name="AVLoadingIndicatorView.Large">
+        <item name="minWidth">76dip</item>
+        <item name="maxWidth">76dip</item>
+        <item name="minHeight">76dip</item>
+        <item name="maxHeight">76dip</item>
+        <item name="indicatorName">com.fugu.utils.beatAnimation.BallPulseIndicator</item>
+    </style>
+
+    <style name="AVLoadingIndicatorView.Small">
+        <item name="minWidth">24dip</item>
+        <item name="maxWidth">24dip</item>
+        <item name="minHeight">24dip</item>
+        <item name="maxHeight">24dip</item>
+        <item name="indicatorName">com.fugu.utils.beatAnimation.BallPulseIndicator</item>
+    </style>
+
+    <style name="MineCustomTabText" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">30sp</item>
+    </style>
+
+    <style name="EmojiLinearLayout">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginEnd" tools:ignore="NewApi">@dimen/fugu_margin_5</item>
+        <item name="android:layout_marginRight">@dimen/fugu_margin_5</item>
+        <item name="android:background">@drawable/round_small_rectangle_border_layout_white</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginBottom">3dp</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:minHeight">30dp</item>
+    </style>
+
+    <style name="ConversationDialogTextView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingStart">@dimen/fugu_margin_10</item>
+        <item name="android:paddingLeft">@dimen/fugu_margin_10</item>
+        <item name="android:paddingRight">@dimen/fugu_margin_5</item>
+        <item name="android:paddingEnd">@dimen/fugu_margin_5</item>
+        <item name="android:paddingTop">@dimen/fugu_margin_10</item>
+        <item name="android:paddingBottom">@dimen/fugu_margin_10</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="SearchViewMy" parent="Widget.AppCompat.Light.SearchView">
+        <item name="submitBackground">@color/colorPrimary</item>
+        <item name="queryBackground">@color/transparent</item>
+    </style>
+
+    <style name="Dialog.NoTitle" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:padding">0dp</item>
+        <item name="android:windowBackground">@color/black</item>
+    </style>
+
+    <style name="MoreOptionsTextView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">?attr/selectableItemBackground</item>
+        <item name="android:drawablePadding">@dimen/fugu_padding_15</item>
+        <item name="android:paddingLeft">@dimen/fugu_padding_20</item>
+        <item name="android:paddingStart">@dimen/fugu_padding_20</item>
+        <item name="android:paddingTop">@dimen/fugu_padding_10</item>
+        <item name="android:paddingBottom">@dimen/fugu_padding_10</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+
+    <style name="AppBottomSheetDialogTheme"
+        parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/AppModalStyle</item>
+    </style>
+
+    <style name="AppModalStyle"
+        parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/rounded_dialog</item>
+    </style>
+
+    <style name="FullScreenDialogStyle" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+    </style>
+
+    <style name="ImageViewerDialog" parent="android:Theme.Translucent.NoTitleBar" />
+
+    <style name="ImageViewerDialog.NoStatusBar" parent="android:Theme.Translucent.NoTitleBar.Fullscreen" />
+
+    <style name="ImageViewerDialog.Default" parent="android:Theme.Translucent.NoTitleBar">
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+    </style>
+
+    <style name="Transparent" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <style name="TransparentPopup" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <style name="RatingBar" parent="Theme.AppCompat">
+        <item name="colorControlActivated">@color/colorPrimary</item>
+    </style>
+
+
+    <style name="EditText">
+        <item name="android:singleLine">true</item>
+        <item name="colorControlNormal">#FFFFFF</item>
+        <item name="colorControlActivated">#FFFFFF</item>
+        <item name="android:textColorPrimary">#FFFFFF</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="AppCompatAlertDialogStyle" parent="@android:style/Theme.Translucent.NoTitleBar.Fullscreen">
+        <item name="colorAccent">@color/colorPrimary</item>
+    </style>
+
+    <declare-styleable name="ProgressWheel">
+        <attr name="matProg_progressIndeterminate" format="boolean" />
+        <attr name="matProg_barColor" format="color" />
+        <attr name="matProg_rimColor" format="color" />
+        <attr name="matProg_rimWidth" format="dimension" />
+        <attr name="matProg_spinSpeed" format="float" />
+        <attr name="matProg_barSpinCycleTime" format="integer" />
+        <attr name="matProg_circleRadius" format="dimension" />
+        <attr name="matProg_fillRadius" format="boolean" />
+        <attr name="matProg_barWidth" format="dimension" />
+        <attr name="matProg_linearProgress" format="boolean" />
+    </declare-styleable>
+    <style name="tab_text" parent="@android:style/TextAppearance.Widget.TabWidget">
+        <item name="android:fontFamily">@string/fontPathRegular</item>
+    </style>
+
+    <style name="ToolbarTheme" parent="ThemeOverlay.AppCompat.Light">
+        <item name="android:fontFamily">@string/fontPathRegular</item>
+    </style>
+
+    <style name="JoinMeetBottomSheet" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+    </style>
+
+</resources>

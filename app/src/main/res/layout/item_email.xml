@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="@dimen/fugu_margin_25"
+        android:layout_marginStart="@dimen/fugu_margin_25"
+        android:background="@drawable/fugu_text_gradient" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:layout_marginTop="@dimen/fugu_margin_10">
+
+        <ImageView
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_marginTop="@dimen/fugu_margin_2"
+            android:src="@drawable/email" />
+
+        <TextView
+            android:id="@+id/tvEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/fugu_margin_15"
+            android:layout_marginStart="@dimen/fugu_margin_15"
+            android:textColor="@android:color/black"
+            android:textSize="17sp"
+            tools:text="rajatkdhamija@gmail.com" />
+    </LinearLayout>
+</LinearLayout>

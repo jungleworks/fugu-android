@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/llRoot"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="start"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/llMessageBg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/fugu_dp_55"
+        android:animateLayoutChanges="true"
+        android:background="@drawable/chat_bubble_other"
+        android:orientation="vertical"
+        android:padding="@dimen/fugu_padding_5">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/fugu_padding_5"
+            android:text="Please specify approval note for"
+            android:textColor="@color/white"
+            android:textAppearance="@style/CustomTextAppearance.DinMediumRegular"
+            android:textSize="18sp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvCustomActions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:padding="@dimen/fugu_margin_5"
+            android:textAppearance="@style/CustomTextAppearance.TitilliumWeb"
+            android:textColor="@color/white"
+            android:textSize="@dimen/fugu_text_size_small"
+            tools:text="12:00AM" />
+    </LinearLayout>
+
+</LinearLayout>

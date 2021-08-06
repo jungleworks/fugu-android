@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="JoinCommunityViewModel"
+            type="com.skeleton.mvp.community.JoinCommunityViewModel" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:orientation="vertical"
+        tools:context="com.skeleton.mvp.community.JoinCommunityActivity">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivBack"
+            android:layout_width="wrap_content"
+            android:layout_height="?attr/actionBarSize"
+            android:onClick="@{JoinCommunityViewModel.onBackPressed}"
+            android:paddingHorizontal="10dp"
+            android:tint="@android:color/black"
+            app:srcCompat="@drawable/ic_arrow_back" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="130dp"
+            app:srcCompat="@drawable/ic_fugu_with_abstract" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvJoinGreen"
+            style="@style/CustomTextAppearance.TitilliumWebSemiBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="JOIN"
+            android:textColor="#4db389"
+            android:textSize="20sp"
+            android:visibility="invisible" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvCommunityName"
+            style="@style/CustomTextAppearance.TitilliumWebSemiBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginVertical="10dp"
+            android:text="Please Wait"
+            android:textColor="@color/black"
+            android:textSize="35sp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvMembersCount"
+            style="@style/CustomTextAppearance.TitilliumWebSemiBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="0 members"
+            android:textColor="@color/grayish"
+            android:textSize="20sp"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/llEmailPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/round_rectangle_border_layout"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <com.hbb20.CountryCodePicker
+                android:id="@+id/etCountryCode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/fugu_margin_8"
+                android:layout_marginLeft="@dimen/fugu_margin_8"
+                android:layout_marginTop="-9dp"
+                android:visibility="gone"
+                app:ccp_autoDetectCountry="true"
+                app:ccp_showFlag="false"
+                app:ccp_showNameCode="false" />
+
+            <EditText
+                android:id="@+id/etEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:hint="Email Address/Phone Number"
+                android:inputType="textEmailAddress"
+                android:paddingStart="@dimen/fugu_margin_15"
+                android:paddingLeft="@dimen/fugu_margin_15"
+                android:paddingTop="@dimen/fugu_margin_7"
+                android:paddingEnd="@dimen/fugu_margin_7"
+                android:paddingRight="@dimen/fugu_margin_7"
+                android:paddingBottom="@dimen/fugu_margin_7"
+                android:text="@={JoinCommunityViewModel.email}"
+                android:textAppearance="@style/CustomTextAppearance.TitilliumWeb" />
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnGetInvite"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/curved_chiku_button"
+            android:onClick="@{JoinCommunityViewModel.onGetInvite}"
+            android:text="Get an Invite"
+            android:textAppearance="@style/CustomTextAppearance.TitilliumWebSemiBold"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_xlarge"
+            android:visibility="gone" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/llSignIn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/CustomTextAppearance.TitilliumWeb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="or"
+                android:textSize="17sp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/CustomTextAppearance.TitilliumWeb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:onClick="@{JoinCommunityViewModel.onSignIn}"
+                android:text="Sign In"
+                android:textColor="@color/colorPrimary"
+                android:textSize="17sp" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="250dp"
+            android:layout_marginTop="40dp"
+            app:srcCompat="@drawable/people_high_five" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnJoinCommunity"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/curved_chiku_button"
+            android:onClick="@{JoinCommunityViewModel.onJoin}"
+            android:text="Join Community"
+            android:textAppearance="@style/CustomTextAppearance.TitilliumWebSemiBold"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_xlarge"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+</layout>

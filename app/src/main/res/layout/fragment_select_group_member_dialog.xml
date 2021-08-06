@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.skeleton.mvp.groupTasks.SelectGroupMemberDialogFragment">
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/llHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:paddingHorizontal="10dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivCloseSelectionSheet"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_close"
+            android:tint="@color/black" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/CustomTextAppearance.TitilliumWebSemiBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="5dp"
+            android:text="Select members"
+            android:textColor="#9aa8ba"
+            android:textSize="20sp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="0.1" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvSelectionDone"
+            style="@style/CustomTextAppearance.TitilliumWebSemiBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="10dp"
+            android:text="Done"
+            android:textColor="#49b8ff"
+            android:textSize="22sp" />
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/llHeader"
+        android:layout_marginStart="@dimen/fugu_margin_5"
+        android:layout_marginTop="@dimen/fugu_margin_15"
+        android:layout_marginEnd="@dimen/fugu_margin_5"
+        android:layout_marginBottom="@dimen/padding_10"
+        app:cardCornerRadius="@dimen/fugu_margin_5"
+        app:cardElevation="@dimen/fugu_margin_5"
+        app:contentPadding="@dimen/fugu_margin_10">
+
+        <EditText
+            android:id="@+id/etSearchMembers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:drawableStart="@drawable/ic_search_black_24dp"
+            android:drawableLeft="@drawable/ic_search_black_24dp"
+            android:drawablePadding="@dimen/padding_5"
+            android:hint="Search"
+            android:textColor="@color/black" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvMembersList"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/cvSearch"
+        android:clipToPadding="false"
+        android:paddingTop="@dimen/list_item_spacing_half"
+        android:paddingBottom="@dimen/list_item_spacing_half"
+        tools:listitem="@layout/select_group_member_list_item" />
+
+    <!--    <androidx.appcompat.widget.AppCompatButton-->
+    <!--        android:id="@+id/btnSelectionDone"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_alignParentBottom="true"-->
+    <!--        android:layout_gravity="center"-->
+    <!--        android:layout_marginVertical="10dp"-->
+    <!--        android:layout_marginStart="30dp"-->
+    <!--        android:layout_marginEnd="30dp"-->
+    <!--        android:background="@drawable/curved_chiku_button"-->
+    <!--        android:text="Done"-->
+    <!--        android:textAllCaps="false"-->
+    <!--        android:textAppearance="@style/CustomTextAppearance.TitilliumWebSemiBold"-->
+    <!--        android:textColor="@color/white"-->
+    <!--        android:textSize="@dimen/font_xlarge" />-->
+
+</RelativeLayout>

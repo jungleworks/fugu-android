@@ -1,0 +1,546 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mainRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:keepScreenOn="true"
+    android:orientation="horizontal">
+
+
+    <!-- Outgoing call layout -->
+    <RelativeLayout
+        android:id="@+id/outgoingCallLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <org.webrtc.SurfaceViewRenderer
+                android:id="@+id/remoteSurfaceview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@color/white"
+                android:backgroundTint="@color/white"
+                android:visibility="visible" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:animateLayoutChanges="true"
+                android:background="@color/white"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvCallType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_fugu"
+                    android:drawablePadding="@dimen/fugu_margin_10"
+                    android:padding="@dimen/fugu_margin_10"
+                    android:text="FUGU CALL"
+                    android:textAppearance="@style/CustomTextAppearance.TitilliumWeb"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/ivCalledPersonImage"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvCalledPersonName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/fugu_margin_10"
+                    android:text=""
+                    android:textAppearance="@style/CustomTextAppearance.TitilliumWebSemiBold"
+                    android:textColor="@color/black"
+                    android:textSize="22sp" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvCallTimer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:gravity="center"
+                    android:paddingLeft="5dp"
+                    android:paddingBottom="@dimen/fugu_margin_5"
+                    android:text="CALLING..."
+                    android:textAppearance="@style/CustomTextAppearance.TitilliumWeb"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:visibility="visible" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/llDialingCallActions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:animateLayoutChanges="true"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <RelativeLayout
+                android:id="@+id/rlLocalView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/lowerCallOptions"
+                android:layout_alignParentRight="true"
+                android:layout_marginEnd="@dimen/fugu_padding_20"
+                android:layout_marginRight="@dimen/fugu_padding_20">
+
+                <org.webrtc.SurfaceViewRenderer
+                    android:id="@+id/localSurfaceView"
+                    android:layout_width="100dp"
+                    android:layout_height="150dp"
+                    android:layout_centerInParent="true"
+                    android:layout_marginEnd="@dimen/fugu_padding_5"
+                    android:backgroundTint="@color/white"
+                    android:layout_marginRight="@dimen/fugu_padding_5"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivHangUp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/lowerCallOptions"
+                android:layout_centerHorizontal="true"
+                android:background="@color/transparent"
+                android:paddingTop="@dimen/fugu_padding_10"
+                android:paddingBottom="@dimen/fugu_padding_10"
+                android:visibility="gone"
+                app:srcCompat="@drawable/ic_hung_up_call" />
+
+            <LinearLayout
+                android:id="@+id/lowerCallOptions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivMuteAudio"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@color/transparent"
+                        android:paddingTop="@dimen/fugu_padding_10"
+                        android:paddingBottom="@dimen/fugu_padding_10"
+                        android:visibility="gone"
+                        android:tint="@color/black"
+                        app:srcCompat="@drawable/ic_mute_microphone_no_bg" />
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivSpeaker"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:background="@color/transparent"
+                    android:paddingTop="@dimen/fugu_padding_10"
+                    android:paddingBottom="@dimen/fugu_padding_10"
+                    android:visibility="gone"
+                    android:tint="@color/black"
+                    app:srcCompat="@drawable/ic_audio_speaker_no_bg" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivBluetooth"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:background="@color/transparent"
+                    android:paddingTop="@dimen/fugu_padding_10"
+                    android:paddingBottom="@dimen/fugu_padding_10"
+                    android:visibility="gone"
+                    android:tint="@color/black"
+                    app:srcCompat="@drawable/ic_bluetooth_no_bg" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivSwitchCamera"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:background="@color/transparent"
+                    android:paddingTop="@dimen/fugu_padding_10"
+                    android:paddingBottom="@dimen/fugu_padding_10"
+                    android:visibility="gone"
+                    android:tint="@color/black"
+                    app:srcCompat="@drawable/ic_switch_camera" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivMuteVideo"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@color/transparent"
+                    android:paddingTop="@dimen/fugu_padding_10"
+                    android:paddingBottom="@dimen/fugu_padding_10"
+                    android:visibility="gone"
+                    android:tint="@color/black"
+                    app:srcCompat="@drawable/ic_mute_video_no_bg" />
+            </LinearLayout>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <!-- Incoming call layout -->
+    <RelativeLayout
+        android:id="@+id/incomingCallLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:animateLayoutChanges="true"
+                android:background="@color/white"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvCallTypeIncoming"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/notification_white"
+                    android:drawablePadding="@dimen/fugu_margin_10"
+                    android:padding="@dimen/fugu_margin_10"
+                    android:text="FUGU CALL"
+                    android:textAppearance="@style/CustomTextAppearance.TitilliumWeb"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/ivIncomingPersonImage"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvIncomingPersonName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/fugu_margin_10"
+                    android:text="@string/amandeep_chauhan"
+                    android:textColor="@color/black"
+                    android:textAppearance="@style/CustomTextAppearance.TitilliumWebSemiBold"
+                    android:textSize="22sp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvConnecting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/fugu_margin_10"
+                    android:text="INCOMING"
+                    android:textColor="@color/black"
+                    android:textAppearance="@style/CustomTextAppearance.TitilliumWeb"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivIncomingPersonImageBig"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:alpha="0.9"
+                    android:scaleType="centerCrop" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/gray_dark_overlay" />
+
+                <RelativeLayout
+                    android:id="@+id/rlCallingButtons"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="@dimen/fugu_margin_35"
+                    android:layout_marginEnd="@dimen/fugu_margin_35"
+                    android:layout_marginBottom="50dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="0dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/llReject"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="invisible">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/reject_call_arrow_up_one"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/fugu_margin_12"
+                                android:layout_marginBottom="-5dp"
+                                android:src="@drawable/ic_keyboard_arrow_up_black_24dp" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/reject_call_arrow_up_two"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/fugu_margin_12"
+                                android:layout_marginBottom="-5dp"
+                                android:src="@drawable/ic_keyboard_arrow_up_black_24dp" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/reject_call_arrow_up_three"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/fugu_margin_12"
+                                android:layout_marginBottom="-5dp"
+                                android:src="@drawable/ic_keyboard_arrow_up_black_24dp" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/reject_call_arrow_up_four"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/fugu_margin_12"
+                                android:src="@drawable/ic_keyboard_arrow_up_black_24dp" />
+                        </LinearLayout>
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ivRejectCall"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/hungup_icon" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/answerRoot"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/llAnswer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="visible">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/pick_call_arrow_up_one"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/fugu_margin_15"
+                                android:layout_marginBottom="-5dp"
+                                android:src="@drawable/ic_keyboard_arrow_up_black_24dp" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/pick_call_arrow_up_two"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/fugu_margin_15"
+                                android:layout_marginBottom="-5dp"
+                                android:src="@drawable/ic_keyboard_arrow_up_black_24dp" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/pick_call_arrow_up_three"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/fugu_margin_15"
+                                android:layout_marginBottom="-5dp"
+                                android:src="@drawable/ic_keyboard_arrow_up_black_24dp" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/pick_call_arrow_up_four"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/fugu_margin_15"
+                                android:src="@drawable/ic_keyboard_arrow_up_black_24dp" />
+                        </LinearLayout>
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ivAnswerCall"
+                            android:layout_width="65dp"
+                            android:layout_height="65dp"
+                            android:paddingLeft="@dimen/fugu_margin_5"
+                            android:paddingRight="@dimen/fugu_margin_5"
+                            android:src="@drawable/ic_call_answer" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/llReply"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="invisible">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/reply_call_arrow_up_one"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/fugu_margin_12"
+                                android:layout_marginBottom="-5dp"
+                                android:src="@drawable/ic_keyboard_arrow_up_black_24dp" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/reply_call_arrow_up_two"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/fugu_margin_12"
+                                android:layout_marginBottom="-5dp"
+                                android:src="@drawable/ic_keyboard_arrow_up_black_24dp" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/reply_call_arrow_up_three"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/fugu_margin_12"
+                                android:layout_marginBottom="-5dp"
+                                android:src="@drawable/ic_keyboard_arrow_up_black_24dp" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/reply_call_arrow_up_four"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/fugu_margin_12"
+                                android:src="@drawable/ic_keyboard_arrow_up_black_24dp" />
+                        </LinearLayout>
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ivReplyCall"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_message" />
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="@dimen/fugu_margin_20">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvReject"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="@dimen/fugu_margin_20"
+                        android:text="Swipe up to reject"
+
+                        android:textColor="@color/white"
+                        android:textAppearance="@style/CustomTextAppearance.TitilliumWeb"
+                        android:textSize="12sp"
+                        android:visibility="invisible" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvAnswer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="Swipe up to accept"
+                        android:textAppearance="@style/CustomTextAppearance.TitilliumWeb"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvReply"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="@dimen/fugu_margin_20"
+                        android:textAppearance="@style/CustomTextAppearance.TitilliumWeb"
+                        android:text="Swipe up to reply"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        android:visibility="invisible" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivBack"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="@dimen/fugu_margin_10"
+        android:padding="10dp"
+        android:visibility="invisible"
+        android:tint="@color/black"
+        app:srcCompat="@drawable/arrow_shadow_png" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivSwitchToConf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="@dimen/fugu_margin_10"
+        android:layout_marginEnd="@dimen/fugu_margin_10"
+        android:padding="10dp"
+        android:visibility="invisible"
+        android:tint="@color/black"
+        app:srcCompat="@drawable/conf" />
+
+    <LinearLayout
+        android:id="@+id/llConnectivityIssues"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black_opaque"
+        android:visibility="gone">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textAppearance="@style/CustomTextAppearance.TitilliumWeb"
+            android:text="@string/facing_connectivity_issues"
+            android:textColor="@color/black"
+            android:textSize="@dimen/fugu_margin_20" />
+    </LinearLayout>
+</RelativeLayout>

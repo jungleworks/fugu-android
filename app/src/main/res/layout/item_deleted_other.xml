@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/llRoot"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/tvUserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:breakStrategy="simple"
+        android:layout_marginTop="5dp"
+        android:paddingRight="@dimen/fugu_margin_10"
+        android:singleLine="true"
+        android:visibility="gone"
+        android:text="@string/amandeep_chauhan"
+        android:textAppearance="@style/CustomTextAppearance.TitilliumWebSemiBold"
+        android:textColor="@color/fugu_secondary_text_msg_from_name"
+        android:textSize="16sp" />
+    <LinearLayout
+        android:id="@+id/llMessageBg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/fugu_dp_55"
+        android:background="@drawable/chat_bubble_other"
+        android:gravity="left"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/fugu_margin_2">
+
+
+        <com.skeleton.mvp.customLayout.ChatRelativeLayout
+            android:id="@+id/rlMessages"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:child="@+id/llTime"
+            app:parent="@+id/tvMsg">
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvMsg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/fugu_dp_8"
+                android:drawableLeft="@drawable/ic_no_stopping"
+                android:drawableStart="@drawable/ic_no_stopping"
+                android:drawableTint="@color/deleted_message_color_other"
+                android:drawablePadding="@dimen/fugu_margin_5"
+                android:text="d"
+                android:textColor="@color/white"
+                android:textColorLink="@color/fugu_primary_text_msg_from"
+                android:textAppearance="@style/CustomTextAppearance.DinMediumRegular"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:id="@+id/llTime"
+                android:layout_width="@dimen/height_ll_time"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/tvMsg"
+                android:layout_marginLeft="@dimen/fugu_margin_3"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/tvTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|end"
+                    android:breakStrategy="simple"
+                    android:paddingRight="@dimen/fugu_padding_3"
+                    android:text="12:38 PM "
+                    android:textAppearance="@style/CustomTextAppearance.TitilliumWeb"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/fugu_text_size_small" />
+            </LinearLayout>
+
+        </com.skeleton.mvp.customLayout.ChatRelativeLayout>
+    </LinearLayout>
+
+    <include
+        layout="@layout/reply_layout"/>
+</LinearLayout>

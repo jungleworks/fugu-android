@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+    <LinearLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/my_toolbar"
+        android:animateLayoutChanges="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/llInternet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/fugu_connected"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tvStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/fugu_margin_2"
+                android:text="Connected"
+                android:textColor="@android:color/black"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/swipeRefresh"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/llInternet"
+            android:visibility="visible">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvChannels"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:overScrollMode="never"
+                android:paddingBottom="40dp" />
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvNoInternet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:onClick="onClick"
+        android:padding="@dimen/fugu_padding_20"
+        android:text="@string/fugu_no_internet_connection_retry"
+        android:textColor="@color/fugu_theme_color_primary"
+        android:textSize="@dimen/fugu_text_size_large"
+        android:visibility="gone" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnInvite"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/tvInvite"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/fugu_margin_10"
+        android:background="@drawable/curved_chiku_button"
+        android:text="Invite Members"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:visibility="gone"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tvInvite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="50dp"
+        android:layout_marginStart="50dp"
+        android:gravity="center"
+        android:layout_marginBottom="120dp"
+        android:text="@string/let_s_onboard_your_colleagues_friends_on_your_fugu_space"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="@dimen/fugu_text_size_intermediate"
+        android:visibility="gone" />
+</RelativeLayout>

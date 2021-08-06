@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="80dp"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/fugu_margin_5"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rlChannelIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivGroupChannelIcon"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ring_grey" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_checked"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginStart="45dp"
+            android:layout_marginLeft="45dp"
+            android:background="@drawable/ring_greyy"
+            android:padding="4dp"
+            android:src="@drawable/tik"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/tvGroupChannelName"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ivGroupChannelIcon"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/fugu_margin_5"
+            android:layout_marginTop="@dimen/fugu_margin_5"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:gravity="center"
+            android:paddingEnd="@dimen/fugu_margin_5"
+            android:paddingLeft="@dimen/fugu_margin_5"
+            android:paddingRight="@dimen/fugu_margin_5"
+            android:paddingStart="@dimen/fugu_margin_5"
+            android:text="Hellood"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+
+    <!--<android.support.v7.widget.AppCompatImageView-->
+    <!--android:id="@+id/ivGroupChannelIcon"-->
+    <!--android:layout_width="45dp"-->
+    <!--android:layout_height="45dp"-->
+    <!--tools:srcCompat="@drawable/fugu_ic_channel_icon" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/tvGroupChannelName"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginTop="@dimen/fugu_margin_5"-->
+    <!--android:text="Hello"-->
+    <!--android:ellipsize="end"-->
+    <!--android:maxLines="1"-->
+    <!--android:textSize="16sp" />-->
+
+
+</LinearLayout>

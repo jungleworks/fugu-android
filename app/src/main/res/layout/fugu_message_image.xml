@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/tools"
+    android:id="@+id/rlImageMessage"
+    android:layout_width="260dp"
+    android:layout_height="260dp"
+    android:visibility="visible">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ivMsgImage"
+            android:layout_width="match_parent"
+            android:layout_height="260dp"
+            android:layout_centerInParent="true"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/placeholder" />
+
+        <LinearLayout
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/tiangle_bg"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvImageTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12:00 A.M"
+                android:paddingTop="30dp"
+                android:paddingStart="30dp"
+                android:paddingLeft="30dp"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivImageMessageState"
+                android:layout_width="10dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/fugu_margin_5"
+                android:paddingBottom="@dimen/fugu_padding_3"
+                android:paddingLeft="@dimen/fugu_margin_2"
+                android:paddingTop="28dp"
+                android:paddingRight="@dimen/fugu_margin_3"
+                android:visibility="gone"
+                app:srcCompat="@drawable/fugu_tick_single" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btnRetry"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="@dimen/fugu_margin_5"
+        android:background="@drawable/fugu_retry_btn_selector"
+        android:paddingBottom="@dimen/fugu_padding_5"
+        android:paddingLeft="@dimen/fugu_padding_10"
+        android:paddingRight="@dimen/fugu_padding_5"
+        android:paddingTop="@dimen/fugu_padding_5"
+        android:text="@string/fugu_retry"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/fugu_text_size_intermediate"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/btnCancel"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnRetry"
+        android:layout_centerInParent="true"
+        android:background="@drawable/fugu_retry_btn_selector"
+        android:paddingBottom="@dimen/fugu_padding_5"
+        android:paddingLeft="@dimen/fugu_padding_10"
+        android:paddingRight="@dimen/fugu_padding_5"
+        android:paddingTop="@dimen/fugu_padding_5"
+        android:text="Retry"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/fugu_text_size_intermediate"
+        android:visibility="gone" />
+
+    <com.github.lzyzsd.circleprogress.DonutProgress
+        android:id="@+id/imageProgress"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        custom:donut_finished_color="@color/office_chat_color"
+        custom:donut_finished_stroke_width="4dp"
+        custom:donut_progress="0"
+        custom:donut_text_color="#939393"
+        custom:donut_text_size="0dp"
+        custom:donut_unfinished_color="@color/fugu_attachment_dialog_text_pressed"
+        custom:donut_unfinished_stroke_width="4dp" />
+
+
+</RelativeLayout>

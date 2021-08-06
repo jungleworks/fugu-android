@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/vw_BgItem">
+
+    <ImageView
+            android:id="@+id/iv_thumbnail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"/>
+
+    <ImageView
+            android:id="@+id/iv_camera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/vw_ic_camera"
+            android:visibility="invisible"/>
+
+    <View
+            android:id="@+id/shadow"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/vw_ShadowItem"
+            android:visibility="visible"/>
+
+    <ImageView
+            android:id="@+id/cbx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:visibility="visible"
+            android:src="@drawable/vw_selector_cbx"/>
+
+    <RelativeLayout
+            android:id="@+id/folder_info"
+            android:layout_width="match_parent"
+            android:layout_alignParentBottom="true"
+            android:visibility="gone"
+            android:paddingTop="@dimen/padding_10"
+            android:paddingBottom="@dimen/margin_10"
+            android:paddingLeft="@dimen/padding_5"
+            android:paddingRight="@dimen/padding_5"
+            android:background="@drawable/picker_directory_shade_bg"
+            android:layout_height="wrap_content">
+
+        <TextView
+                android:id="@+id/total_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_small"
+        />
+        <TextView
+                android:id="@+id/directory_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/total_count"
+                android:textColor="@color/white"
+                android:gravity="center_vertical"
+                android:paddingRight="@dimen/padding_10"
+                android:drawablePadding="@dimen/padding_5"
+                android:singleLine="true"
+                android:maxLines="1"
+                android:drawableLeft="@drawable/hippo_ic_folder_open"
+                android:textSize="@dimen/text_size_small"
+        />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

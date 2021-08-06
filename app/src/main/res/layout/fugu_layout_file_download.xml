@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/tools"
+    android:id="@+id/llFileRoot"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/fugu_padding_15"
+    android:paddingRight="@dimen/fugu_padding_15"
+    android:paddingTop="@dimen/fugu_margin_15">
+
+    <TextView
+        android:id="@+id/tvAttachment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Unsupported file attachment"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/llAudio"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/ivFileType"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/music" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvFileName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/fugu_margin_5"
+                android:layout_marginRight="@dimen/fugu_margin_5"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:maxLength="20"
+                android:text="565747467cdcdsc"
+                android:textSize="@dimen/fugu_text_size_small" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/fugu_margin_6"
+                android:layout_marginRight="@dimen/fugu_margin_6">
+
+                <include
+                    layout="@layout/fugu_layout_file_details"
+                    android:visibility="visible" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rlStopDownload"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:visibility="visible">
+
+            <com.github.lzyzsd.circleprogress.DonutProgress
+                android:id="@+id/circle_progress"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerInParent="true"
+                custom:donut_finished_color="@color/office_chat_color"
+                custom:donut_finished_stroke_width="4dp"
+                custom:donut_progress="0"
+                custom:donut_text_color="#939393"
+                custom:donut_text_size="0dp"
+                custom:donut_unfinished_color="@color/fugu_attachment_dialog_text_pressed"
+                custom:donut_unfinished_stroke_width="4dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="X"
+                android:textColor="@color/office_chat_color"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/ivPlay"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:src="@drawable/music_player"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/ivDownload"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            app:srcCompat="@drawable/ic_down_arrow_new_down" />
+    </LinearLayout>
+</LinearLayout>

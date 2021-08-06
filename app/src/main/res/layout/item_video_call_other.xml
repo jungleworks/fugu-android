@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rlRoot"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="55dp"
+        android:layout_marginRight="55dp"
+        android:gravity="start"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/llMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/missed_call_bubble_other"
+            android:orientation="vertical">
+
+            <com.skeleton.mvp.customLayout.ChatRelativeLayout
+                android:id="@+id/rlMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:child="@+id/llTime"
+                app:parent="@+id/tvMsg">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvMsg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/fugu_margin_2"
+                    android:paddingLeft="@dimen/fugu_dp_8"
+                    android:paddingTop="@dimen/fugu_margin_2"
+                    android:textAppearance="@style/CustomTextAppearance.DinMediumRegular"
+                    android:textColor="@color/white"
+                    android:textColorLink="@color/fugu_primary_text_msg_from"
+                    android:textSize="17sp"
+                    tools:text="The video call ended" />
+            </com.skeleton.mvp.customLayout.ChatRelativeLayout>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/llTime"
+                android:layout_width="190dp"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/tvMsg"
+                android:layout_gravity="end"
+                android:layout_marginTop="1dp"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="start"
+                    android:layout_marginStart="@dimen/fugu_margin_10"
+                    android:gravity="start"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:id="@+id/ivCallIcon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="3dp"
+                        android:visibility="visible"
+                        app:srcCompat="@drawable/ic_missed_call" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvDuration"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:breakStrategy="simple"
+                        android:text="5 sec at"
+                        android:textColor="@color/white"
+                        android:layout_marginStart="@dimen/fugu_margin_5"
+                        android:textSize="@dimen/fugu_text_size_small"
+                        android:textAppearance="@style/CustomTextAppearance.TitilliumWeb"
+                        android:visibility="visible" />
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:gravity="end"
+                    android:layout_marginBottom="@dimen/fugu_margin_2"
+                    android:layout_marginLeft="4dp"
+                    android:breakStrategy="simple"
+                    android:text="12:38 PM "
+                    android:textAppearance="@style/CustomTextAppearance.TitilliumWeb"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/fugu_text_size_small" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="@dimen/fugu_margin_2"
+                android:background="@color/divider_color" />
+
+            <TextView
+                android:id="@+id/callAgain"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:gravity="center"
+                android:text="@string/call_back"
+                android:textAppearance="@style/CustomTextAppearance.TitilliumWebSemiBold"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</RelativeLayout>

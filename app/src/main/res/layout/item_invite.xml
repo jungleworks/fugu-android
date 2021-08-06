@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/fugu_margin_10"
+    android:background="@drawable/round_rectangle_border_layout"
+    android:orientation="horizontal">
+
+    <com.hbb20.CountryCodePicker
+        android:id="@+id/etCountryCode3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/fugu_margin_8"
+        android:layout_marginStart="@dimen/fugu_margin_8"
+        android:layout_marginTop="-9dp"
+        android:visibility="gone"
+        app:ccp_autoDetectCountry="true"
+        app:ccp_showFlag="false"
+        app:ccp_showNameCode="false" />
+
+    <com.skeleton.mvp.util.ExtendedEditText
+        android:id="@+id/etEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent"
+        android:hint="Email Address/Phone Number"
+        android:imeOptions="actionGo"
+        android:inputType="textEmailAddress"
+        android:maxLines="1"
+        android:paddingBottom="@dimen/fugu_margin_7"
+        android:paddingEnd="@dimen/fugu_margin_7"
+        android:paddingLeft="@dimen/fugu_margin_15"
+        android:paddingRight="@dimen/fugu_margin_7"
+        android:paddingStart="@dimen/fugu_margin_15"
+        android:paddingTop="@dimen/fugu_margin_7"
+        android:singleLine="true" />
+    <!--<EditText-->
+    <!--android:id="@+id/etEmail"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:background="@color/transparent"-->
+    <!--android:hint="Email Address/Phone Number"-->
+    <!--android:inputType="textEmailAddress" />-->
+</LinearLayout>

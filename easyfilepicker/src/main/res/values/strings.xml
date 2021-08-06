@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">EasyFilePicker</string>
+    <string name="picker_select_string">Select</string>
+    <string name="hippo_rationale_storage">Need Reading Storage Permission for Picking Files</string>
+
+    <string name="vw_confirm">Done</string>
+    <string name="vw_no_video_play_app">No App exists for playing video!</string>
+    <string name="vw_record_audio">Record Audio</string>
+    <string name="vw_rationale_storage">Need Reading Storage Permission for Picking Files</string>
+    <string name="vw_up_to_max">Already selected maximum images!</string>
+    <string name="vw_no_photo_app">No photo App in this phone!</string>
+    <string name="vw_no_audio_play_app">No App exists for playing audio!</string>
+    <string name="vw_no_video_app">No video App in this phone!</string>
+    <string name="vw_no_audio_app">No audio App in this phone!</string>
+    <string name="vw_all">All</string>
+    <string name="hippo_browse_other_doc">Browse other docs&#8230;</string>
+    <string name="rationale_ask">This app may not work correctly without the requested permissions.</string>
+    <string name="rationale_ask_again">
+        This app may not work correctly without the requested permissions.
+        Open the app settings screen to modify app permissions.
+    </string>
+    <string name="title_settings_dialog">Permissions Required</string>
+    <string name="image_picker">Image Picker</string>
+    <string name="file_picker">Documents</string>
+    <string name="video_picker">Video Picker</string>
+</resources>

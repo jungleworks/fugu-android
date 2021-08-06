@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:wheel="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/dlgProgress"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@android:color/transparent">
+
+    <com.skeleton.mvp.utils.loadingBox.ProgressWheel
+        android:id="@+id/progress_wheel"
+        android:layout_width="@dimen/fugu_size_70"
+        android:layout_height="@dimen/fugu_size_70"
+        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
+        android:visibility="visible"
+        wheel:matProg_barColor="@color/fugu_drawable_color"
+        wheel:matProg_barWidth="@dimen/fugu_size_2"
+        wheel:matProg_fillRadius="true"
+        wheel:matProg_progressIndeterminate="false" />
+
+    <TextView
+        android:id="@+id/progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="@dimen/fugu_margin_30"
+        android:textColor="#8c8c8c"
+        android:textSize="@dimen/fugu_text_size_very_large" />
+
+    <TextView
+        android:id="@+id/tvProgress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/progress_wheel"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/fugu_margin_30"
+        android:text="Loading..."
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/fugu_text_size_large" />
+
+</RelativeLayout>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.skeleton.mvp.activity.ForwardActivity">
+
+    <com.skeleton.mvp.util.SearchAnimationToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:title="Forward To ..."
+        app:searchHint="@string/search_hint"
+        app:subtitleTextColor="@color/black"
+        app:titleTextColor="@color/black" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:paddingEnd="@dimen/fugu_margin_10"
+        android:paddingLeft="@dimen/fugu_margin_10"
+        android:paddingRight="@dimen/fugu_margin_10"
+        android:paddingStart="@dimen/fugu_margin_10" />
+    <TextView
+        android:id="@+id/tvNoResultsFound"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="No results found"
+        android:textSize="20sp"
+        android:visibility="gone" />
+</LinearLayout>

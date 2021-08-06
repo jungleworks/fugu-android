@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <View
+        android:layout_width="40dp"
+        android:layout_height="4dp"
+        android:layout_marginTop="@dimen/fugu_margin_10"
+        android:layout_marginBottom="@dimen/fugu_margin_10"
+        android:backgroundTint="@color/white"
+        android:layout_gravity="center"
+        android:background="@drawable/curved_bg_button"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/fugu_margin_10"
+        android:paddingStart="10dp"
+        android:background="@drawable/round_bottom_sheet">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvEmoji"
+            android:layout_width="match_parent"
+            android:layout_margin="@dimen/fugu_margin_2"
+            android:layout_height="50dp"
+            android:nestedScrollingEnabled="false"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="@dimen/fugu_margin_10"
+            android:layout_marginEnd="@dimen/fugu_margin_10"
+            android:background="@color/black"/>
+
+        <LinearLayout
+            android:id="@+id/forward"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_marginStart="@dimen/fugu_margin_12"
+                android:layout_marginLeft="@dimen/fugu_margin_12"
+                android:layout_marginEnd="@dimen/fugu_margin_12"
+                android:layout_marginRight="@dimen/fugu_margin_12"
+                android:src="@drawable/ic_forward_chat"
+                android:textColor="@color/black"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Forward"
+                android:textAppearance="@style/CustomTextAppearance.TitilliumWeb"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/copy"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_marginStart="@dimen/fugu_margin_12"
+                android:layout_marginLeft="@dimen/fugu_margin_12"
+                android:layout_marginEnd="@dimen/fugu_margin_12"
+                android:layout_marginRight="@dimen/fugu_margin_12"
+                android:src="@drawable/ic_copy_chat"
+                android:layout_gravity="center"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="Copy Text"
+                android:textAppearance="@style/CustomTextAppearance.TitilliumWeb"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/react"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_marginStart="@dimen/fugu_margin_12"
+                android:layout_marginLeft="@dimen/fugu_margin_12"
+                android:layout_marginEnd="@dimen/fugu_margin_10"
+                android:layout_marginRight="@dimen/fugu_margin_10"
+                android:src="@drawable/ic_emoji_chat"
+                android:layout_gravity="center"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="Add a reaction"
+                android:gravity="center"
+                android:textAppearance="@style/CustomTextAppearance.TitilliumWeb"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/info"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_marginStart="@dimen/fugu_margin_12"
+                android:layout_marginLeft="@dimen/fugu_margin_12"
+                android:layout_marginEnd="@dimen/fugu_margin_12"
+                android:layout_marginRight="@dimen/fugu_margin_12"
+                android:src="@drawable/ic_bottom_seen_by"
+                android:textColor="@color/black"
+                android:layout_gravity="center"
+                android:tint="@color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="Seen By"
+                android:gravity="center"
+                android:textAppearance="@style/CustomTextAppearance.TitilliumWeb"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/edit"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_marginStart="@dimen/fugu_margin_12"
+                android:layout_marginLeft="@dimen/fugu_margin_12"
+                android:layout_marginEnd="@dimen/fugu_margin_12"
+                android:layout_marginRight="@dimen/fugu_margin_12"
+                android:src="@drawable/ic_edit_group"
+                android:textColor="@color/black"
+                android:layout_gravity="center"
+                android:tint="@color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center"
+                android:text="Edit Message"
+                android:textAppearance="@style/CustomTextAppearance.TitilliumWeb"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:orientation="horizontal"
+            android:layout_gravity="end"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_marginStart="@dimen/fugu_margin_12"
+                android:layout_marginLeft="@dimen/fugu_margin_12"
+                android:layout_marginEnd="@dimen/fugu_margin_12"
+                android:layout_marginRight="@dimen/fugu_margin_12"
+                android:tint="#737373"
+                app:srcCompat="@drawable/ic_send_mail" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="Send an email"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/star"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_marginStart="@dimen/fugu_margin_12"
+                android:layout_marginLeft="@dimen/fugu_margin_12"
+                android:layout_marginEnd="@dimen/fugu_margin_12"
+                android:layout_marginRight="@dimen/fugu_margin_12"
+                android:tint="@color/black"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/ic_bottom_star" />
+
+            <TextView
+                android:id="@+id/tvStar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center"
+                android:text="Star Message"
+                android:textAppearance="@style/CustomTextAppearance.TitilliumWeb"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/delete"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="26dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="@dimen/fugu_margin_12"
+                android:layout_marginLeft="@dimen/fugu_margin_12"
+                android:layout_marginEnd="@dimen/fugu_margin_12"
+                android:layout_marginRight="@dimen/fugu_margin_12"
+                android:layout_gravity="center"
+                android:tint="@color/red"
+                app:srcCompat="@drawable/ic_delete_chat" />
+
+            <TextView
+                android:id="@+id/tvDelete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center"
+                android:textAppearance="@style/CustomTextAppearance.TitilliumWeb"
+                android:text="Delete Message"
+                android:textColor="@color/red"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

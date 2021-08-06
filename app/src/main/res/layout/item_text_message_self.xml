@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rlRoot"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/llMainMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="55dp"
+        android:paddingLeft="55dp"
+        android:gravity="end"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/llMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/chat_bubble_self"
+            android:orientation="vertical">
+
+
+
+            <com.skeleton.mvp.customLayout.ChatRelativeLayout
+                android:id="@+id/rlMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:parent="@id/tvMsg"
+                app:child="@id/llTime">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvMsg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/fugu_margin_2"
+                    android:paddingLeft="@dimen/fugu_dp_8"
+                    android:paddingTop="@dimen/fugu_margin_2"
+                    android:textColor="@color/black"
+                    android:textAppearance="@style/CustomTextAppearance.TitilliumWeb"
+                    android:textColorLink="@color/mentionAndLinks"
+                    android:textSize="17sp"
+                    tools:text="hello" />
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/llTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/tvMsg"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivStar"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:tint="@color/mentionAndLinks"
+                        android:visibility="gone"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginStart="@dimen/fugu_padding_5"
+                        android:src="@drawable/ic_star_black_24dp" />
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/fugu_margin_2"
+                        android:layout_marginLeft="@dimen/fugu_margin_5"
+                        android:breakStrategy="simple"
+                        android:text="12:38 PM "
+                        android:textAppearance="@style/CustomTextAppearance.TitilliumWeb"
+                        android:textColor="#b3bec9"
+                        android:textSize="@dimen/fugu_text_size_small" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivMessageState"
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:visibility="visible"
+                        android:layout_marginStart="@dimen/fugu_margin_3"
+                        android:layout_marginEnd="@dimen/fugu_margin_3"
+                        android:layout_marginBottom="2dp"
+                        app:srcCompat="@drawable/ic_single_tick" />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </com.skeleton.mvp.customLayout.ChatRelativeLayout>
+
+
+        </LinearLayout>
+        <include
+            layout="@layout/emoji_layout"/>
+
+        <include
+            layout="@layout/reply_layout"/>
+        <LinearLayout
+            android:id="@+id/llRetry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/fugu_margin_4"
+            android:layout_marginTop="@dimen/fugu_margin_2"
+            android:gravity="end"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/fugu_padding_10"
+            android:paddingRight="@dimen/fugu_padding_10"
+            android:visibility="gone">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvCouldNotSend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/error"
+                android:drawableStart="@drawable/error"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="@string/could_not_send_message"
+                android:textColor="@android:color/holo_red_dark" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginEnd="@dimen/fugu_dp_6"
+                android:layout_marginRight="@dimen/fugu_dp_6"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvTryAgain"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Tap to Retry "
+                    android:textColor="@android:color/holo_red_dark" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvCancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="| Cancel"
+                    android:textColor="@android:color/holo_red_dark" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</RelativeLayout>

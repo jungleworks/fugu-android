@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llMain"
+    android:layout_width="match_parent"
+    android:layout_height="67dp"
+    android:orientation="horizontal"
+    android:alpha="1">
+
+    <RelativeLayout
+        android:id="@+id/rlChannelIcon"
+        android:layout_width="54dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="2dp"
+        android:layout_marginStart="2dp"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp">
+
+        <ImageView
+            android:id="@+id/ivContactImage"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ring_grey" />
+
+        <TextView
+            android:id="@+id/tvContactIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="A"
+            android:textColor="@android:color/white"
+            android:textAppearance="@style/CustomTextAppearance.Semibold"
+            android:textSize="24sp"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/iv_tick"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="36dp"
+            android:layout_marginTop="28dp"
+            android:background="@drawable/ring_greyy"
+            android:src="@drawable/fab_tick"
+            android:padding="@dimen/fugu_margin_4"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_name_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+
+        <com.skeleton.mvp.util.TrimmedTextView
+            android:id="@+id/tvName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:textAppearance="@style/CustomTextAppearance.TitilliumWebSemiBold"
+            android:text="Name: " />
+
+        <TextView
+            android:id="@+id/tvEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:visibility="visible"
+            android:textColor="#b3bec9"
+            android:textAppearance="@style/CustomTextAppearance.TitilliumWeb"
+            android:textSize="14sp"
+            android:text="Email: " />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

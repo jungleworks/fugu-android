@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rlRoot"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/llMainMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingEnd="55dp"
+        android:paddingRight="55dp"
+        android:gravity="start"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginEnd="5dp"
+            android:gravity="start"
+            android:singleLine="true"
+            android:text="@string/amandeep_chauhan"
+            android:textAppearance="@style/CustomTextAppearance.TitilliumWebSemiBold"
+            android:textColor="@color/fugu_secondary_text_msg_from_name"
+            android:textSize="16sp" />
+
+
+        <LinearLayout
+            android:id="@+id/llMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/chat_bubble_other"
+            android:orientation="vertical">
+            <com.skeleton.mvp.customLayout.ChatRelativeLayout
+                android:id="@+id/rlMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:parent="@id/tvMsg"
+                app:child="@id/llTime">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvMsg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/fugu_margin_2"
+                    android:paddingLeft="@dimen/fugu_dp_8"
+                    android:paddingTop="@dimen/fugu_margin_2"
+                    android:textColor="@color/white"
+                    android:textAppearance="@style/CustomTextAppearance.TitilliumWeb"
+                    android:textColorLink="@color/black"
+                    android:textSize="17sp"
+                    tools:text="R" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/llTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/tvMsg"
+                    android:gravity="end"
+                    android:layout_marginStart="@dimen/fugu_margin_5"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivStar"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_marginEnd="@dimen/fugu_margin_3"
+                        android:src="@drawable/ic_star_black_24dp"
+                        android:tint="@color/white"
+                        android:visibility="gone" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:breakStrategy="simple"
+                        android:text="12:38 PM "
+                        android:textAppearance="@style/CustomTextAppearance.TitilliumWeb"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/fugu_text_size_small" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </com.skeleton.mvp.customLayout.ChatRelativeLayout>
+
+        </LinearLayout>
+        <include
+            layout="@layout/emoji_layout"/>
+        <LinearLayout
+            android:id="@+id/llReplies"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/fugu_margin_3"
+            android:layout_marginBottom="@dimen/fugu_margin_10"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/fugu_margin_3"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:id="@+id/llReplyOne"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:visibility="gone"
+                    android:layout_marginEnd="@dimen/fugu_margin_3"
+                    android:orientation="vertical"
+                    android:background="@drawable/curver_linear_layout_two_dp">
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvReplyOne"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="A"
+                        android:textSize="10sp"
+                        android:gravity="center"
+                        android:background="@color/colorPrimary"
+                        android:textColor="@color/white"
+                        android:visibility="gone"/>
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivReplyOne"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="gone"
+                        android:src="@drawable/profile_placeholder"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/llReplyTwo"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:visibility="gone"
+                    android:layout_marginEnd="@dimen/fugu_margin_3"
+                    android:orientation="vertical"
+                    android:background="@drawable/curver_linear_layout_two_dp">
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvReplyTwo"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="R"
+                        android:textSize="10sp"
+                        android:gravity="center"
+                        android:background="@color/red"
+                        android:visibility="gone"
+                        android:textColor="@color/white"/>
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivReplyTwo"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="gone"
+                        android:src="@drawable/profile_placeholder"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/llReplyThree"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:visibility="gone"
+                    android:orientation="vertical"
+                    android:background="@drawable/curver_linear_layout_two_dp">
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvReplyThree"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="J"
+                        android:textSize="10sp"
+                        android:gravity="center"
+                        android:visibility="gone"
+                        android:background="@color/teal"
+                        android:textColor="@color/white"/>
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivReplyThree"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="gone"
+                        android:src="@drawable/profile_placeholder"/>
+                </LinearLayout>
+            </LinearLayout>
+            <TextView
+                android:id="@+id/tvReplies"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/fugu_margin_5"
+                android:layout_marginRight="@dimen/fugu_margin_5"
+                android:gravity="end"
+                android:textSize="14sp"
+                android:textColor="@color/colorPrimary"
+                android:textAppearance="@style/CustomTextAppearance.DinMediumRegular"
+                android:visibility="visible"
+                tools:text="99 Replies" />
+        </LinearLayout>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</RelativeLayout>

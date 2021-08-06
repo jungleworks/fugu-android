@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.skeleton.mvp.activity.OnboardActivity">
+
+
+    <ImageView
+        android:id="@+id/ivOnboardBg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:adjustViewBounds="true"
+        app:srcCompat="@drawable/background_blue_curved" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/ivOnboardBg"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="55.7dp"
+        app:srcCompat="@drawable/logo" />
+
+
+    <LinearLayout
+        android:id="@+id/llChatsIndicators"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ivOnboardBg"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:visibility="visible">
+
+        <View
+            android:layout_width="12dp"
+            android:layout_height="7dp"
+            android:background="@drawable/slider_selected_dot" />
+
+        <View
+            android:layout_width="7dp"
+            android:layout_height="7dp"
+            android:layout_marginHorizontal="4dp"
+            android:background="@drawable/slider_unselected_dot" />
+
+        <View
+            android:layout_width="7dp"
+            android:layout_height="7dp"
+            android:background="@drawable/slider_unselected_dot" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/llConferenceIndicators"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ivOnboardBg"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:visibility="gone">
+
+        <View
+            android:layout_width="7dp"
+            android:layout_height="7dp"
+            android:background="@drawable/slider_unselected_dot" />
+
+        <View
+            android:layout_width="12dp"
+            android:layout_height="7dp"
+            android:layout_marginHorizontal="4dp"
+            android:background="@drawable/slider_selected_dot" />
+
+        <View
+            android:layout_width="7dp"
+            android:layout_height="7dp"
+            android:background="@drawable/slider_unselected_dot" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/llAppsIndicators"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ivOnboardBg"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:visibility="gone">
+
+        <View
+            android:layout_width="7dp"
+            android:layout_height="7dp"
+            android:background="@drawable/slider_unselected_dot" />
+
+        <View
+            android:layout_width="7dp"
+            android:layout_height="7dp"
+            android:layout_marginHorizontal="4dp"
+            android:background="@drawable/slider_unselected_dot" />
+
+        <View
+            android:layout_width="12dp"
+            android:layout_height="7dp"
+            android:background="@drawable/slider_selected_dot" />
+
+    </LinearLayout>
+
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/vpOnboardIntro"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/btnGetStartedOnboard" />
+
+    <Button
+        android:id="@+id/btnGetStartedOnboard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/curved_chiku_button"
+        android:text="Get Started"
+        android:textAppearance="@style/CustomTextAppearance.TitilliumWebSemiBold"
+        android:textColor="@color/white"
+        android:textSize="17.3sp" />
+
+
+</RelativeLayout>

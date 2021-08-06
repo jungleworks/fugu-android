@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context="com.skeleton.mvp.activity.CreateWorkspaceActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <!--<TextView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginStart="@dimen/spacing_small"-->
+        <!--android:text="@string/business_name"-->
+        <!--android:textColor="@color/white" />-->
+
+        <!--<EditText-->
+        <!--android:id="@+id/etBusinessName"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginEnd="@dimen/spacing_small"-->
+        <!--android:layout_marginStart="@dimen/spacing_small"-->
+        <!--android:layout_marginTop="@dimen/spacing_tiny"-->
+        <!--android:background="@color/transparent"-->
+        <!--android:hint="@string/your_business_name"-->
+        <!--android:singleLine="true"-->
+        <!--android:textColor="@color/white"-->
+        <!--android:textColorHint="@color/whiteBlur"-->
+        <!--android:textCursorDrawable="@drawable/color_cursor"-->
+        <!--android:textSize="@dimen/font_xxlarge" />-->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spacing_small"
+            android:layout_marginStart="@dimen/spacing_small"
+            android:layout_marginTop="@dimen/spacing_medium"
+            android:text="@string/workspace_url"
+            android:textColor="@color/white" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_tiny"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/spacing_small"
+                android:layout_marginStart="@dimen/spacing_small"
+                android:text="@string/https"
+                android:textColor="@color/whiteBlur"
+                android:textSize="@dimen/font_xxlarge" />
+
+            <EditText
+                android:id="@+id/etWorkspaceUrl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:hint="@string/hint_your_domain"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textColorHint="@color/whiteBlur"
+                android:textCursorDrawable="@drawable/color_cursor"
+                android:textSize="@dimen/font_xxlarge" />
+
+            <TextView
+                android:id="@+id/tvWorkspaceSuffix"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:text="@string/your_domian_officechat_com"
+                android:textColor="@color/whiteBlur"
+                android:textSize="@dimen/font_xxlarge" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvForgot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnContinue"
+        android:layout_marginTop="@dimen/fugu_margin_10"
+        android:gravity="center"
+        android:text="Forgot Domain Name?"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/fugu_text_size_large" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnContinue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/spacing_small"
+        android:layout_marginTop="@dimen/spacing_medium"
+        android:background="@drawable/curved_white_button"
+        android:text="@string/continuee"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold" />
+</RelativeLayout>

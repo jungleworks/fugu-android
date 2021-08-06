@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="@color/white" />
+
+    <corners
+        android:topLeftRadius="@dimen/fugu_message_corner_radius_normal"
+        android:topRightRadius="@dimen/fugu_message_corner_radius_small" />
+    <stroke
+        android:width="@dimen/fugu_border_width"
+        android:color="@color/fugu_border_color" />
+</shape>

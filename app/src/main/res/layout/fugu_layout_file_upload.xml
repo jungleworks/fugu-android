@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/llFileRoot"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/fugu_margin_15"
+    android:visibility="visible">
+
+    <ImageView
+        android:id="@+id/ivPreviewImage"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_marginTop="@dimen/fugu_margin_5"
+        android:padding="@dimen/fugu_margin_5"
+        android:scaleType="centerCrop"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/lldetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ivPreviewImage"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/fugu_margin_10"
+            android:layout_marginLeft="@dimen/fugu_margin_2"
+            android:layout_marginRight="@dimen/fugu_margin_10"
+            android:layout_marginStart="@dimen/fugu_margin_2"
+            android:layout_marginTop="@dimen/fugu_margin_8"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/ivFileType"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="@dimen/fugu_margin_5"
+                android:layout_marginStart="@dimen/fugu_margin_5"
+                android:src="@drawable/music" />
+
+            <TextView
+                android:id="@+id/tvFileName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/fugu_margin_5"
+                android:layout_marginRight="@dimen/fugu_margin_5"
+                android:ellipsize="end"
+                android:maxLength="20"
+                android:maxLines="1"
+                android:text="Thor Ragnarok.mp3"
+                android:textSize="@dimen/fugu_text_size_small" />
+
+
+            <RelativeLayout
+                android:id="@+id/rlStopUpload"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/fugu_margin_5"
+                android:layout_marginRight="@dimen/fugu_margin_5"
+                android:visibility="gone">
+
+                <com.github.lzyzsd.circleprogress.DonutProgress
+                    android:id="@+id/circle_progress"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:visibility="visible"
+                    custom:donut_finished_color="@color/office_chat_color"
+                    custom:donut_finished_stroke_width="4dp"
+                    custom:donut_progress="0"
+                    custom:donut_text_color="#939393"
+                    custom:donut_text_size="0dp"
+                    custom:donut_unfinished_color="@color/fugu_attachment_dialog_text_pressed"
+                    custom:donut_unfinished_stroke_width="4dp" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/fugu_margin_10"
+                android:layout_marginRight="@dimen/fugu_margin_15"
+                android:layout_marginTop="@dimen/fugu_margin_2"
+                android:visibility="gone"
+                android:gravity="end">
+
+                <ImageView
+                    android:id="@+id/ivPlay"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/music_player"
+                    android:visibility="visible" />
+
+                <ImageView
+                    android:id="@+id/ivDownload"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:visibility="visible"
+                    custom:srcCompat="@drawable/ic_down_arrow_new_down" />
+
+                <ImageView
+                    android:id="@+id/ivUpload"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:visibility="visible"
+                    custom:srcCompat="@drawable/ic_up_arrow" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llinfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lldetails"
+        android:layout_marginLeft="35dp"
+        android:layout_marginStart="42dp"
+        android:layout_marginTop="-15dp"
+        android:gravity="start">
+
+        <include
+            layout="@layout/fugu_layout_file_details"
+            android:visibility="visible" />
+
+    </LinearLayout>
+
+    <SeekBar
+        android:id="@+id/audio_seekbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/llinfo"
+        android:visibility="gone" />
+
+</RelativeLayout>

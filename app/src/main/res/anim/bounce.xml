@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+    <translate
+        android:fromYDelta="-300%"
+        android:toYDelta="100%"
+        android:duration="200"
+        android:repeatMode="reverse"
+        android:interpolator="@android:anim/accelerate_interpolator"
+        />
+
+    <scale
+        android:fromXScale="1"
+        android:toXScale="1.08"
+        android:fromYScale="1"
+        android:toYScale="0.8"
+        android:pivotX="50%"
+        android:pivotY="50%"
+        android:repeatCount="1"
+        android:duration="30"
+        android:repeatMode="reverse"
+        android:startOffset="200"
+        android:interpolator="@android:anim/bounce_interpolator"
+        />
+
+    <translate
+        android:fromYDelta="100%"
+        android:toYDelta="-200%"
+        android:duration="120"
+        android:startOffset="260"
+        android:interpolator="@android:anim/decelerate_interpolator"
+        />
+    <translate
+        android:fromYDelta="-200%"
+        android:toYDelta="100%"
+        android:duration="120"
+        android:startOffset="380"
+        android:interpolator="@android:anim/accelerate_interpolator"
+        />
+
+    <scale
+        android:fromXScale="1"
+        android:toXScale="1.08"
+        android:fromYScale="1"
+        android:toYScale="0.8"
+        android:pivotX="50%"
+        android:pivotY="50%"
+        android:repeatCount="1"
+        android:duration="30"
+        android:repeatMode="reverse"
+        android:startOffset="500"
+        android:interpolator="@android:anim/bounce_interpolator"
+        />
+
+    <translate
+        android:fromYDelta="100%"
+        android:toYDelta="-100%"
+        android:duration="70"
+        android:startOffset="560"
+        android:interpolator="@android:anim/decelerate_interpolator"
+
+        />
+    <translate
+        android:fromYDelta="-100%"
+        android:toYDelta="100%"
+        android:duration="70"
+        android:startOffset="640"
+        android:interpolator="@android:anim/accelerate_interpolator"
+        />
+
+    <scale
+        android:fromXScale="1"
+        android:toXScale="1.08"
+        android:fromYScale="1"
+        android:toYScale="0.8"
+        android:pivotX="50%"
+        android:pivotY="50%"
+        android:repeatCount="1"
+        android:duration="20"
+        android:repeatMode="reverse"
+        android:startOffset="710"
+        android:interpolator="@android:anim/bounce_interpolator"
+        />
+
+</set>

@@ -1,0 +1,88 @@
+{
+  "project_info": {
+    "project_number": "1067615629789",
+    "firebase_url": "https://officechat-b6e5c.firebaseio.com",
+    "project_id": "officechat-b6e5c",
+    "storage_bucket": "officechat-b6e5c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1067615629789:android:e79c8b83138c2360",
+        "android_client_info": {
+          "package_name": "com.officechat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1067615629789-6omcli8tio6soqpjl03ael3imvvefjcc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.officechat",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "1067615629789-ek62bvk8ubb0gg4v2ch4288q56ua7h79.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.officechat",
+            "certificate_hash": "828a44310feee2d273d3f56d51998622e74fc63d"
+          }
+        },
+        {
+          "client_id": "1067615629789-havodmvsb0urpvjro4dj20b86q4f4so2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.officechat",
+            "certificate_hash": "dfe323005b68fea6253a9dfb37ff61c6f6458cd6"
+          }
+        },
+        {
+          "client_id": "1067615629789-kcljhs21eg2g6krboepbjbu3n1uifaqj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.officechat",
+            "certificate_hash": "c509187c8bef85b80e5363e8d2f4e32f738ddec4"
+          }
+        },
+        {
+          "client_id": "1067615629789-pnm524lahu8ra4j0q11gfo9aedo018gr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.officechat",
+            "certificate_hash": "7a86532d1a7ebcd22950ef89a9c5a3db096bdc7b"
+          }
+        },
+        {
+          "client_id": "1067615629789-td5u14j5lqtempjgbg4j3urfliv2psds.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDaFmhfJfvNxeE5b75QfwIIm2BM_o2JQEI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1067615629789-qs9p7v7o3ur01tf7oanq3ds4k9ashmjh.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1067615629789-i7pbaeqn04sshaf54vs7749cp3grci1a.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.product.officeChat",
+                "app_store_id": "1336986136"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <Toolbar
+        android:id="@+id/taskCalendarToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentTop="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingHorizontal="10dp"
+                android:src="@drawable/fugu_ic_arrow_back" />
+
+            <TextView
+                android:id="@+id/tvScreenTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="start|center"
+                android:layout_toRightOf="@id/ivBack"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLength="20"
+                android:text="Task Calendar"
+                android:textAppearance="@style/CustomTextAppearance.TitilliumWebSemiBold"
+                android:textColor="@color/black"
+                android:textSize="19.2sp" />
+
+            <Spinner
+                android:id="@+id/spinnerTaskType"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:entries="@array/task_type"
+                android:paddingHorizontal="10dp"
+                android:spinnerMode="dropdown"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+        </RelativeLayout>
+    </Toolbar>
+
+    <io.github.memfis19.cadar.view.MonthCalendar
+        android:id="@+id/monthCalendar"
+        android:layout_width="match_parent"
+        android:layout_height="255dp"
+        android:layout_below="@id/taskCalendarToolbar" />
+
+    <io.github.memfis19.cadar.view.ListCalendar
+        android:id="@+id/listCalendar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/monthCalendar" />
+
+</RelativeLayout>

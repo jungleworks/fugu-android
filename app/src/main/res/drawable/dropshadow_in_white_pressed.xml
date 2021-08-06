@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape>
+            <solid android:color="#0DCCCCCC" />
+            <padding android:top="@dimen/dropshadow_width"  android:bottom="@dimen/dropshadow_width" android:left="@dimen/dropshadow_width" />
+            <corners android:radius="@dimen/button_corner_radius"/>
+        </shape>
+    </item>
+
+    <item>
+        <shape>
+            <solid android:color="#0DCCCCCC" />
+            <padding android:top="@dimen/dropshadow_width"  android:bottom="@dimen/dropshadow_width" android:left="@dimen/dropshadow_width" />
+            <corners android:radius="@dimen/button_corner_radius"/>
+        </shape>
+    </item>
+
+    <!-- content background -->
+    <item
+        android:left="@dimen/dropshadow_width"
+        android:top="@dimen/dropshadow_width"
+        android:bottom="@dimen/dropshadow_width"
+        >
+        <shape>
+            <solid android:color="@color/white_50"/>
+            <corners android:radius="@dimen/button_corner_radius"/>
+        </shape>
+    </item>
+</layer-list>

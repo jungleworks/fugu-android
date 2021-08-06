@@ -1,0 +1,11 @@
+<androidx.appcompat.widget.AppCompatEditText xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tvOption"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="@dimen/fugu_margin_10"
+    android:layout_marginStart="@dimen/fugu_margin_10"
+    android:layout_marginTop="8dp"
+    android:background="@drawable/rectangle_border_radio"
+    android:hint="Option 1"
+    android:inputType="textCapSentences"
+    android:padding="@dimen/fugu_margin_10" />

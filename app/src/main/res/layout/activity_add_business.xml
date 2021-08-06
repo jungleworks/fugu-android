@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.skeleton.mvp.ui.addBusiness.AddBusinessActivity">
+
+    <LinearLayout
+        android:id="@+id/llToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="10dp"
+            android:layout_weight="0.07"
+            app:srcCompat="@drawable/ic_arrow_back" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="10dp"
+            android:layout_weight="0.93"
+            android:gravity="center|start"
+            android:text="Add Workspace"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/fugu_margin_10"
+                app:cardCornerRadius="@dimen/fugu_margin_5"
+                app:cardElevation="@dimen/fugu_margin_5">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingEnd="@dimen/fugu_margin_10"
+                    android:paddingLeft="@dimen/fugu_margin_10"
+                    android:paddingRight="@dimen/fugu_margin_10"
+                    android:paddingStart="@dimen/fugu_margin_10">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/CustomTextAppearance.Bold"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/fugu_margin_5"
+                        android:text="@string/add_a_workspace_by_email_address"
+                        android:textSize="16sp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/fugu_margin_5"
+                        android:layout_marginTop="@dimen/fugu_margin_10"
+                        android:text="@string/see_fuguchat_workspaces_associated_with_your_email_address_or_create_a_new_fuguchat_workspace_with_the_address_of_your_choice"
+                        android:textSize="14sp" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvEmails"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/fugu_margin_10"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:overScrollMode="never" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/fugu_margin_10"
+                app:cardCornerRadius="@dimen/fugu_margin_5"
+                app:cardElevation="@dimen/fugu_margin_5"
+                app:contentPadding="@dimen/fugu_margin_5">
+
+                <LinearLayout
+                    android:id="@+id/llAnotherEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:layout_marginEnd="@dimen/fugu_margin_15"
+                        android:layout_marginRight="@dimen/fugu_margin_15"
+                        app:srcCompat="@drawable/envelope_large" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/fugu_margin_10"
+                        android:layout_marginTop="@dimen/fugu_margin_10"
+                        android:text="Login with another email address"
+                        android:textColor="@android:color/black"
+                        android:textSize="17sp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/fugu_margin_10"
+                app:cardCornerRadius="@dimen/fugu_margin_5"
+                app:cardElevation="@dimen/fugu_margin_5"
+                app:contentPadding="@dimen/fugu_margin_5">
+
+                <LinearLayout
+                    android:id="@+id/llCreateWorkspace"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:layout_marginEnd="@dimen/fugu_margin_15"
+                        android:layout_marginRight="@dimen/fugu_margin_15"
+                        app:srcCompat="@drawable/envelope_large" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/fugu_margin_10"
+                        android:layout_marginTop="@dimen/fugu_margin_10"
+                        android:text="Create new workspace"
+                        android:textColor="@android:color/black"
+                        android:textSize="17sp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

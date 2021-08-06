@@ -1,0 +1,268 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rlMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:animateLayoutChanges="true"-->
+    <!--android:orientation="vertical">-->
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/bottom_navigation">
+
+        <LinearLayout
+            android:id="@+id/mainLL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
+            android:orientation="vertical">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/mainAppBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible">
+
+                <androidx.appcompat.widget.Toolbar
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/homeToolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="@color/white"
+                    android:visibility="visible">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:id="@+id/llHome"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:visibility="visible">
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent">
+
+                                <TextView
+                                    android:id="@+id/tvHomeTitle"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="start|center"
+                                    android:ellipsize="end"
+                                    android:gravity="center"
+                                    android:maxWidth="220dp"
+                                    android:singleLine="true"
+                                    android:textAppearance="@style/CustomTextAppearance.TitilliumWebSemiBold"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/font_xxlarge"
+                                    tools:text="OfficeChat" />
+
+                                <ImageView
+                                    android:id="@+id/ivNotification"
+                                    android:layout_width="8dp"
+                                    android:layout_height="8dp"
+                                    android:layout_marginTop="@dimen/fugu_margin_10"
+                                    android:layout_toRightOf="@+id/tvHomeTitle"
+                                    android:src="@drawable/ring_red"
+                                    android:visibility="gone" />
+
+                            </RelativeLayout>
+
+                            <ImageView
+                                android:id="@+id/ivArrow"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/fugu_margin_2"
+                                android:src="@drawable/ic_keyboard_arrow_down_white_24dp"
+                                android:tint="@color/black"
+                                android:visibility="gone" />
+
+                        </LinearLayout>
+
+
+<!--                        <androidx.appcompat.widget.AppCompatImageView-->
+<!--                            android:id="@+id/ivLiveHeader"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_alignParentEnd="true"-->
+<!--                            android:layout_centerVertical="true"-->
+<!--                            android:layout_marginEnd="95dp"-->
+<!--                            android:src="@drawable/ic_live_video"-->
+<!--                            android:tint="@color/black" />-->
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ivSearchHeader"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="55dp"
+                            android:src="@drawable/ic_search"
+                            android:tint="@color/black" />
+
+                        <RelativeLayout
+                            android:id="@+id/rlNoti"
+                            android:layout_width="27dp"
+                            android:layout_height="36dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="10dp">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="22dp"
+                                android:layout_height="22dp"
+                                android:layout_centerVertical="true"
+                                android:src="@drawable/ic_bn_notification" />
+
+                            <RelativeLayout
+                                android:id="@+id/rlCount"
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:layout_marginStart="12dp"
+                                android:background="@drawable/ring_light_grey"
+                                android:backgroundTint="@color/colorPrimary">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvCount"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:text="0"
+                                    android:textColor="@color/white"
+                                    android:textSize="10sp" />
+
+                            </RelativeLayout>
+
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                </androidx.appcompat.widget.Toolbar>
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/notificationToolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="start|center"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:maxLength="20"
+                        android:text="Notifications"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font_xxlarge" />
+                </androidx.appcompat.widget.Toolbar>
+
+                <RelativeLayout
+                    android:id="@+id/searchLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:background="@color/office_chat_color"
+                    android:visibility="gone">
+
+
+                    <com.skeleton.mvp.util.SearchAnimationToolbar
+                        android:id="@+id/searchToolbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorPrimary"
+                        app:searchHint="@string/search_hint"
+                        app:subTitileTextSize="12sp"
+                        app:subtitle="Add members"
+                        app:title="New group"
+                        app:titleTextColor="@color/white" />
+
+                </RelativeLayout>
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/moreToolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="start|center"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:maxLength="20"
+                        android:text="More Options"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font_xxlarge" />
+
+                </androidx.appcompat.widget.Toolbar>
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <TextView
+                android:id="@+id/tvReturnCall"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/office_chat_color_opaque"
+                android:gravity="center"
+                android:text="@string/tap_to_return_to_video_call"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+
+        <com.skeleton.mvp.utils.NoSwipePager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/mainLL" />
+
+    </RelativeLayout>
+    <!--</LinearLayout>-->
+
+    <LinearLayout
+        android:id="@+id/llInternet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:background="@color/fugu_connected"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/fugu_margin_2"
+            android:textColor="@android:color/black"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+    <com.aurelhubert.ahbottomnavigation.AHBottomNavigation
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:background="@color/white"
+        android:visibility="visible"
+        app:elevation="8dp"
+        app:layout_insetEdge="top" />
+
+</RelativeLayout>

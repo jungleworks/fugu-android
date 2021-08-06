@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical"
+    tools:context="com.skeleton.mvp.ui.selectdomain.SelectDomainActivity">
+
+    <TextView
+        style="@style/CustomTextAppearance.Bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_medium"
+        android:layout_marginTop="@dimen/spacing_small"
+        android:text="@string/your_workspaces"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_xxlarge" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_medium"
+        android:layout_marginTop="@dimen/spacing_tiny"
+        android:text="@string/you_have_account_on_these_officechat_workspaces"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_normal" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvDomainList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/spacing_small"
+        android:layoutAnimation="@anim/layout_animation_from_bottom" />
+</LinearLayout>

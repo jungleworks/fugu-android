@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/fugu_margin_15">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:layout_marginLeft="@dimen/fugu_margin_10"
+        android:layout_marginStart="@dimen/fugu_margin_10"
+        style="@style/CustomTextAppearance.Semibold"
+        android:layout_marginBottom="@dimen/fugu_margin_10"
+        android:background="?attr/selectableItemBackground"
+        android:layout_marginTop="@dimen/fugu_margin_5"
+        android:text="Conversation" />
+
+    <TextView
+        android:id="@+id/tvViewProfile"
+        style="@style/ConversationDialogTextView"
+        android:background="?attr/selectableItemBackground"
+        android:text="View Profile" />
+
+    <TextView
+        android:id="@+id/tvMute"
+        style="@style/ConversationDialogTextView"
+        android:background="?attr/selectableItemBackground"
+        android:text="Mute Group" />
+
+    <TextView
+        android:id="@+id/tvPin"
+        style="@style/ConversationDialogTextView"
+        android:background="?attr/selectableItemBackground"
+        android:text="Pin Chat" />
+
+    <TextView
+        android:id="@+id/tvClear"
+        style="@style/ConversationDialogTextView"
+        android:background="?attr/selectableItemBackground"
+        android:text="Delete Chat" />
+
+    <TextView
+        android:id="@+id/tvLeave"
+        style="@style/ConversationDialogTextView"
+        android:background="?attr/selectableItemBackground"
+        android:text="Leave Group" />
+</LinearLayout>

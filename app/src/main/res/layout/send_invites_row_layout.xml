@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginEnd="@dimen/fugu_margin_5"
+    android:layout_marginStart="@dimen/fugu_margin_5">
+
+<LinearLayout
+    android:id="@+id/llMain"
+   android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingTop="@dimen/fugu_margin_10"
+    android:paddingBottom="@dimen/fugu_margin_10"
+    android:weightSum="1"
+    >
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="0.9">
+
+        <TextView
+            android:textSize="17sp"
+            android:layout_marginStart="@dimen/fugu_margin_10"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="@dimen/fugu_margin_10"
+            android:id="@+id/tv_emailid_invites"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Email Id"
+            />
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatCheckBox
+        android:id="@+id/invites_checkbox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.1"
+        android:layout_gravity="center_vertical"
+        />
+</LinearLayout>
+    <View
+
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="@dimen/fugu_margin_10"
+
+        android:layout_marginEnd="@dimen/fugu_margin_10"
+        android:background="@color/gray_light"/>
+
+</LinearLayout>

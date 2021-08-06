@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/spacing_medium"
+            android:paddingTop="@dimen/font_large"
+            android:paddingRight="@dimen/spacing_medium">
+
+            <ImageView
+                android:id="@+id/img"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/fugu_img" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_medium"
+                android:layout_marginLeft="@dimen/spacing_medium"
+                android:layout_marginTop="@dimen/spacing_large"
+                android:layout_marginBottom="@dimen/spacing_very_tiny"
+                android:text="Email Address" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_rectangle_border_layout"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/etEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/transparent"
+                    android:hint="Email Address"
+                    android:inputType="textEmailAddress"
+                    android:paddingStart="@dimen/fugu_margin_15"
+                    android:paddingLeft="@dimen/fugu_margin_15"
+                    android:paddingTop="@dimen/fugu_margin_7"
+                    android:imeOptions="actionNext"
+                    android:paddingEnd="@dimen/fugu_margin_7"
+                    android:paddingRight="@dimen/fugu_margin_7"
+                    android:paddingBottom="@dimen/fugu_margin_7" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_medium"
+                android:layout_marginLeft="@dimen/spacing_medium"
+                android:layout_marginTop="@dimen/spacing_large"
+                android:layout_marginBottom="@dimen/spacing_very_tiny"
+                android:text="Phone Number" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_rectangle_border_layout"
+                android:orientation="horizontal">
+
+                <com.hbb20.CountryCodePicker
+                    android:id="@+id/etCountryCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/fugu_margin_8"
+                    android:layout_marginLeft="@dimen/fugu_margin_8"
+                    android:layout_marginTop="-9dp"
+                    android:visibility="visible"
+                    app:ccp_autoDetectCountry="true"
+                    app:ccp_showFlag="false"
+                    app:ccp_showNameCode="false" />
+
+                <EditText
+                    android:id="@+id/etPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/transparent"
+                    android:hint="Phone Number"
+                    android:inputType="phone"
+                    android:paddingStart="@dimen/fugu_margin_15"
+                    android:paddingLeft="@dimen/fugu_margin_15"
+                    android:paddingTop="@dimen/fugu_margin_7"
+                    android:paddingEnd="@dimen/fugu_margin_7"
+                    android:paddingRight="@dimen/fugu_margin_7"
+                    android:paddingBottom="@dimen/fugu_margin_7"
+                    android:imeOptions="actionDone"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_medium"
+                android:layout_marginLeft="@dimen/spacing_medium"
+                android:layout_marginTop="@dimen/spacing_tiny"
+                android:text="@string/after_confirming_your_email_address_we_ll_use_it_to_n_create_your_account" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnContinue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_xxlarge"
+                android:layout_marginTop="@dimen/spacing_xlarge"
+                android:layout_marginEnd="@dimen/spacing_xxlarge"
+                android:layout_marginBottom="@dimen/fugu_margin_10"
+                android:background="@drawable/curved_chiku_button"
+                android:text="Continue"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_xlarge" />
+        </LinearLayout>
+    </ScrollView>
+    <!--<com.skeleton.mvp.ui.customview.MaterialEditText-->
+    <!--android:id="@+id/etEmail"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_centerInParent="true"-->
+    <!--android:layout_marginEnd="@dimen/spacing_small"-->
+    <!--android:layout_marginStart="@dimen/spacing_small"-->
+    <!--android:background="@color/transparent"-->
+    <!--app:met_underlineColor="@color/transparent"-->
+    <!--app:met_floatingLabel="highlight"-->
+    <!--app:met_floatingLabelText="@string/your_email_address"-->
+    <!--app:met_hideUnderline="true"-->
+    <!--android:hint="@string/your_email_address"-->
+    <!--android:paddingStart="@dimen/spacing_tiny"-->
+    <!--android:singleLine="true"-->
+    <!--android:textColor="@color/gray_dark"-->
+    <!--android:textColorHint="@color/gray_dark"-->
+    <!--android:textSize="@dimen/font_xxlarge" />-->
+
+
+    <!--<android.support.v7.widget.AppCompatButton-->
+    <!--android:id="@+id/btnContinue"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentBottom="true"-->
+    <!--android:layout_margin="@dimen/spacing_small"-->
+    <!--android:layout_marginTop="@dimen/spacing_medium"-->
+    <!--android:background="@drawable/curved_button"-->
+    <!--android:text="@string/continuee"-->
+    <!--android:textColor="@color/white"-->
+    <!--android:textStyle="bold" />-->
+</RelativeLayout>

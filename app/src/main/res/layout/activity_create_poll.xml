@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.skeleton.mvp.activity.CreatePollActivity">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivBack"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:tint="@color/black"
+                android:src="@drawable/ic_arrow_back_white_24dp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="20dp"
+                android:gravity="center"
+                android:text="Create a Poll"
+                android:textAppearance="@style/CustomTextAppearance.TitilliumWebSemiBold"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/fugu_margin_10"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etQuestion"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_margin="@dimen/fugu_margin_10"
+                android:background="@drawable/rectangle_border_radio"
+                android:gravity="start"
+                android:hint="Ask a question"
+                android:padding="@dimen/fugu_margin_10" />
+
+            <LinearLayout
+                android:id="@+id/llOptions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/option_one"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/fugu_margin_10"
+                    android:layout_marginStart="@dimen/fugu_margin_10"
+                    android:layout_marginTop="@dimen/fugu_padding_15"
+                    android:textAppearance="@style/CustomTextAppearance.TitilliumWeb"
+                    android:background="@drawable/rectangle_border_radio"
+                    android:hint="Option 1"
+                    android:inputType="textCapSentences"
+                    android:padding="@dimen/fugu_margin_10" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/option_two"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/fugu_margin_10"
+                    android:layout_marginStart="@dimen/fugu_margin_10"
+                    android:layout_marginTop="@dimen/fugu_padding_7"
+                    android:textAppearance="@style/CustomTextAppearance.TitilliumWeb"
+                    android:background="@drawable/rectangle_border_radio"
+                    android:hint="Option 2"
+                    android:inputType="textCapSentences"
+                    android:padding="@dimen/fugu_margin_10" />
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvAddOption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/fugu_margin_10"
+                android:layout_marginTop="@dimen/fugu_margin_10"
+                android:text="+ Add an Option"
+                android:textAppearance="@style/CustomTextAppearance.TitilliumWebSemiBold"
+                android:textColor="@color/colorPrimary"
+                android:textSize="17sp" />
+
+            <CheckBox
+                android:id="@+id/cbMultipleSelect"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/fugu_margin_10"
+                android:layout_marginStart="@dimen/fugu_dp_6"
+                android:layout_marginTop="@dimen/fugu_margin_10"
+                android:textAppearance="@style/CustomTextAppearance.TitilliumWeb"
+                android:text="Let people select multiple options" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/fugu_margin_10"
+                android:layout_marginStart="@dimen/fugu_margin_10"
+                android:layout_marginTop="@dimen/fugu_margin_15"
+                android:background="@color/gray_lighter"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/llStatic"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="125dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:paddingBottom="@dimen/fugu_margin_10"
+                        android:paddingStart="@dimen/fugu_margin_10"
+                        android:paddingTop="@dimen/fugu_margin_10"
+                        android:textAppearance="@style/CustomTextAppearance.TitilliumWeb"
+                        android:text="Poll expires in :" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:gravity="start"
+                        android:paddingBottom="@dimen/fugu_margin_10"
+                        android:paddingTop="@dimen/fugu_margin_10"
+                        android:text="7 days"
+                        android:textAppearance="@style/CustomTextAppearance.TitilliumWeb"
+                        android:textColor="@color/black" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="10dp"
+                        android:layout_weight="0.5" />
+
+                    <LinearLayout
+                        android:id="@+id/llEdit"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="@dimen/fugu_margin_10"
+                        android:layout_weight="0.3"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_edit_black_24dp"
+                            android:tint="@color/colorPrimary" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Edit"
+                            android:textAppearance="@style/CustomTextAppearance.TitilliumWeb"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvPoll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/fugu_margin_10"
+                    android:text="Poll expires in :"
+                    android:textAppearance="@style/CustomTextAppearance.Semibold"
+                    android:textSize="20sp"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/llEditableDays"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/fugu_margin_10"
+                    android:visibility="gone">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvDays"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rectangle_border_normal"
+                        android:padding="@dimen/fugu_margin_15"
+                        android:text="7" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/fugu_margin_10"
+                        android:text="Days"
+                        android:textSize="18sp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvHours"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/fugu_padding_35"
+                        android:background="@drawable/rectangle_border_normal"
+                        android:padding="@dimen/fugu_margin_15"
+                        android:text="00" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/fugu_margin_10"
+                        android:text="Hours"
+                        android:textSize="18sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnCreatePoll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_normal"
+                android:layout_marginTop="@dimen/spacing_xlarge"
+                android:background="@drawable/curved_chiku_button"
+                android:textAppearance="@style/CustomTextAppearance.TitilliumWebSemiBold"
+                android:layout_marginEnd="@dimen/fugu_padding_35"
+                android:layout_marginStart="@dimen/fugu_padding_35"
+                android:text="Create Poll"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_xlarge" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

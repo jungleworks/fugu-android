@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.skeleton.mvp.activity.JitsiCallActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvCallType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_fugu"
+            android:drawablePadding="@dimen/fugu_margin_10"
+            android:padding="@dimen/fugu_margin_10"
+            tools:text="@string/fugu_video_call"
+            android:textAppearance="@style/CustomTextAppearance.TitilliumWeb"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvCalledPersonName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/fugu_margin_10"
+            tools:text="@string/amandeep_chauhan"
+            android:textAppearance="@style/CustomTextAppearance.TitilliumWebSemiBold"
+            android:textColor="@color/black"
+            android:textSize="22sp" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ivCalledPersonImage"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/group_placeholder_big" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvDummyImage"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:text="A"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:textAppearance="@style/CustomTextAppearance.Semibold"
+            android:textAlignment="center"
+            android:textSize="44sp"
+            android:visibility="visible" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvCallStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/fugu_margin_10"
+            android:text="Calling..."
+            android:textAppearance="@style/CustomTextAppearance.TitilliumWeb"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivHangUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/fugu_margin_20"
+        android:layout_alignParentBottom="true"
+        android:background="@color/transparent"
+        android:paddingTop="@dimen/fugu_padding_10"
+        android:paddingBottom="@dimen/fugu_padding_10"
+        android:visibility="visible"
+        app:srcCompat="@drawable/ic_hung_up_call" />
+
+</RelativeLayout>

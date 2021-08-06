@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical"
+    android:background="@color/white"
+tools:context="com.skeleton.mvp.activity.MediaSettingActivity">
+
+<LinearLayout
+    android:id="@+id/llToolbar"
+    android:layout_width="match_parent"
+    android:layout_height="?actionBarSize"
+    android:background="@color/white"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/ivBack"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="5dp"
+        android:layout_marginStart="10dp"
+        android:layout_weight="0.07"
+        android:tint="@color/black"
+        app:srcCompat="@drawable/ic_arrow_back" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="5dp"
+        android:layout_marginStart="10dp"
+        android:layout_weight="0.93"
+        android:gravity="center|start"
+        android:text="@string/media_settings_tv"
+        android:textColor="@color/black"
+        android:textAppearance="@style/CustomTextAppearance.TitilliumWebSemiBold"
+        android:textSize="20sp" />
+</LinearLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingStart="@dimen/fugu_margin_15"
+    android:paddingTop="@dimen/fugu_margin_10">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Media auto download"
+        android:textAppearance="@style/CustomTextAppearance.TitilliumWeb"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+    <Spinner
+        android:id="@+id/notificationType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="-10dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="-10dp"
+        android:alpha="0.4"
+        android:background="@color/transparent"
+        android:textSize="14sp" />
+</LinearLayout>
+
+<View
+    android:layout_width="match_parent"
+    android:layout_height="1dp"
+    android:layout_marginEnd="@dimen/fugu_margin_5"
+    android:layout_marginStart="@dimen/fugu_margin_5"
+    android:background="@color/gray_light" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Media Visibility"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textAppearance="@style/CustomTextAppearance.TitilliumWebSemiBold"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Show media in gallery"
+            android:textSize="16sp"
+            android:textAppearance="@style/CustomTextAppearance.DinMediumRegular"
+            android:layout_marginTop="6dp"
+            android:textColor="@color/black"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/fugu_margin_20"
+            android:layout_marginTop="-6dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Show newly downloaded media in your phone's gallery"
+            android:layout_weight="0.9"
+            android:textSize="13sp"
+            android:textAppearance="@style/CustomTextAppearance.TitilliumWeb"
+            android:paddingBottom="20dp"/>
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switchGallery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/fugu_margin_10"
+            android:checked="true"
+            />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>
+

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center"
+    android:background="@android:color/black">
+
+    <com.github.chrisbanes.photoview.PhotoView
+        android:id="@+id/ivImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/placeholder"
+        android:paddingBottom="@dimen/fugu_padding_10"
+        android:paddingTop="30dp"
+        android:layout_centerInParent="true"
+        />
+    <!--<ImageView-->
+        <!--android:id="@+id/ivImage"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+       <!---->
+        <!--android:paddingBottom="@dimen/fugu_padding_10"-->
+        <!--android:paddingLeft="@dimen/fugu_padding_10"-->
+        <!--android:paddingRight="@dimen/fugu_padding_10"-->
+        <!--android:paddingTop="30dp"-->
+        <!--android:src="@drawable/placeholder" />-->
+
+<com.skeleton.mvp.utils.beatAnimation.AVLoadingIndicatorViewFugu
+    android:id="@+id/pbLoading"
+    android:visibility="gone"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+
+    android:layout_centerInParent="true"/>
+    <TextView
+        android:id="@+id/tvCross"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_margin="@dimen/fugu_margin_10"
+        android:paddingTop="@dimen/fugu_padding_20"
+        android:paddingRight="@dimen/fugu_padding_15"
+        android:paddingLeft="@dimen/fugu_padding_15"
+        android:gravity="end"
+        android:text="CLOSE"
+        android:background="@drawable/fugu_text_gradient"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/fugu_text_size_large" />
+
+
+</RelativeLayout>

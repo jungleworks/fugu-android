@@ -1,0 +1,676 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="@+id/tvTaskEndDate"
+            app:layout_constraintTop_toBottomOf="@+id/tvTaskEndDate"
+            tools:context="com.skeleton.mvp.activity.ScheduleMeetActivity">
+
+            <Toolbar
+                android:id="@+id/scheduleToolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/white"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/ivBack"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:paddingHorizontal="10dp"
+                        android:src="@drawable/fugu_ic_arrow_back" />
+
+                    <TextView
+                        android:id="@+id/tvScreenTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="start|center"
+                        android:layout_toEndOf="@id/ivBack"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:maxLength="20"
+                        android:text="Assign Task"
+                        android:textAppearance="@style/CustomTextAppearance.TitilliumWebSemiBold"
+                        android:textColor="@color/black"
+                        android:textSize="19.2sp" />
+
+                    <ImageView
+                        android:id="@+id/ivEdit"
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:paddingHorizontal="10dp"
+                        android:src="@drawable/ic_edit_black_24dp"
+                        android:tint="@color/black"
+                        android:visibility="gone" />
+
+                </RelativeLayout>
+
+            </Toolbar>
+
+            <View
+                android:id="@+id/divider_1"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#f2f2f2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/scheduleToolbar" />
+
+            <TextView
+                android:id="@+id/tvTaskTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Task Title"
+                android:textColor="#969698"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toTopOf="@id/etTaskTitle"
+                app:layout_constraintEnd_toEndOf="@+id/etTaskTitle"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toStartOf="@+id/etTaskTitle"
+                app:layout_constraintTop_toBottomOf="@id/divider_1" />
+
+            <EditText
+                android:id="@+id/etTaskTitle"
+                style="@style/CustomTextAppearance.TitilliumWeb"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/round_rect_grey_border"
+                android:hint="Enter Task Title"
+                android:inputType="text"
+                android:padding="10dp"
+                android:paddingVertical="5dp"
+                android:textAppearance="@style/CustomTextAppearance.TitilliumWebSemiBold"
+                android:textColor="#000000"
+                android:textSize="17.3sp"
+                app:layout_constraintBottom_toTopOf="@id/divider_2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvTaskTitle" />
+
+            <View
+                android:id="@+id/divider_2"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="12dp"
+                android:background="#f2f2f2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/etTaskTitle" />
+
+            <TextView
+                android:id="@+id/tvTaskDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Task Details"
+                android:textColor="#969698"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toTopOf="@id/etTaskDescription"
+                app:layout_constraintEnd_toEndOf="@+id/etTaskDescription"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toStartOf="@+id/etTaskDescription"
+                app:layout_constraintTop_toBottomOf="@id/divider_2" />
+
+            <EditText
+                android:id="@+id/etTaskDescription"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/round_rect_grey_border"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="Enter Task Details"
+                android:inputType="textCapSentences|textMultiLine"
+                android:lines="4"
+                android:overScrollMode="always"
+                android:padding="10dp"
+                android:scrollbarStyle="insideInset"
+                android:scrollbars="vertical"
+                android:scrollHorizontally="false"
+                android:singleLine="false"
+                android:textAppearance="@style/CustomTextAppearance.TitilliumWeb"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvTaskDescription" />
+
+            <View
+                android:id="@+id/divider_3"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="12dp"
+                android:background="#f2f2f2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/etTaskDescription" />
+
+            <TextView
+                android:id="@+id/tvTaskStartDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Start Date"
+                android:textColor="#969698"
+                app:layout_constraintEnd_toEndOf="@id/etTaskTitle"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@id/etTaskTitle"
+                app:layout_constraintTop_toBottomOf="@id/divider_3" />
+
+            <TextView
+                android:id="@+id/etTaskStartDate"
+                style="@style/CustomTextAppearance.TitilliumWeb"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/round_rect_grey_border"
+                android:clickable="true"
+                android:focusable="true"
+                android:hint="DD/MM/YY"
+                android:inputType="none"
+                android:padding="10dp"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toStartOf="@id/etStartTaskTime"
+                app:layout_constraintStart_toStartOf="@id/etTaskTitle"
+                app:layout_constraintTop_toBottomOf="@id/tvTaskStartDate" />
+
+            <TextView
+                android:id="@+id/tvTaskStartTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Start Time"
+                android:textColor="#969698"
+                app:layout_constraintStart_toStartOf="@+id/etStartTaskTime"
+                app:layout_constraintTop_toBottomOf="@id/divider_3" />
+
+            <TextView
+                android:id="@+id/etStartTaskTime"
+                style="@style/CustomTextAppearance.TitilliumWeb"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/round_rect_grey_border"
+                android:clickable="true"
+                android:focusable="true"
+                android:hint="00:00 XX"
+                android:inputType="none"
+                android:padding="10dp"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toStartOf="@+id/ivStartCal"
+                app:layout_constraintStart_toEndOf="@id/etTaskStartDate"
+                app:layout_constraintTop_toBottomOf="@id/tvTaskStartDate" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivStartCal"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="8dp"
+                app:layout_constraintBottom_toBottomOf="@+id/etStartTaskTime"
+                app:layout_constraintEnd_toEndOf="@id/etTaskTitle"
+                app:layout_constraintStart_toEndOf="@+id/etStartTaskTime"
+                app:layout_constraintTop_toTopOf="@+id/etStartTaskTime"
+                app:srcCompat="@drawable/ic_schedule_meet" />
+
+            <TextView
+                android:id="@+id/tvTaskEndDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:text="End Date"
+                android:textColor="#969698"
+                app:layout_constraintStart_toStartOf="@id/etTaskEndDate"
+                app:layout_constraintTop_toBottomOf="@id/etTaskStartDate" />
+
+            <TextView
+                android:id="@+id/etTaskEndDate"
+                style="@style/CustomTextAppearance.TitilliumWeb"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/round_rect_grey_border"
+                android:clickable="true"
+                android:focusable="true"
+                android:hint="DD/MM/YY"
+                android:inputType="none"
+                android:padding="10dp"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toStartOf="@id/etEndTaskTime"
+                app:layout_constraintStart_toStartOf="@id/etTaskStartDate"
+                app:layout_constraintTop_toBottomOf="@id/tvTaskEndDate" />
+
+            <TextView
+                android:id="@+id/tvTaskEndTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:text="End Time"
+                app:layout_constraintStart_toStartOf="@id/etEndTaskTime"
+                app:layout_constraintTop_toBottomOf="@+id/etStartTaskTime" />
+
+            <TextView
+                android:id="@+id/etEndTaskTime"
+                style="@style/CustomTextAppearance.TitilliumWeb"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="7dp"
+                android:background="@drawable/round_rect_grey_border"
+                android:clickable="true"
+                android:focusable="true"
+                android:hint="00:00 XX"
+                android:inputType="none"
+                android:padding="10dp"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="@+id/etStartTaskTime"
+                app:layout_constraintStart_toEndOf="@id/etTaskEndDate"
+                app:layout_constraintTop_toBottomOf="@id/tvTaskEndTime" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivEndCal"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                app:layout_constraintBottom_toBottomOf="@+id/etEndTaskTime"
+                app:layout_constraintEnd_toEndOf="@id/etTaskTitle"
+                app:layout_constraintTop_toTopOf="@+id/etEndTaskTime"
+                app:srcCompat="@drawable/ic_schedule_meet" />
+
+            <!--            <TextView-->
+            <!--                android:id="@+id/tvTaskReminderDate"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginTop="14dp"-->
+            <!--                android:text="Reminder Time"-->
+            <!--                android:textColor="#969698"-->
+            <!--                app:layout_constraintStart_toStartOf="@id/etTaskReminderDate"-->
+            <!--                app:layout_constraintTop_toBottomOf="@id/etTaskEndDate" />-->
+
+            <!--            <TextView-->
+            <!--                android:id="@+id/etTaskReminderDate"-->
+            <!--                style="@style/CustomTextAppearance.TitilliumWeb"-->
+            <!--                android:layout_width="0dp"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginTop="7dp"-->
+            <!--                android:layout_marginEnd="10dp"-->
+            <!--                android:background="@drawable/round_rect_grey_border"-->
+            <!--                android:clickable="true"-->
+            <!--                android:focusable="true"-->
+            <!--                android:visibility="gone"-->
+            <!--                android:hint="DD/MM/YY"-->
+            <!--                android:inputType="none"-->
+            <!--                android:padding="10dp"-->
+            <!--                android:textSize="18sp"-->
+            <!--                app:layout_constraintEnd_toStartOf="@id/etTaskReminderTime"-->
+            <!--                app:layout_constraintStart_toStartOf="@id/etTaskStartDate"-->
+            <!--                app:layout_constraintTop_toBottomOf="@id/tvTaskReminderDate" />-->
+
+            <!--            <TextView-->
+            <!--                android:id="@+id/tvTaskReminderTime"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginTop="14dp"-->
+            <!--                android:text="Reminder Time"-->
+            <!--                android:visibility="gone"-->
+            <!--                app:layout_constraintStart_toStartOf="@id/etTaskReminderTime"-->
+            <!--                app:layout_constraintTop_toBottomOf="@+id/etEndTaskTime" />-->
+
+            <!--            <TextView-->
+            <!--                android:id="@+id/etTaskReminderTime"-->
+            <!--                style="@style/CustomTextAppearance.TitilliumWeb"-->
+            <!--                android:layout_width="0dp"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginStart="10dp"-->
+            <!--                android:layout_marginTop="7dp"-->
+            <!--                android:background="@drawable/round_rect_grey_border"-->
+            <!--                android:clickable="true"-->
+            <!--                android:focusable="true"-->
+            <!--                android:hint="00:00 XX"-->
+            <!--                android:visibility="gone"-->
+            <!--                android:inputType="none"-->
+            <!--                android:padding="10dp"-->
+            <!--                android:textSize="18sp"-->
+            <!--                app:layout_constraintEnd_toEndOf="@+id/etStartTaskTime"-->
+            <!--                app:layout_constraintStart_toEndOf="@id/etTaskReminderDate"-->
+            <!--                app:layout_constraintTop_toBottomOf="@id/tvTaskReminderTime" />-->
+
+            <!--            <androidx.appcompat.widget.AppCompatImageView-->
+            <!--                android:id="@+id/ivRemindCal"-->
+            <!--                android:layout_width="30dp"-->
+            <!--                android:visibility="gone"-->
+            <!--                android:layout_height="30dp"-->
+            <!--                app:layout_constraintBottom_toBottomOf="@+id/etTaskReminderTime"-->
+            <!--                app:layout_constraintEnd_toEndOf="@id/etTaskTitle"-->
+            <!--                app:layout_constraintTop_toTopOf="@+id/etTaskReminderTime"-->
+            <!--                app:srcCompat="@drawable/ic_schedule_meet" />-->
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvReminderText2"
+                style="@style/CustomTextAppearance.TitilliumWeb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="before the deadline."
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@+id/tvReminderText1"
+                app:layout_constraintEnd_toEndOf="@id/ivEndCal"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@id/spinnerReminderTime"
+                app:layout_constraintTop_toTopOf="@+id/tvReminderText1" />
+
+            <Spinner
+                android:id="@+id/spinnerReminderTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/round_rect_grey_border_2dp"
+                android:entries="@array/reminderTimeSlots"
+                app:layout_constraintBottom_toTopOf="@+id/divider_4"
+                app:layout_constraintStart_toEndOf="@+id/tvReminderText1"
+                app:layout_constraintTop_toBottomOf="@+id/etTaskEndDate"
+                tools:listitem="@layout/custom_spinner_item" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvReminderText1"
+                style="@style/CustomTextAppearance.TitilliumWeb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Remind"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@+id/spinnerReminderTime"
+                app:layout_constraintStart_toStartOf="@+id/etTaskEndDate"
+                app:layout_constraintTop_toBottomOf="@+id/etTaskEndDate" />
+
+            <View
+                android:id="@+id/divider_4"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginVertical="12dp"
+                android:background="#f2f2f2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/spinnerReminderTime" />
+
+            <TextView
+                android:id="@+id/tvSelectAll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:text="Select All Users"
+                android:textColor="@color/grayish"
+                android:textSize="16.3sp"
+                app:layout_constraintBottom_toBottomOf="@id/switchSelectAll"
+                app:layout_constraintStart_toStartOf="@id/etTaskEndDate"
+                app:layout_constraintTop_toTopOf="@+id/switchSelectAll" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switchSelectAll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="-5dp"
+                android:layout_marginBottom="12dp"
+                android:thumb="@drawable/custom_switch"
+                app:layout_constraintBottom_toTopOf="@+id/llSelectMembers"
+                app:layout_constraintEnd_toEndOf="@id/ivEndCal"
+                app:layout_constraintTop_toBottomOf="@id/divider_4"
+                app:track="@drawable/custom_switch_states" />
+
+            <TextView
+                android:id="@+id/tvDisplayMessage"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="4dp"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Submission already ended at 12:00 PM on 28/08/2020"
+                android:textColor="@color/grayish"
+                android:textSize="20sp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toTopOf="@+id/llSelectMembers"
+                app:layout_constraintEnd_toEndOf="@+id/ivEndCal"
+                app:layout_constraintStart_toStartOf="@id/etTaskEndDate"
+                app:layout_constraintTop_toBottomOf="@+id/switchSelectAll" />
+
+            <LinearLayout
+                android:id="@+id/llSelectMembers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/switchSelectAll"
+                android:orientation="horizontal"
+                android:paddingVertical="15dp"
+                app:layout_constraintBottom_toTopOf="@+id/switchAttachFile"
+                app:layout_constraintTop_toBottomOf="@id/switchSelectAll">
+
+                <ImageView
+                    android:layout_width="@dimen/fugu_margin_35"
+                    android:layout_height="@dimen/fugu_margin_35"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="22dp"
+                    android:layout_marginEnd="@dimen/fugu_margin_12"
+                    android:src="@drawable/user" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="5dp"
+                    android:text="Selected Users"
+                    android:textColor="#000000"
+                    android:textSize="16.3sp" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/tvMemberCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="0"
+                    android:textColor="#000000"
+                    android:textSize="16.3sp" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/fugu_margin_7"
+                    android:layout_marginEnd="@dimen/fugu_margin_17"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/ic_arrow_right_grey" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvAttachFile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:text="Attach File"
+                android:textColor="@color/grayish"
+                android:textSize="16.3sp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@id/switchAttachFile"
+                app:layout_constraintStart_toStartOf="@id/etTaskEndDate"
+                app:layout_constraintTop_toTopOf="@+id/switchAttachFile" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switchAttachFile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="-5dp"
+                android:layout_marginBottom="12dp"
+                android:thumb="@drawable/custom_switch"
+                android:visibility="gone"
+                app:layout_constraintBottom_toTopOf="@id/llUploadFile"
+                app:layout_constraintEnd_toEndOf="@id/ivEndCal"
+                app:layout_constraintTop_toBottomOf="@id/llSelectMembers"
+                app:track="@drawable/custom_switch_states" />
+
+            <LinearLayout
+                android:id="@+id/llUploadFile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingHorizontal="24dp"
+                android:paddingVertical="10dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toTopOf="@+id/tvSubmissionContent"
+                app:layout_constraintEnd_toEndOf="@id/divider_4"
+                app:layout_constraintStart_toStartOf="@id/divider_4"
+                app:layout_constraintTop_toBottomOf="@id/switchAttachFile">
+
+                <include
+                    layout="@layout/task_file_item_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:visibility="gone" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvUploadFile"
+                    style="@style/CustomTextAppearance.TitilliumWebSemiBold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:background="@drawable/curved_chiku_button"
+                    android:drawablePadding="10sp"
+                    android:maxLines="1"
+                    android:paddingHorizontal="20dp"
+                    android:paddingVertical="10dp"
+                    android:text="Choose File"
+                    android:textColor="@android:color/white"
+                    android:visibility="gone"
+                    app:drawableEndCompat="@drawable/ic_cloud_upload_24"
+                    app:drawableTint="@color/white" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvSubmissionContent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Content"
+                android:textColor="#969698"
+                android:textSize="15sp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toTopOf="@id/etSubmissionContent"
+                app:layout_constraintEnd_toEndOf="@+id/etSubmissionContent"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toStartOf="@+id/etSubmissionContent"
+                app:layout_constraintTop_toBottomOf="@id/llUploadFile" />
+
+            <EditText
+                android:id="@+id/etSubmissionContent"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/round_rect_grey_border"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="Enter submission content here"
+                android:inputType="textCapSentences|textMultiLine"
+                android:lines="5"
+                android:overScrollMode="always"
+                android:padding="10dp"
+                android:scrollbarStyle="insideInset"
+                android:scrollbars="vertical"
+                android:scrollHorizontally="false"
+                android:singleLine="false"
+                android:textAppearance="@style/CustomTextAppearance.TitilliumWeb"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvSubmissionContent" />
+
+            <View
+                android:id="@+id/divider_6"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginHorizontal="15dp"
+                android:background="#f2f2f2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/etSubmissionContent" />
+
+            <Button
+                android:id="@+id/btnAssignTask"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/curved_chiku_button"
+                android:text="Assign"
+                android:textAllCaps="false"
+                android:textAppearance="@style/CustomTextAppearance.TitilliumWebSemiBold"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_xlarge"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/divider_6"
+                app:layout_constraintVertical_bias="0.0"
+                tools:layout_editor_absoluteX="15dp" />
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnDeleteTask"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/curved_button_red"
+                android:text="Delete Task"
+                android:textAppearance="@style/CustomTextAppearance.TitilliumWebSemiBold"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@+id/btnAssignTask" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</LinearLayout>

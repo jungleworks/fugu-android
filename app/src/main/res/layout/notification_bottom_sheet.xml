@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/fugu_margin_10">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Group Notification Preferences"
+        android:textAppearance="@style/CustomTextAppearance.Semibold"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:id="@+id/llOne"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/fugu_margin_30"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radioOne"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/fugu_margin_5"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/fugu_margin_2"
+                android:textAppearance="@style/CustomTextAppearance.TitilliumWeb"
+                android:text="Notify me for all notifications (default)"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/fugu_margin_4"
+                android:textAppearance="@style/CustomTextAppearance.TitilliumWeb"
+                android:text="All new messages will notify you"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llTwo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/fugu_margin_30"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radioTwo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/fugu_margin_5"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/fugu_margin_2"
+
+                android:text="Notify me for mentions only"
+                android:textAppearance="@style/CustomTextAppearance.TitilliumWeb"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/tvMentions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/fugu_margin_4"
+                android:textAppearance="@style/CustomTextAppearance.TitilliumWeb"
+                android:text="Everyone and Rajat Dhamija will notify you"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llThree"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="@dimen/fugu_margin_20"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radioThree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/fugu_margin_5"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/fugu_margin_2"
+                android:textAppearance="@style/CustomTextAppearance.TitilliumWeb"
+                android:text="Notify me for direct mentions only"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/tvDirectMentions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/fugu_margin_4"
+                android:textAppearance="@style/CustomTextAppearance.TitilliumWeb"
+                android:text="Rajat Dhamija will notify you and nothing else"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

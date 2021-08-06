@@ -1,0 +1,510 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.skeleton.mvp">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission
+        android:name="android.permission.READ_LOGS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.USE_FULL_SCREEN_INTENT" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.USES_POLICY_FORCE_LOCK" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.EXPAND_STATUS_BAR" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+
+    <application
+        android:name=".MyApplication"
+        android:finishOnTaskLaunch="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@drawable/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="LockedOrientationActivity"
+        tools:replace="android:label">
+        <activity
+            android:name="com.dropbox.core.android.AuthActivity"
+            android:configChanges="keyboard|orientation"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="db-omkekx86c88gxlh" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".groupTasks.selectedTaskUsers.SelectedTaskUsersActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".groupTasks.TaskCalendarActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".groupTasks.ViewGroupTasksActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".groupTasks.TaskActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".calendar.AuthorizeGoogleActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".community.JoinCommunityActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <action android:name="android.intent.action.VIEW" />
+                <data
+                    android:host="app.fugu.chat"
+                    android:pathPattern="\/.*\/join.*"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".payment.CalculatePaymentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payment.PaymentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ScheduleMeetActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.OnboardActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activity.IncomingJitsiCallActivity" />
+        <activity android:name=".activity.JitsiCallActivity" />
+        <activity android:name=".TestActivityy" />
+        <activity
+            android:name=".activity.MultipleImageDisplayActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeImages" />
+        <activity
+            android:name=".activity.GuestContactsAccessActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.GuestGroupsAccessActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.InviteGuestsActivity"
+            android:windowSoftInputMode="adjustResize|stateAlwaysVisible" />
+        <activity
+            android:name=".activity.InviteChooserActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.WebViewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.PhoneNumberActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.CallFeedbackActivity"
+            android:launchMode="singleInstance"
+            android:theme="@style/TransparentPopup" />
+        <activity android:name=".activity.AnimationTestActivity" />
+        <activity android:name=".activity.TesingtActivity" />
+        <activity android:name=".activity.CallingFeedBackActivity" />
+        <activity
+            android:name=".activity.SendInvitesActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.MediaSettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.AlreadySignInGoogle"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.AppPermissionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.splash.SplashActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".ui.onboarding.signin.SignInActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateAlwaysVisible" />
+        <activity
+            android:name=".ui.notificationrecycler.NotificationActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".ui.intro.IntroActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" /> <!-- Facebook -->
+        <activity
+            android:name=".ui.getstarted.GetStartedActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateAlwaysVisible" />
+        <activity
+            android:name=".activity.CreateWorkspaceActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateAlwaysVisible" />
+        <activity
+            android:name=".ui.otp.OTPActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateAlwaysVisible" />
+        <activity
+            android:name=".ui.setpassword.SetPasswordActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateAlwaysVisible" />
+        <activity
+            android:name=".ui.selectdomain.SelectDomainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.invite.InviteMembersActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateAlwaysVisible" />
+        <activity
+            android:name=".ui.creategroup.CreateGroupActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden" />
+        <activity
+            android:name=".ui.search.SearchActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.search.CreateGroupSearchActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.profile.ProfileActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeGroup" />
+        <activity
+            android:name=".ui.setupprofile.SetUpProfileActivity"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateAlwaysVisible" />
+        <activity
+            android:name=".data.model.notifications.NotificationSettingsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.groupspecific.GroupSpecificActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.addchannel.AddChannelActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.groupspecific.OldGroupSpecificActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden" />
+        <activity
+            android:name=".ui.editProfile.EditProfileActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.browsegroup.BrowseGroupActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.addBusiness.AddBusinessActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.domain.DomainActivity"
+            android:windowSoftInputMode="adjustResize|stateAlwaysVisible" />
+        <activity
+            android:name=".ui.yourspaces.YourSpacesActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.fcinvite.InviteOnboardActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.reset.ResetActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".ui.search.ShareSearchActivity" />
+        <activity
+            android:name=".activity.GroupInfoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeGroup" />
+        <activity
+            android:name=".activity.ShowMoreActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.HelpActivity"
+            android:screenOrientation="portrait" /> <!-- Branch init -->
+        <activity
+            android:name=".activity.FuguInnerChatActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity android:name=".activity.ForwardActivity" />
+        <activity
+            android:name=".activity.ChatActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden">
+        </activity>
+        <activity android:name=".activity.FuguSearchsActivity" />
+        <activity
+            android:name=".activity.AlreadyInvitedMembersActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".activity.EditPhoneActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateAlwaysVisible" />
+        <activity
+            android:name=".activity.MultipleInviteActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.HomeSearchActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.MembersSearchActivity"
+            android:label="@string/title_activity_members_search"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".activity.VideoPlayerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.MediaActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.SendEmailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.VideoCallActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.MainActivity"
+            android:label="@string/app_name"
+            android:launchMode="standard"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="*/*" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND_MULTIPLE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="image/*" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="fuguchat" /> <!--Change this scheme to your appname-->
+            </intent-filter>
+
+            <meta-data
+                android:name="android.service.chooser.chooser_target_service"
+                android:value="com.skeleton.mvp.service.ExternalShareChooserService" />
+        </activity>
+        <activity
+            android:name=".videoCall.FuguCallActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:showOnLockScreen="true" />
+        <activity
+            android:name=".activity.CreatePollActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.PollDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.StarredMessagesActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ImageDisplayActivity"
+            android:excludeFromRecents="true"
+            android:theme="@style/Transparent" />
+        <activity
+            android:name=".activity.GroupInformationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeGroup" />
+        <activity
+            android:name=".activity.TestActivity"
+            android:theme="@style/Transparent" />
+        <activity
+            android:name=".activity.ImageDisplayViewpagerActivity"
+            android:theme="@style/Transparent" />
+        <activity
+            android:name=".activity.CameraActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.GroupMembersActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.VideoConferenceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.VideoConfActivity"
+            android:launchMode="singleTask"
+            android:resizeableActivity="true"
+            android:screenOrientation="portrait"
+            android:supportsPictureInPicture="true"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data
+                    android:host="meet.jit.si"
+                    android:scheme="https" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:scheme="fuguChat"
+                    tools:ignore="AppLinkUrlError" /> <!--Change this scheme to your appname-->
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.IncomingVideoConferenceActivity"
+            android:showOnLockScreen="true" />
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat" />
+        <activity
+            android:name=".activity.MessageInformationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".fragment.NotificationsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".fragment.MoreFragment"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeGroup" />
+        <activity
+            android:name=".activity.SetNewUserDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ValidateOtpActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.CheckEmailActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".activity.HangoutsCallActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activity.StartHangoutsActivity" />
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="Add your crashlytics fabric key here" /> <!--Add your crashlytics fabric key here-->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/ic_fugu" />
+        <!-- <meta-data -->
+        <!-- android:name="io.branch.sdkA.BranchKey.test" -->
+        <!-- android:value="${branchKey}" /> -->
+        <!-- <meta-data -->
+        <!-- android:name="io.branch.sdk.TestMode" -->
+        <!-- android:value="true" /> -->
+        <meta-data
+            android:name="io.branch.sdk.BranchKey"
+            android:value="${branchKey}" />
+        <meta-data
+            android:name="io.branch.sdk.LiveMode"
+            android:value="true" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+        <provider
+            android:name=".util.LocalStorageProvider"
+            android:authorities="${applicationId}.localstorage.documents"
+            android:enabled="false"
+            android:exported="true"
+            android:grantUriPermissions="true"
+            android:permission="android.permission.MANAGE_DOCUMENTS">
+            <intent-filter>
+                <action android:name="android.content.action.DOCUMENTS_PROVIDER" />
+            </intent-filter>
+        </provider>
+
+        <receiver
+            android:name=".receiver.FuguNetworkStateReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".receiver.HungUpBroadcast" />
+
+        <service android:name=".fcm.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".fcm.MyFirebaseInstanceIdService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".service.FuguPushIntentService"
+            android:exported="false" />
+        <service
+            android:name=".service.FuguOnClearFromRecentService"
+            android:stopWithTask="false" />
+        <service
+            android:name=".service.VideoCallService"
+            android:enabled="true"
+            android:exported="false" />
+        <service
+            android:name=".service.OngoingCallService"
+            android:enabled="true"
+            android:exported="false" />
+        <service
+            android:name=".service.NotificationService"
+            android:enabled="true"
+            android:exported="false" />
+        <service
+            android:name=".service.ExternalShareChooserService"
+            android:label="@string/app_name"
+            android:permission="android.permission.BIND_CHOOSER_TARGET_SERVICE">
+            <intent-filter>
+                <action android:name="android.service.chooser.ChooserTargetService" />
+            </intent-filter>
+        </service>
+        <service android:name=".service.ConferenceCallService" />
+    </application>
+
+</manifest>

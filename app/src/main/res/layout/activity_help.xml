@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/llToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/office_chat_color"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            app:srcCompat="@drawable/ic_arrow_back_white_24dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp"
+            android:gravity="center_vertical"
+            android:text="Help"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llEditTexts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/llToolbar"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/etFeedback"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_margin="@dimen/fugu_margin_15"
+            android:background="@drawable/round_small_rectangle_border_layout"
+            android:gravity="start|top"
+            android:hint="Please enter your valuable feedback/query."
+            android:padding="@dimen/fugu_margin_10"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/etFeedback"
+            android:layout_marginBottom="@dimen/fugu_margin_15"
+            android:layout_marginEnd="@dimen/fugu_margin_15"
+            android:layout_marginLeft="@dimen/fugu_margin_15"
+            android:layout_marginRight="@dimen/fugu_margin_15"
+            android:layout_marginStart="@dimen/fugu_margin_15"
+            android:layout_marginTop="@dimen/fugu_margin_5"
+            android:background="@drawable/round_small_rectangle_border_layout"
+            android:gravity="start|top"
+            android:hint="Please enter your email."
+            android:inputType="textEmailAddress"
+            android:padding="@dimen/fugu_margin_10"
+            android:textSize="14sp"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/llEditTexts"
+        android:layout_marginLeft="@dimen/fugu_margin_15"
+        android:layout_marginRight="@dimen/fugu_margin_15"
+        android:layout_marginTop="-10dp"
+        android:gravity="center"
+        android:text="We will respond via email to feedback and questions" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSend"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvMessage"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/fugu_margin_35"
+        android:background="@drawable/curved_chiku_button"
+        android:text="Send"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/tvVersion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/fugu_margin_15"
+        android:gravity="center" />
+</RelativeLayout>

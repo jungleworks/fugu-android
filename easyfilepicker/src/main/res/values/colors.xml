@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="divider_color">#aaaaaa</color>
+
+
+    <color name="vw_BgToolBar">#373B3E</color>
+    <color name="vw_BgRv">#191919</color>
+    <color name="vw_BgItem">#353535</color>
+    <color name="vw_ShadowItem">#94333232</color>
+    <color name="vw_BgRvFileDivider">#EEEEEE</color>
+    <color name="black_opaque_bar">#99000000</color>
+    <color name="white">#ffffff</color>
+    <color name="picker_primary_color">#627de3</color>
+    <color name="tb_text_color">#FFFFFF</color>
+
+</resources>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llRoot"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rectangle_border"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.75"
+        android:textSize="@dimen/font_xlarge"
+        android:textStyle="bold"
+        android:textColor="#2c2333"
+        tools:text="Jungleworks" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnLaunch"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:layout_weight="0.25"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/curved_chiku_button_empty"
+        android:text="Launch"
+        android:textSize="@dimen/font_large"
+        android:textAllCaps="false"
+        android:textColor="@color/colorPrimary" />
+</LinearLayout>

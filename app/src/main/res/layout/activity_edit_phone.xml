@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/spacing_medium"
+        android:paddingRight="@dimen/spacing_medium"
+        android:paddingTop="@dimen/font_large">
+
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="250dp">
+
+           <ImageView
+               android:id="@+id/sign_in_image"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:paddingEnd="@dimen/spacing_large"
+               android:paddingStart="@dimen/spacing_large"
+               android:paddingTop="@dimen/spacing_xxxlarge"
+               android:layout_centerHorizontal="true"
+               app:srcCompat="@drawable/ic_fugu_bg" />
+           <ImageView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_centerHorizontal="true"
+               android:layout_alignParentBottom="true"
+               app:srcCompat="@drawable/ic_fugu_avatar"/>
+       </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/fugu_padding_20"
+            android:gravity="center"
+            android:textAppearance="@style/CustomTextAppearance.TitilliumWeb"
+            android:text="You will receive the OTP on the following number "
+            android:textColor="#333333" />
+
+
+
+        <LinearLayout
+            android:id="@+id/llEmails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_rectangle_border_layout"
+                android:orientation="horizontal">
+
+                <com.hbb20.CountryCodePicker
+                    android:id="@+id/etCountryCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/fugu_margin_8"
+                    android:layout_marginStart="@dimen/fugu_margin_8"
+                    android:layout_marginTop="-9dp"
+                    android:visibility="visible"
+                    app:ccp_autoDetectCountry="true"
+                    app:ccp_showFlag="false"
+                    app:ccp_showNameCode="false" />
+
+                <EditText
+                    android:id="@+id/etPhoneNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/transparent"
+                    android:hint="Phone Number"
+                    android:imeOptions="actionGo"
+                    android:inputType="number"
+                    android:maxLines="1"
+                    android:textAppearance="@style/CustomTextAppearance.TitilliumWeb"
+                    android:paddingBottom="@dimen/fugu_margin_7"
+                    android:paddingEnd="@dimen/fugu_margin_7"
+                    android:paddingLeft="@dimen/fugu_margin_15"
+                    android:paddingRight="@dimen/fugu_margin_7"
+                    android:paddingStart="@dimen/fugu_margin_15"
+                    android:paddingTop="@dimen/fugu_margin_7"
+                    android:singleLine="true" />
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnRequestOtp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/fugu_margin_20"
+            android:layout_marginEnd="@dimen/spacing_xxxlarge"
+            android:layout_marginStart="@dimen/spacing_xxxlarge"
+            android:layout_marginTop="@dimen/spacing_xlarge"
+            android:textAppearance="@style/CustomTextAppearance.TitilliumWebSemiBold"
+            android:background="@drawable/curved_chiku_button"
+            android:text="REQUEST OTP"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_xlarge" />
+    </LinearLayout>
+
+
+</LinearLayout>

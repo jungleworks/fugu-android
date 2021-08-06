@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tvWorkSpaceName"
+    android:layout_width="1000dp"
+    android:layout_height="30dp"
+    android:maxLines="1"
+    android:ellipsize="end"
+    android:text="Hello"
+    android:paddingTop="@dimen/fugu_margin_2"
+    android:paddingBottom="@dimen/fugu_margin_2"
+    android:paddingStart="@dimen/fugu_margin_10"
+    android:paddingLeft="@dimen/fugu_padding_10"
+    android:layout_marginBottom="@dimen/fugu_margin_5"
+    android:textColor="@color/white"
+    android:textAppearance="@style/CustomTextAppearance.Semibold"
+    android:background="@color/gray_dark"
+    android:orientation="vertical" />

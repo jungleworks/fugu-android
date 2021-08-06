@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:orientation="vertical"
+    >
+
+
+
+    <RelativeLayout
+        android:id="@+id/camera_preview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center" />
+    <RelativeLayout
+        android:id="@+id/rlScanner"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:layout_marginStart="30dp">
+            <View
+                android:layout_width="50dp"
+                android:layout_height="5dp"
+                android:background="@color/colorPrimary"/>
+            <View
+                android:layout_width="5dp"
+                android:layout_height="50dp"
+                android:background="@color/colorPrimary"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:rotation="90"
+            android:layout_marginTop="100dp"
+            android:layout_marginEnd="30dp">
+            <View
+                android:layout_width="50dp"
+                android:layout_height="5dp"
+                android:background="@color/colorPrimary"/>
+            <View
+                android:layout_width="5dp"
+                android:layout_height="50dp"
+                android:background="@color/colorPrimary"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/llScanner"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:layout_marginTop="90dp"
+            android:orientation="vertical">
+            <View
+                android:layout_width="300dp"
+                android:layout_height="70dp"
+                android:background="@drawable/gradient"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="35dp"
+                android:background="@color/colorPrimaryAlpha2"/>
+            <View
+                android:layout_width="300dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="15dp"
+                android:rotation="180"
+                android:background="@drawable/gradient"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:rotation="270"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="150dp"
+            android:layout_marginStart="30dp">
+            <View
+                android:layout_width="50dp"
+                android:layout_height="5dp"
+                android:background="@color/colorPrimary"/>
+            <View
+                android:layout_width="5dp"
+                android:layout_height="50dp"
+                android:background="@color/colorPrimary"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="150dp"
+            android:layout_alignParentEnd="true"
+            android:rotation="180"
+            android:layout_marginTop="100dp"
+            android:layout_marginEnd="30dp">
+            <View
+                android:layout_width="50dp"
+                android:layout_height="5dp"
+                android:background="@color/colorPrimary"/>
+            <View
+                android:layout_width="5dp"
+                android:layout_height="50dp"
+                android:background="@color/colorPrimary"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/clickedImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_gravity="center_horizontal|bottom"
+        android:background="@color/black_opaque"
+        android:gravity="center">
+
+        <ProgressBar
+            android:id="@+id/pbLoader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:indeterminateTint="@color/white" />
+
+        <LinearLayout
+            android:id="@+id/llButton"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:background="@drawable/camera_button_outline"
+            android:gravity="center"
+            android:visibility="visible">
+
+            <Button
+                android:id="@+id/button_capture"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/camera_button"
+                android:gravity="center" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llOptions"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/retake"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="2dp"
+                android:layout_weight="0.33"
+                android:padding="@dimen/fugu_margin_5"
+                android:src="@drawable/ic_reload" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/done"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.33"
+                android:src="@drawable/ic_done_white_36dp" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/cancel"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.33"
+                android:padding="@dimen/fugu_margin_8"
+                android:src="@drawable/ic_cancel"
+                android:tint="@color/white" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</FrameLayout>

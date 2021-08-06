@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingHorizontal="20dp"
+    android:paddingTop="15dp">
+    
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivMeetIcon"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignBottom="@id/tvMeetTitle"
+        android:layout_alignTop="@id/tvMeetTitle"
+        app:srcCompat="@drawable/ic_google_meet_small"
+        android:layout_alignParentStart="true" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvMeetTitle"
+        style="@style/CustomTextAppearance.TitilliumWebSemiBold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toStartOf="@id/tvJoinMeet"
+        android:layout_marginStart="5dp"
+        android:layout_toEndOf="@id/ivMeetIcon"
+        android:text="Meet Title"
+        android:textSize="@dimen/font_xlarge" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvMeetTimings"
+        style="@style/CustomTextAppearance.TitilliumWebSemiBold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvMeetTitle"
+        android:layout_marginTop="5dp"
+        android:text="09:00 AM - 09:20 AM"
+        android:textColor="@color/grayish"
+        android:textSize="@dimen/font_xlarge" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvOngoing"
+        style="@style/CustomTextAppearance.TitilliumWeb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/tvMeetTimings"
+        android:layout_alignBottom="@id/tvMeetTimings"
+        android:layout_marginStart="8dp"
+        android:layout_toEndOf="@id/tvMeetTimings"
+        android:background="@drawable/round_rect_grey_border_2dp"
+        android:backgroundTint="#ff8f47"
+        android:paddingHorizontal="5dp"
+        android:paddingVertical="1dp"
+        android:text="ONGOING"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_large"
+        android:visibility="gone" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvTomorrow"
+        style="@style/CustomTextAppearance.TitilliumWebSemiBold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/tvMeetTimings"
+        android:layout_marginStart="8dp"
+        android:layout_toEndOf="@id/tvOngoing"
+        android:background="@drawable/round_sides_grey_border"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="3dp"
+        android:text="Tomorrow"
+        android:textColor="@color/grayish"
+        android:textSize="@dimen/font_xlarge"
+        android:visibility="gone" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvJoinMeet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center"
+        android:background="@drawable/curved_chiku_button"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="10dp"
+        android:text="Join"
+        android:textAppearance="@style/CustomTextAppearance.TitilliumWebSemiBold"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_xlarge"
+        android:visibility="gone" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/tvMeetTimings"
+        android:layout_marginTop="15dp"
+        android:background="#f2f2f2"
+        android:visibility="visible" />
+
+</RelativeLayout>

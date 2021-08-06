@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rlDialog"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
+    android:layout_marginEnd="@dimen/fugu_dp_8"
+    android:layout_marginStart="@dimen/fugu_dp_8"
+    android:layout_marginTop="@dimen/fugu_margin_20">
+
+    <LinearLayout
+        android:id="@+id/llRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/fugu_padding_20"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvAttachment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/fugu_dialog_bg"
+            android:overScrollMode="never" />
+
+        <TextView
+            android:id="@+id/btnCancel"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginTop="@dimen/fugu_margin_10"
+            android:background="@drawable/fugu_dialog_bg"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="@string/fugu_cancel"
+            android:textAllCaps="false"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/fugu_text_size_very_large" />
+    </LinearLayout>
+</RelativeLayout>
+

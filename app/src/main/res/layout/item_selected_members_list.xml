@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llMain"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:visibility="gone">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvSelectedMembers"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:scrollbars="horizontal"
+            android:layout_weight="0.8" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivVideoCall"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:paddingBottom="@dimen/fugu_margin_15"
+            android:src="@drawable/ic_video_camera"
+            android:tint="@color/colorPrimary" />
+        <ProgressBar
+            android:id="@+id/pbConnecting"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="0.2"
+            android:paddingBottom="@dimen/fugu_margin_15"
+            android:textColor="@color/colorPrimary"
+            android:visibility="gone"
+            android:text="Connecting..."/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="@dimen/fugu_margin_10"
+        android:layout_marginTop="@dimen/fugu_margin_10"
+        android:layout_marginEnd="@dimen/fugu_margin_10"
+        android:layout_marginBottom="@dimen/fugu_margin_10"
+        android:background="@color/gray_light" />
+</LinearLayout>

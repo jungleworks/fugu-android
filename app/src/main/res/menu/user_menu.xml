@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.home.HomeActivity">
+    <item
+        android:id="@+id/action_search"
+        android:icon="@drawable/ic_search_white_24dp"
+        android:title="Search"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_settings"
+        android:icon="@drawable/ic_more_vert_black_24dp"
+        android:orderInCategory="100"
+        android:title="More Options"
+        app:showAsAction="ifRoom">
+        <menu>
+            <item
+                android:id="@+id/profile"
+                android:icon="@drawable/profile"
+                android:orderInCategory="100"
+                android:title="@string/profile"
+                app:showAsAction="never" />
+            <item
+                android:id="@+id/group"
+                android:icon="@drawable/group"
+                android:orderInCategory="100"
+                android:title="@string/browse_group"
+                app:showAsAction="never" />
+            <item
+                android:id="@+id/createGroup"
+                android:icon="@drawable/group_logo"
+                android:orderInCategory="100"
+                android:title="@string/create_group"
+                app:showAsAction="never" />
+            <item
+                android:id="@+id/notification"
+                android:icon="@drawable/notifications"
+                android:orderInCategory="100"
+                android:title="@string/notifications"
+                app:showAsAction="never" />
+            <item
+                android:id="@+id/help"
+                android:icon="@drawable/question"
+                android:orderInCategory="100"
+                android:title="Help"
+                app:showAsAction="never" />
+            <item
+                android:id="@+id/exit_space"
+                android:icon="@drawable/logout"
+                android:orderInCategory="100"
+                android:title="Exit Space"
+                app:showAsAction="never" />
+            <item
+                android:id="@+id/logout"
+                android:icon="@drawable/logout_four_dp"
+                android:orderInCategory="100"
+                android:title="@string/logout"
+                app:showAsAction="never" />
+        </menu>
+    </item>
+</menu>

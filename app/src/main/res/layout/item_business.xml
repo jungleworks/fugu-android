@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingStart="@dimen/fugu_margin_15"
+    android:paddingLeft="@dimen/fugu_padding_15"
+    android:paddingRight="@dimen/fugu_padding_15"
+    android:paddingEnd="@dimen/fugu_padding_15"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/rlChannelIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp">
+
+            <ImageView
+                android:id="@+id/ivContactImage"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_centerInParent="true"
+                android:tint="@color/black"
+                android:src="@drawable/ring_white" />
+
+            <TextView
+                android:id="@+id/tvContactIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="A"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textAppearance="@style/CustomTextAppearance.TitilliumWebSemiBold"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/ivNotification"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:visibility="gone"
+                android:src="@drawable/ring_red" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/fugu_margin_10"
+            android:layout_marginStart="@dimen/fugu_margin_10"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.92"
+                android:gravity="center|start"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|start"
+                    android:singleLine="true"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    android:textAppearance="@style/CustomTextAppearance.TitilliumWeb"
+                    tools:text="Business Name" />
+
+                <TextView
+                    android:id="@+id/tvSubtitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|start"
+                    android:singleLine="true"
+                    android:text="Sign in, join or create a workspace"
+                    android:textAppearance="@style/CustomTextAppearance.TitilliumWeb"
+                    android:textColor="@android:color/black"
+                    android:textSize="12sp"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="@dimen/fugu_dp_8"
+                android:layout_marginRight="@dimen/fugu_dp_8"
+                android:layout_weight="0.08"
+                android:gravity="end|center">
+
+                <ImageView
+                    android:id="@+id/ivSelected"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|center"
+                    android:tint="@color/black"
+                    app:srcCompat="@drawable/ic_done_white_36dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

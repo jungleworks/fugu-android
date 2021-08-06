@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.skeleton.mvp.ui.home.HomeActivity">
+
+    <androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:text="Send to Jungleworks"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_xxlarge" />
+
+            <ImageView
+                android:id="@+id/ivArrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/fugu_margin_2"
+                android:layout_marginStart="@dimen/fugu_margin_2"
+                android:layout_marginTop="@dimen/fugu_margin_2"
+                android:src="@drawable/ic_keyboard_arrow_down_white_24dp"
+                android:visibility="visible" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="@dimen/fugu_margin_15"
+                android:layout_marginRight="@dimen/fugu_margin_15"
+                android:gravity="end">
+
+                <ImageView
+                    android:id="@+id/ivSearch"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/fugu_margin_2"
+                    android:visibility="visible"
+                    app:srcCompat="@drawable/ic_search_white_24dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <!--<LinearLayout-->
+    <!--android:id="@+id/llWorkspace"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:background="@color/colorPrimary"-->
+    <!--android:gravity="start"-->
+    <!--android:orientation="horizontal"-->
+    <!--android:paddingBottom="@dimen/spacing_small"-->
+    <!--android:paddingLeft="@dimen/spacing_smedium"-->
+    <!--android:paddingStart="@dimen/spacing_smedium"-->
+    <!--android:paddingTop="@dimen/spacing_small">-->
+
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="start"-->
+    <!--android:ellipsize="end"-->
+    <!--android:maxLength="20"-->
+    <!--android:text="OfficeChat"-->
+    <!--android:textColor="@color/white"-->
+    <!--android:textSize="@dimen/font_xxlarge" />-->
+
+    <!--<ImageView-->
+    <!--android:id="@+id/ivArrow"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginLeft="@dimen/fugu_margin_2"-->
+    <!--android:layout_marginStart="@dimen/fugu_margin_2"-->
+    <!--android:layout_marginTop="@dimen/fugu_margin_2"-->
+    <!--android:src="@drawable/ic_keyboard_arrow_down_white_24dp"-->
+    <!--android:visibility="visible" />-->
+    <!--</LinearLayout>-->
+
+    <View
+        android:id="@+id/shadow"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@drawable/toolbar_dropshadow" />
+
+    <RelativeLayout
+        android:id="@+id/rlRoot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <FrameLayout
+            android:id="@+id/contentFrame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <LinearLayout
+            android:id="@+id/llBusinessList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:id="@+id/llMain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:animateLayoutChanges="true"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvBusinessList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimary"
+                    android:paddingEnd="@dimen/fugu_margin_10"
+                    android:paddingLeft="@dimen/fugu_margin_15"
+                    android:paddingRight="@dimen/fugu_margin_10"
+                    android:paddingStart="@dimen/fugu_margin_15"
+                    android:scrollbarFadeDuration="1000"
+                    android:scrollbarThumbVertical="@drawable/scroll_bg"
+                    android:scrollbars="vertical"
+                    android:visibility="visible" />
+
+
+                <LinearLayout
+                    android:id="@+id/llAddWorksapce"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimary"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/fugu_margin_15"
+                    android:paddingRight="@dimen/fugu_margin_15"
+                    android:paddingTop="@dimen/fugu_margin_10">
+
+                    <RelativeLayout
+                        android:id="@+id/rlChannelIcon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="5dp">
+
+                        <ImageView
+                            android:id="@+id/ivContactImage"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/ring_white" />
+
+                        <TextView
+                            android:id="@+id/tvContactIcon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:gravity="center"
+                            android:text="+"
+                            android:textColor="@color/office_chat_color"
+                            android:textSize="40sp"
+                            android:visibility="visible" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/fugu_margin_10"
+                        android:layout_marginStart="@dimen/fugu_margin_10"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.92"
+                            android:gravity="center|start"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tvName"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center|start"
+                                android:singleLine="true"
+                                android:text="Add New Workspace"
+                                android:textColor="@android:color/white"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/tvSubtitle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center|start"
+                                android:singleLine="true"
+                                android:text="Sign in, join or create a workspace"
+                                android:textColor="@android:color/white"
+                                android:textSize="12sp"
+                                android:visibility="gone" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginEnd="@dimen/fugu_dp_8"
+                            android:layout_marginRight="@dimen/fugu_dp_8"
+                            android:layout_weight="0.08"
+                            android:gravity="end|center">
+
+                            <ImageView
+                                android:id="@+id/ivSelected"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="end|center"
+                                android:visibility="gone"
+                                app:srcCompat="@drawable/ic_done_white_36dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/vClose"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+        </LinearLayout>
+
+    </RelativeLayout>
+</LinearLayout>

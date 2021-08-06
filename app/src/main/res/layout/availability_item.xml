@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llParent"
+    android:layout_width="60dp"
+    android:layout_height="60dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <View
+            android:id="@+id/vStatus"
+            android:layout_width="7dp"
+            android:layout_height="7dp" />
+
+        <View
+            android:id="@+id/vStatus2"
+            android:layout_width="7dp"
+            android:layout_marginTop="5dp"
+            android:layout_height="7dp"/>
+
+        <View
+            android:id="@+id/vStatus3"
+            android:layout_width="7dp"
+            android:layout_height="7dp"
+            android:layout_marginTop="5dp"/>
+
+        <View
+            android:id="@+id/vStatus4"
+            android:layout_width="7dp"
+            android:layout_marginTop="5dp"
+            android:layout_height="7dp"/>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white_50"/>
+</RelativeLayout>

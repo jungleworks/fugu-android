@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.skeleton.mvp.utils.HeaderView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/group_info_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/header_view_end_text_size"
+        android:shadowColor="@color/gray_dark"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="2"
+        android:textAppearance="@style/CustomTextAppearance.TitilliumWebSemiBold"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/group_info_last_seen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:shadowColor="@color/gray_dark"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="2"
+        android:textAppearance="@style/CustomTextAppearance.TitilliumWeb"
+        android:textColor="@android:color/white" />
+
+
+</com.skeleton.mvp.utils.HeaderView>

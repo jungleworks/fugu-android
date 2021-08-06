@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <!DOCTYPE resources
+        [<!ENTITY appname "FuguChat">
+        <!ENTITY fugu "Fugu">]
+        >
+
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+
+    <string name="dropbox_app_key">omkekx86c88gxlh</string>
+
+    <!-- Font Paths -->
+    <string name="fontPathRegular">fonts/TitilliumWeb-Regular.ttf</string>
+    <string name="fontPathItalic">fonts/italic.otf</string>
+    <string name="fontPathSemiBold">fonts/TitilliumWeb-SemiBold.ttf</string>
+    <string name="fontPathBold">fonts/TitilliumWeb-SemiBold.ttf</string>
+
+    <!-- Fcm service -->
+    <string name="log_fcm_notification_message">"FCM Notification Message: "</string>
+    <string name="log_fcm_data">"FCM Data: "</string>
+    <string name="log_fcm_data_message">"FCM Data Message: "</string>
+    <string name="notification_channel_default">Notifications</string>
+    <string name="notification_channel_description_default">Latest Updates</string>
+
+    <!-- Network error messages -->
+    <string name="error_unexpected_error">Something went wrong.</string>
+    <string name="error_bad_connection_try_again">Bad connectivity.</string>
+    <string name="error_remote_server_failed">Application server could not respond.</string>
+    <string name="error_paring">Parsing error</string>
+    <string name="error_internet_not_connected">Please check your internet connection and Try Again!</string>
+    <string name="error_device_rooted">This device is rooted. We are not responsible for any kind of data loss and hack. Use it at your own risk!!</string>
+    <string name="error_session_expired">Session expired.</string>
+
+    <!-- Error messages -->
+
+    <!-- Image Chooser -->
+
+    <!-- Dialog -->
+    <string name="text_retry">Retry</string>
+    <string name="text_exit">Exit</string>
+    <string name="text_proceed">Proceed</string>
+    <string name="text_loading">Loading…</string>
+
+
+    <string-array name="task_type">
+        <item>All Tasks</item>
+        <item>Completed</item>
+        <item>Pending</item>
+        <item>Assigned by You</item>
+    </string-array>
+
+    <string-array name="year">
+        <item>2020</item>
+        <item>2021</item>
+        <item>2022</item>
+        <item>2023</item>
+    </string-array>
+
+    <string-array name="months">
+        <item>Jan</item>
+        <item>Feb</item>
+        <item>Mar</item>
+        <item>Apr</item>
+        <item>May</item>
+        <item>Jun</item>
+        <item>Jul</item>
+        <item>Aug</item>
+        <item>Sep</item>
+        <item>Oct</item>
+        <item>Nov</item>
+        <item>Dec</item>
+    </string-array>
+
+    <string-array name="reminderTimeSlots">
+        <item>10 Min</item>
+        <item>15 Min</item>
+        <item>30 Min</item>
+        <item>1 Hour</item>
+    </string-array>
+
+    <!-- Sign In -->
+    <string name="error_invalid_email">Please enter valid email address.</string>
+    <string name="error_invalid_phone_number">Please enter valid phone number.</string>
+    <string name="error_invalid_password">Please enter valid password.</string>
+    <string name="text_start_tutorial_msg">Welcome to MVP Base Project.
+        \n\n<b>1.</b> Change applicationId in app gradle.
+        \n<b>2.</b> Change app name from app gradle.
+        \n<b>3.</b> Replace google-services.json file.
+    </string>
+
+
+    <!-- Notifications -->
+    <string name="title_notifications">Notifications</string>
+    <string name="no_notifications">You do not have any notifications yet</string>
+    <string name="back">Back</string>
+    <string name="welcome_to_officechat">Welcome to &appname;</string>
+    <string name="all_your_team_communication_in_one_place_instantly_searchable">All your team communications in one\nplace, instantly searchable.</string>
+    <string name="sign_in">Sign In</string>
+    <string name="reset_password">Reset password</string>
+    <string name="continuee">Continue</string>
+    <string name="after_confirming_your_email_address_we_ll_use_it_to_n_create_your_account">After confirming your email address, we\'ll use it to create your account.</string>
+    <string name="after_confirming_your_phone_number_we_ll_use_it_to_n_create_your_account">After confirming your phone number, we\'ll use it to create your account.</string>
+    <string name="your_business_name">Your Business Name</string>
+    <string name="workspace_url">Workspace URL</string>
+    <string name="https">https://</string>
+    <string name="your_domian_officechat_com">.fugu.chat</string>
+    <string name="error_please_enter_business_name">Please enter space name</string>
+    <string name="error_please_enter_workspace_url">Please enter workspace url</string>
+    <string name="invalid_otp">Invalid OTP</string>
+    <string name="password">Password</string>
+    <string name="your_workspaces">Your workspaces</string>
+    <string name="you_have_account_on_these_officechat_workspaces">You have account on these &appname;
+        workspaces</string>
+    <string name="hint_your_domain">your-domain</string>
+    <string name="your_domain_password">Your Domain Password</string>
+    <string name="profile">Profile</string>
+    <string name="invide_members">Invite Members</string>
+    <string name="invite">Invite</string>
+    <string name="know_any_coworkers_who_should_join_officechat">Know any coworkers who should join &appname;?</string>
+    <string name="send">Send</string>
+    <string name="contacts">Contacts</string>
+    <string name="add_email">Add Email</string>
+    <string name="you_cannot_invite_more_than_five_people_at_a_time">You cannot invite more than five people at a time</string>
+    <string name="email_already_Added">Email already added</string>
+    <string name="group_name">Group Name</string>
+    <string name="create_group">Create Group</string>
+    <string name="add_member">Add Member</string>
+    <string name="please_enter_a_valid_group_name">Please enter a valid group name</string>
+    <string name="you_need_to_add_atleast_three_members_to_create_a_group">You need to add atleast 1 member to create a group</string>
+    <string name="your_full_name">Please enter your Full Name</string>
+    <string name="save">Save</string>
+    <string name="please_enter_your_full_name">Please enter your full name</string>
+    <string name="notifications">Notifications</string>
+    <string name="on_mobile_notify_me_about">On mobile, notify me about...</string>
+    <string name="all_your_groups_are_using_the_default_notification_settings">All your groups are using the default\nnotification settings</string>
+    <string name="only_groups_with_different_settings_will_be_listed_here">Only groups with different settings will \nbe listed here</string>
+    <string name="contact_information">CONTACT INFORMATION</string>
+    <string name="human_resources">HUMAN RESOURCES</string>
+    <string name="no_gallery">No Gallery Found</string>
+    <string name="browse_group">Browse Groups</string>
+    <string name="see_fuguchat_workspaces_associated_with_your_email_address_or_create_a_new_fuguchat_workspace_with_the_address_of_your_choice">See &appname;
+        workspaces associated with your email address, or create a new &appname; workspace with the address of your choice</string>
+    <string name="add_a_workspace_by_email_address">Add a workspace by email address</string>
+    <string name="your_workspace">space</string>
+    <string name="welcome_message">Hello!\nSign in to get started.</string>
+    <string name="prefix_email">Let other people sign up with their verified&#160;</string>
+    <string name="create_a_new_space"><u>Create a new space</u></string>
+    <string name="one_or_more_permissions_denied">One or more permissions denied app may not work properly !</string>
+    <string name="fugu_app_name">&fugu;</string>
+    <string name="fugu_unable_to_connect_internet">Unable to connect to the internet</string>
+    <string name="fugu_no_internet_connection_retry">No Internet Connection \nTap to retry</string>
+    <string name="fugu_new_conversation">New Conversation</string>
+    <string name="fugu_loading">Loading...</string>
+    <string name="fugu_powered_by">Powered by </string>
+
+    <string name="fugu_camera">Camera</string>
+    <string name="fugu_gallery">Gallery</string>
+    <string name="fugu_pdf">PDF</string>
+    <string name="fugu_document">Document</string>
+    <string name="fugu_audio">Audio</string>
+    <string name="fugu_no_gallery">Gallery not found in this phone.</string>
+    <string name="fugu_permission_was_not_granted_text">The permission was not granted</string>
+    <string name="fugu_retry">Retry</string>
+    <string name="fugu_empty" translatable="false"></string>
+    <string name="fugu_attachment">Attachment Image</string>
+    <string name="fugu_send_message"> Send a message...</string>
+    <string name="fugu_cancel">Cancel</string>
+    <string name="fugu_file_not_found">Sorry this file is no longer available on your device</string>
+    <string name="fugu_support">Support</string>
+    <string name="space">&#160;</string>
+    <string name="could_not_send_message">Could not send your message</string>
+    <string name="tap_to_retry">Tap to <u>Retry</u>&#160;</string>
+    <string name="fugu_not_connected_to_internet">Not connected to Internet</string>
+    <string name="fugu_connecting">Connecting...</string>
+    <string name="fugu_connected">Connected</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="members">&#160;Members)</string>
+    <string name="memberss">&#160;Members</string>
+    <string name="you_won_t_receive_notifications_from_muted_group">You won\'t receive notifications from muted group.</string>
+    <string name="mute_group">Mute Group</string>
+    <string name="message">Message</string>
+    <string name="search_members_groups">Search members / groups</string>
+    <string name="dummy_time">12:00 A.M</string>
+    <string name="thor_ragnarok_mp3">Thor Ragnarok.mp3</string>
+    <string name="_25_mb">25 MB</string>
+    <string name="no_pending_invites">No pending invites !</string>
+    <string name="no_results_found">No results found !</string>
+    <string name="no_accepted_invites">No accepted invites !</string>
+    <string name="see_pending_and_accepted_invites"><u>See pending and accepted invites</u></string>
+    <string name="invite_multiple_people">Invite multiple at once</string>
+    <string name="title_activity_members_search">MembersSearchActivity</string>
+    <string name="notification_settings">Notification Settings</string>
+    <string name="invite_members">Invite Members</string>
+    <string name="help">Help</string>
+    <string name="exit_space">Exit Space</string>
+    <string name="disable_space">Disable Space</string>
+    <string name="logout">Logout</string>
+    <string name="mark_all_as_read"><u>Mark all as read</u></string>
+    <string name="name_colon">Name:</string>
+    <string name="email_colon">Email:</string>
+    <string name="fugu_video_call">&fugu; Video Call</string>
+    <string name="call_again">Call Again</string>
+    <string name="call_back">Call Back</string>
+    <string name="amandeep_chauhan">Amandeep Chauhan</string>
+    <string name="ringing">Ringing...</string>
+    <string name="tap_to_return_to_video_call">Tap to return to video call</string>
+    <string name="fugu_poll">Poll</string>
+    <string name="error_add_atleast_two_options">Please add atleast 2 options to create a poll</string>
+    <string name="error_add_question_to_create_poll">Please add a question to create poll!</string>
+    <string name="starred_messages">Starred Messages</string>
+    <string name="backdrop_title">LOVE MUSIC</string>
+    <string name="backdrop_subtitle">This season top 20 albums</string>
+    <string name="device_admin_explanation">For experimentation purposes only</string>
+    <string name="admin_receiver_status_enabled">Admin Receiver Status Enabled</string>
+    <string name="admin_receiver_status_disabled">Admin Receiver Status Disabled</string>
+    <string name="device_admin_not_enabled">Device Admin Not Enabled</string>
+    <string name="device_admin_description">Device Admin Description</string>
+    <string name="google_authorization_string"><b>&fugu;</b> requires authenticaion through</string>
+    <string name="media_settings">Media Settings</string>
+    <string name="media_settings_tv">Media Settings</string>
+
+    <string name="error_msg">"Oh Snap! It\'s not you, it\'s us. "</string>
+    <string name="error_msg_yellow_bar">"Slow Internet connection. "</string>
+    <string name="retry">Retry</string>
+    <string name="retry_text"><u><b>Retry</b></u></string>
+    <string name="select_all_string"><u>Select All</u></string>
+    <string name="unselected_all"><u>Unselect All</u></string>
+    <string name="video_conference_invitation">has converted this video call into a Conference call</string>
+    <string name="skip"><u>Skip</u></string>
+    <string name="facing_connectivity_issues">Facing Connectivity Issues \n\n Reconnecting...</string>
+    <string name="error_couldnt_place_call">Couldn\'t place call. Try Again</string>
+    <string name="error_email_phoneno">Please enter a valid Email Address/Phone Number</string>
+
+    <string name="label_brush">Brush</string>
+
+
+    <string name="label_emoji">Emoji</string>
+    <string name="label_sticker">Sticker</string>
+    <string name="label_eraser">Eraser</string>
+    <string name="label_text">Text</string>
+    <string name="label_filter">Filter</string>
+    <string name="label_adjust">Adjust</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="dummy_text">Sir woh toh mtlb koi bhi bna skta hai\nKya he issue hai usme\nSite pe jaake sign up kr sktefeveef fff</string>
+    <string name="you_deleted_this_message">You deleted this message</string>
+    <string name="this_message_was_deleted">This message was deleted</string>
+    <string name="name">Name:</string>
+    <string name="add_comments">Add Comments</string>
+    <string name="stop_streaming">Stop Streaming</string>
+    <string name="officechat_is_better_with_others">&appname; is better with others</string>
+    <string name="a_fugu_space_is_simply_a_group_of_people_using_fugu_together">A &fugu; space is simply a group of people using &fugu;
+        together</string>
+    <string name="enter_your_space_name">Enter your space name</string>
+    <string name="fugu_meet">&fugu; Meet</string>
+    <string name="integrate_multiple_apps_with_fugu">Integrate Multiple Apps with &fugu;</string>
+    <string name="get_real_time_updates_and_notifications_by_connecting_apps_like_trello_jira_etc">Get real-time updates and notifications by connecting apps like Trello, Jira etc</string>
+    <string name="you_are_already_member_of_these_fugu_spaces">You are already member of these &fugu;
+        spaces.</string>
+    <string name="you_re_invited_to_join_the_following_fugu_spaces">You’re invited to join the following &fugu;
+        spaces.</string>
+    <string name="fugu_conference_call">&fugu; Conference Call</string>
+    <string name="fugu_bot_is_your_personal_bot">&fugu; Bot is your personal bot</string>
+    <string name="please_rate_the_quality_of_your_fugu_call">Please rate the quality of your &fugu;
+        call</string>
+    <string name="conferences_made_easy_with_fugu_meet">Conferences Made Easy with &fugu;
+        Meet</string>
+    <string name="make_video_calls_easily_and_connect_with_your_teammates_schedule_organise_or_present_meetings_and_invite_members">Make video calls easily and connect with your teammates. Schedule, Organise or present meetings and invite members!</string>
+    <string name="let_s_onboard_your_colleagues_friends_on_your_fugu_space">Let\'s onboard your colleagues/friends on your &fugu;
+        Space.</string>
+    <string name="fugu_live">&fugu; Live</string>
+    <string name="know_a_few_friends_who_d_like_to_explore_fugu_with_you">Know a few friends who\'d like to explore &fugu;
+        with you</string>
+    <string-array name="styling_options">
+        <item>hide status bar</item>
+        <item>images margin</item>
+        <item>container padding</item>
+        <item>transitions</item>
+        <item>swipe-to-dismiss</item>
+        <item>zooming</item>
+        <item>show overlay</item>
+        <item>random background</item>
+    </string-array>
+    <string name="your_are_not_allowed_to_create_meeting">You\'re not allowed to create a new meeting.</string>
+    <string name="fetching_your_meetings">Fetching Your Meetings…</string>
+    <string name="no_scheduled_meetings">No Scheduled Meetings!\nYou are all clear</string>
+    <string name="no_workspace_error">You\'re not part of any workspace. Please contact admin</string>
+    <string name="support_email_text">""</string><!-- Example Value: " at support@fuguchat.com" (Quotes are necessary to show space before at, replace the email for a whitelabel. -->
+    <string name="link_your_google_account_to_create_google_meeting">Link your Google Account to create Google Meeting</string>
+    <string name="link">Link</string>
+    <string name="google_meeting">Google Meeting</string>
+    <string name="create_a_google_meeting">Create a Google Meeting</string>
+    <string name="switch_google_account">Switch Google Account</string>
+    <string name="create_a_new_conference_meeting">Create a new conference meeting</string>
+    <string name="have_a_meeting_id_or_link_join_the_meeting">Have a meeting ID or link? Join the meeting</string>
+    <string name="new_meeting">New Meeting</string>
+    <string name="meeting_id_link">Meeting ID/Link</string>
+    <string name="schedule_a_meeting">Schedule a Meeting</string>
+    <string name="settings">Settings</string>
+    <string name="view_your_profile">View your profile</string>
+    <string name="account">Account</string>
+    <string name="show_more">Show More</string>
+    <string name="group_details">Group Details</string>
+    <string name="leave">LEAVE</string>
+    <string name="media">Media</string>
+    <string name="choose_space">Choose Space :</string>
+    <string name="add_join_new_space">Add/Join new space</string>
+    <string name="sign_in_join_or_create_a_workspace">Sign in, join or create a workspace</string>
+    <string name="edit_profile_image">Edit Profile Image</string>
+    <string name="guest">(Guest)</string>
+    <string name="direct_message">Direct Message</string>
+    <string name="email">Email</string>
+    <string name="phone">Phone</string>
+    <string name="location">Location</string>
+    <string name="designation">Designation</string>
+    <string name="department">Department</string>
+    <string name="manager">Manager</string>
+    <string name="deactivate_profile">Deactivate profile</string>
+    <string name="edit">Edit</string>
+    <string name="new_group">New group</string>
+    <string name="add_subject">Add subject</string>
+    <string name="private_text">Private</string>
+    <string name="private_groups_are_invite_only_and_do_not_show_up_in_the_group_browser_list">Private groups are invite-only, and do not show up in the group browser list.</string>
+    <string name="enter_group_name_optional">Enter group name (optional)</string>
+    <string name="type_your_group_name_here">Type your group name here…</string>
+    <string name="provide_a_group_name_and_group_icon">Provide a group name and group icon</string>
+    <string name="add_members">Add Members</string>
+    <string name="participants_10">Participants: 10</string>
+    <string name="schedule">Schedule</string>
+    <string name="name_of_the_meeting">Name of the meeting</string>
+    <string name="start_time">Start Time</string>
+    <string name="dd_mm_yy_00_00_xx">DD/MM/YY 00:00 XX</string>
+    <string name="end_time">End Time</string>
+    <string name="remind">Remind</string>
+    <string name="before_the_meeting_starts">before the meeting starts.</string>
+    <string name="repeat">Repeat</string>
+    <string name="every_day">Every Day</string>
+    <string name="weekdays">Weekdays</string>
+    <string name="every_week">Every Week</string>
+    <string name="monthly">Monthly</string>
+    <string name="public_group_desc">Anyone on your team can join.</string>
+    <string name="private_group_desc">Private groups are invite-only, and do not show up in the group browser list.</string>
+    <string name="public_text">Public</string>
+</resources>

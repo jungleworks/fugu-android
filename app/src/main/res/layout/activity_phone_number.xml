@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="@dimen/fugu_margin_20"
+    tools:context="com.skeleton.mvp.activity.PhoneNumberActivity">
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:src="@mipmap/logo_splash" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_medium"
+        android:layout_marginLeft="@dimen/spacing_medium"
+        android:layout_marginTop="@dimen/spacing_large"
+        android:layout_marginBottom="@dimen/spacing_very_tiny"
+        android:text="Phone Number" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_rectangle_border_layout"
+        android:orientation="horizontal">
+
+        <com.hbb20.CountryCodePicker
+            android:id="@+id/etCountryCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/fugu_margin_8"
+            android:layout_marginLeft="@dimen/fugu_margin_8"
+            android:layout_marginTop="-9dp"
+            android:visibility="visible"
+            app:ccp_autoDetectCountry="true"
+            app:ccp_showFlag="false"
+            app:ccp_showNameCode="false" />
+
+        <EditText
+            android:id="@+id/etPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:hint="Phone Number"
+            android:imeOptions="actionDone"
+            android:inputType="phone"
+            android:paddingStart="@dimen/fugu_margin_15"
+            android:paddingLeft="@dimen/fugu_margin_15"
+            android:paddingTop="@dimen/fugu_margin_7"
+            android:paddingEnd="@dimen/fugu_margin_7"
+            android:paddingRight="@dimen/fugu_margin_7"
+            android:paddingBottom="@dimen/fugu_margin_7" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_medium"
+        android:layout_marginTop="@dimen/spacing_tiny"
+        android:text="@string/after_confirming_your_phone_number_we_ll_use_it_to_n_create_your_account" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnContinue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_xxlarge"
+        android:layout_marginTop="@dimen/spacing_xlarge"
+        android:layout_marginEnd="@dimen/spacing_xxlarge"
+        android:layout_marginBottom="@dimen/fugu_margin_10"
+        android:background="@drawable/curved_chiku_button"
+        android:text="Continue"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_xlarge" />
+</LinearLayout>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llRootListItem"
+    android:layout_width="match_parent"
+    android:layout_height="67dp"
+    android:alpha="1"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:id="@+id/rlChannelIcon"
+        android:layout_width="58dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
+
+        <ImageView
+            android:id="@+id/ivContactImage"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ring_grey" />
+
+        <TextView
+            android:id="@+id/tvContactIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="A"
+            android:textAppearance="@style/CustomTextAppearance.TitilliumWeb"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/iv_tick"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="37dp"
+            android:layout_marginTop="27dp"
+            android:background="@drawable/ring_greyy"
+            android:padding="@dimen/fugu_margin_4"
+            android:src="@drawable/fab_tick"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_name_email"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="8dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Name: "
+            android:textAppearance="@style/CustomTextAppearance.TitilliumWeb"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tvEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="Email: "
+            android:textAppearance="@style/CustomTextAppearance.TitilliumWeb"
+            android:textSize="12sp"
+            android:visibility="visible" />
+
+    </LinearLayout>
+
+    <CheckBox
+        android:id="@+id/cbSelected"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="20dp"
+        android:button="@drawable/custom_checkbox"
+        android:visibility="gone" />
+
+</LinearLayout>

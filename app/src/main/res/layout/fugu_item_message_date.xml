@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/fugu_margin_5"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/fugu_date_bg"
+        android:paddingLeft="@dimen/fugu_padding_15"
+        android:paddingRight="@dimen/fugu_padding_15"
+        android:paddingTop="@dimen/fugu_padding_5"
+        android:paddingBottom="@dimen/fugu_padding_5"
+        android:textColor="@color/fugu_chat_date_text"
+        android:textSize="@dimen/fugu_text_size_small" />
+
+</LinearLayout>

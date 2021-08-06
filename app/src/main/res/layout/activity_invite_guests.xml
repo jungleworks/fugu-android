@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context="com.skeleton.mvp.activity.InviteGuestsActivity">
+
+    <androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="30dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/spacing_tiny"
+                android:layout_marginLeft="@dimen/spacing_tiny"
+                android:visibility="visible"
+                android:tint="@color/black"
+                app:srcCompat="@drawable/ic_arrow_back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/spacing_medium"
+                android:layout_marginLeft="@dimen/spacing_medium"
+                android:layout_weight="0.5"
+                android:gravity="center_vertical"
+                android:text="Invite Guests"
+                android:textAppearance="@style/CustomTextAppearance.TitilliumWebSemiBold"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font_xxlarge" />
+
+            <TextView
+                android:id="@+id/tvSkip"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/spacing_medium"
+                android:layout_marginLeft="10dp"
+                android:layout_marginEnd="@dimen/spacing_medium"
+                android:layout_marginRight="@dimen/spacing_medium"
+                android:layout_weight="0.5"
+                android:gravity="center_vertical|end"
+                android:text="Skip"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_xxlarge"
+                android:visibility="gone" />
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/spacing_medium"
+            android:paddingTop="@dimen/font_large"
+            android:paddingRight="@dimen/spacing_medium"
+            android:paddingBottom="@dimen/fugu_margin_35">
+
+            <TextView
+                android:id="@+id/tvSendInvitationsText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/fugu_margin_5"
+                android:gravity="start"
+                android:maxLines="1"
+                android:text="Enter email IDs or Phone Number of guests"
+                android:textAppearance="@style/CustomTextAppearance.TitilliumWeb"
+                android:textColor="#333333"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:id="@+id/llEmails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/fugu_margin_10"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/round_rectangle_border_layout"
+                    android:orientation="horizontal">
+
+                    <com.hbb20.CountryCodePicker
+                        android:id="@+id/etCountryCode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/fugu_margin_8"
+                        android:layout_marginLeft="@dimen/fugu_margin_8"
+                        android:layout_marginTop="-9dp"
+                        android:visibility="gone"
+                        app:ccp_autoDetectCountry="true"
+                        app:ccp_showFlag="false"
+                        app:ccp_showNameCode="false" />
+
+                    <com.skeleton.mvp.util.ExtendedEditText
+                        android:id="@+id/etOne"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/transparent"
+                        android:hint="Email Address/Phone Number"
+                        android:imeOptions="actionGo"
+                        android:inputType="textEmailAddress"
+                        android:textAppearance="@style/CustomTextAppearance.TitilliumWeb"
+                        android:maxLines="1"
+                        android:paddingStart="@dimen/fugu_margin_15"
+                        android:paddingLeft="@dimen/fugu_margin_15"
+                        android:paddingTop="@dimen/fugu_margin_7"
+                        android:paddingEnd="@dimen/fugu_margin_7"
+                        android:paddingRight="@dimen/fugu_margin_7"
+                        android:paddingBottom="@dimen/fugu_margin_7"
+                        android:singleLine="true" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/fugu_margin_10"
+                    android:background="@drawable/round_rectangle_border_layout"
+                    android:orientation="horizontal">
+
+                    <com.hbb20.CountryCodePicker
+                        android:id="@+id/etCountryCode2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/fugu_margin_8"
+                        android:layout_marginLeft="@dimen/fugu_margin_8"
+                        android:layout_marginTop="-9dp"
+                        android:visibility="gone"
+                        app:ccp_autoDetectCountry="true"
+                        app:ccp_showFlag="false"
+                        app:ccp_showNameCode="false" />
+
+                    <com.skeleton.mvp.util.ExtendedEditText
+                        android:id="@+id/etTwo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/transparent"
+                        android:hint="Email Address/Phone Number"
+                        android:imeOptions="actionGo"
+                        android:inputType="textEmailAddress"
+                        android:textAppearance="@style/CustomTextAppearance.TitilliumWeb"
+                        android:maxLines="1"
+                        android:paddingStart="@dimen/fugu_margin_15"
+                        android:paddingLeft="@dimen/fugu_margin_15"
+                        android:paddingTop="@dimen/fugu_margin_7"
+                        android:paddingEnd="@dimen/fugu_margin_7"
+                        android:paddingRight="@dimen/fugu_margin_7"
+                        android:paddingBottom="@dimen/fugu_margin_7"
+                        android:singleLine="true" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnNext"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/fugu_margin_20"
+                android:layout_marginBottom="@dimen/fugu_margin_20"
+                android:background="@drawable/curved_chiku_button"
+                android:textAppearance="@style/CustomTextAppearance.TitilliumWeb"
+                android:text="Next"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_xlarge" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

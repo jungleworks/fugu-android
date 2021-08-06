@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvCallTypeIncoming"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/notification_white"
+            android:drawablePadding="@dimen/fugu_margin_10"
+            android:padding="@dimen/fugu_margin_10"
+            android:text="FUGU VOICE CALL"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ivIncomingPersonImage"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/test" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvIncomingPersonName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/fugu_margin_10"
+            android:text="@string/amandeep_chauhan"
+            android:textColor="@color/white"
+            android:textSize="22sp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/fugu_margin_10"
+            android:text="INCOMING"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0.9"
+            android:scaleType="centerCrop"
+            android:src="@drawable/test" />
+
+        <View
+            android:id="@+id/ivIncomingPersonImageBig"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/gray_dark_overlay" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="@dimen/fugu_margin_35"
+            android:layout_marginEnd="@dimen/fugu_margin_35"
+            android:layout_marginBottom="50dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="0dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/llReject"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="invisible">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/reject_call_arrow_up_one"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/fugu_margin_12"
+                        android:layout_marginBottom="-5dp"
+                        android:src="@drawable/ic_keyboard_arrow_up_black_24dp" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/reject_call_arrow_up_two"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/fugu_margin_12"
+                        android:layout_marginBottom="-5dp"
+                        android:src="@drawable/ic_keyboard_arrow_up_black_24dp" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/reject_call_arrow_up_three"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/fugu_margin_12"
+                        android:layout_marginBottom="-5dp"
+                        android:src="@drawable/ic_keyboard_arrow_up_black_24dp" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/reject_call_arrow_up_four"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/fugu_margin_12"
+                        android:src="@drawable/ic_keyboard_arrow_up_black_24dp" />
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivRejectCall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/hungup_icon" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/answerRoot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/llAnswer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/pick_call_arrow_up_one"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/fugu_margin_12"
+                        android:layout_marginBottom="-5dp"
+                        android:src="@drawable/ic_keyboard_arrow_up_black_24dp" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/pick_call_arrow_up_two"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/fugu_margin_12"
+                        android:layout_marginBottom="-5dp"
+                        android:src="@drawable/ic_keyboard_arrow_up_black_24dp" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/pick_call_arrow_up_three"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/fugu_margin_12"
+                        android:layout_marginBottom="-5dp"
+                        android:src="@drawable/ic_keyboard_arrow_up_black_24dp" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/pick_call_arrow_up_four"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/fugu_margin_12"
+                        android:src="@drawable/ic_keyboard_arrow_up_black_24dp" />
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivAnswerCall"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:paddingLeft="@dimen/fugu_margin_5"
+                    android:paddingRight="@dimen/fugu_margin_5"
+                    android:src="@drawable/ic_call_answer" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/llReply"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="invisible">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/reply_call_arrow_up_one"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/fugu_margin_12"
+                        android:layout_marginBottom="-5dp"
+                        android:src="@drawable/ic_keyboard_arrow_up_black_24dp" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/reply_call_arrow_up_two"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/fugu_margin_12"
+                        android:layout_marginBottom="-5dp"
+                        android:src="@drawable/ic_keyboard_arrow_up_black_24dp" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/reply_call_arrow_up_three"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/fugu_margin_12"
+                        android:layout_marginBottom="-5dp"
+                        android:src="@drawable/ic_keyboard_arrow_up_black_24dp" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/reply_call_arrow_up_four"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/fugu_margin_12"
+                        android:src="@drawable/ic_keyboard_arrow_up_black_24dp" />
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivReplyCall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_message" />
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/fugu_margin_20">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvReject"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="@dimen/fugu_margin_20"
+                android:text="Swipe up to reject"
+                android:textColor="@color/white"
+                android:visibility="invisible"
+                android:textSize="12sp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvAnswer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Swipe up to accept"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvReply"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/fugu_margin_20"
+                android:text="Swipe up to reply"
+                android:textColor="@color/white"
+                android:visibility="invisible"
+                android:textSize="12sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

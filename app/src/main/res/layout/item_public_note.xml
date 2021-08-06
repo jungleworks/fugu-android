@@ -1,0 +1,18 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@android:color/transparent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tvMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="5dp"
+        android:background="@android:color/transparent"
+        android:gravity="center"
+        android:textAppearance="@style/CustomTextAppearance.TitilliumWeb"
+        android:textColor="@android:color/darker_gray"
+        tools:text="Rajat Dhamija New Name Here removed Ankit Prasad from conversation" />
+</FrameLayout>

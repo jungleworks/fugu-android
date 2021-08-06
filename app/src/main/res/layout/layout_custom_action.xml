@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+    <com.skeleton.mvp.utils.SelectableRoundedImageView
+        android:id="@+id/ivActionImage"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fugu_custom_action_image_height"
+        android:layout_alignParentTop="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/placeholder"
+        android:visibility="gone"
+        app:sriv_left_top_corner_radius="@dimen/fugu_message_corner_radius_normal"
+        app:sriv_right_top_corner_radius="@dimen/fugu_message_corner_radius_normal"/>
+
+    <LinearLayout
+        android:id="@+id/llTextualContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ivActionImage"
+        android:background="@drawable/fugu_white_background_curved_bottom"
+        android:paddingTop="@dimen/fugu_padding_10"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvActionTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingEnd="@dimen/fugu_padding_10"
+            android:paddingLeft="@dimen/fugu_padding_10"
+            android:paddingRight="@dimen/fugu_padding_10"
+            android:paddingStart="@dimen/fugu_padding_10"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/fugu_text_size_large"
+            android:visibility="visible"
+            tools:text="Title"/>
+
+
+        <TextView
+            android:id="@+id/tvActionDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/fugu_margin_10"
+            android:paddingEnd="@dimen/fugu_margin_10"
+            android:paddingLeft="@dimen/fugu_margin_10"
+            android:paddingRight="@dimen/fugu_margin_10"
+            android:paddingStart="@dimen/fugu_margin_10"
+            android:textSize="@dimen/fugu_text_size_normal"
+            android:visibility="gone"
+            tools:text="Tkjhjkhjkhjkhjkhjkhjhjhjkhjkhjkhjkhjkhjkhjk"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvActionDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/fugu_margin_10"
+            android:visibility="gone"
+            tools:listitem="@layout/list_item_description"/>
+
+        <View
+            android:id="@+id/vwActionButtonDivider"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/fugu_action_divider_size"
+            android:background="@color/fugu_action_divider_color"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvActionButtons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:visibility="gone"
+            tools:listitem="@layout/list_item_action_button"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

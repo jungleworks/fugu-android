@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/llRoot"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:animateLayoutChanges="true"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/fugu_margin_6"
+        android:layout_marginLeft="@dimen/fugu_margin_10"
+        android:layout_marginRight="@dimen/fugu_margin_10"
+        android:layout_marginTop="@dimen/fugu_margin_6"
+        android:animateLayoutChanges="true"
+        android:orientation="horizontal"
+        android:padding="@dimen/fugu_margin_5">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.8"
+            android:animateLayoutChanges="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/ivPrivate"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:src="@drawable/padlock" />
+
+            <TextView
+                android:id="@+id/tvGroupName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:layout_marginStart="3dp"
+                android:layout_marginLeft="3dp"
+                android:textAppearance="@style/CustomTextAppearance.TitilliumWeb"
+                tools:text="Group Name" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvJoin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="0.2"
+            android:gravity="end"
+            android:text="JOIN"
+            android:textAppearance="@style/CustomTextAppearance.DinMediumRegular"
+            android:textColor="@color/colorPrimary"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginEnd="@dimen/fugu_margin_10"
+        android:layout_marginStart="@dimen/fugu_margin_10"
+        android:layout_marginLeft="@dimen/fugu_margin_10"
+        android:layout_marginRight="@dimen/fugu_margin_10"
+        android:background="@color/gray_light" />
+</LinearLayout>

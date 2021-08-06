@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llRoot"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="start"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/tvUserName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:breakStrategy="simple"
+        android:gravity="start"
+        android:layout_marginTop="5dp"
+        android:singleLine="true"
+        android:text="@string/amandeep_chauhan"
+        android:textAppearance="@style/CustomTextAppearance.Semibold"
+        android:textColor="@color/fugu_secondary_text_msg_from_name"
+        android:textSize="16sp" />
+    <LinearLayout
+        android:id="@+id/llMessageBg"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/fugu_dp_55"
+        android:animateLayoutChanges="true"
+        android:background="@drawable/chat_bubble_other"
+        android:orientation="vertical"
+        android:padding="@dimen/fugu_padding_5">
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvQuestion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLength="100"
+            android:textColor="@color/white"
+            android:textAppearance="@style/CustomTextAppearance.TitilliumWeb"
+            android:padding="@dimen/fugu_padding_5"
+            android:text="test"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:id="@+id/llRadioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/fugu_padding_5"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/llRadioOne"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/fugu_padding_5"
+                    android:background="@drawable/rectangle_border_radio_gray"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/radioOne"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.75"
+                        android:minHeight="40dp"
+                        android:padding="@dimen/fugu_padding_5"
+                        android:singleLine="true"
+                        android:text="Yes" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/radioOneVotes"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="4dp"
+                        android:layout_weight="0.25"
+                        android:gravity="end"
+                        android:text="0 votes" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/radioOneView"
+                    android:layout_width="300dp"
+                    android:layout_height="38dp"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginTop="6dp"
+                    android:background="@drawable/rectangle_border_radio_blue_filled"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/llRadioTwo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/fugu_padding_5"
+                    android:background="@drawable/rectangle_border_radio_gray"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/radioTwo"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.75"
+                        android:minHeight="40dp"
+                        android:padding="@dimen/fugu_padding_5"
+                        android:singleLine="true"
+                        android:text="Yes" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/radioTwoVotes"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="4dp"
+                        android:layout_weight="0.25"
+                        android:gravity="end"
+                        android:text="0 votes" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/radioTwoView"
+                    android:layout_width="300dp"
+                    android:layout_height="38dp"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginTop="6dp"
+                    android:background="@drawable/rectangle_border_radio_blue_filled"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/checkboxGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/llCheckBoxOne"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/fugu_padding_5"
+                    android:background="@drawable/rectangle_border_radio_gray"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/cbOne"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.75"
+                        android:minHeight="40dp"
+                        android:singleLine="true"
+                        android:text="Yes" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/cbOneVotes"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="4dp"
+                        android:layout_weight="0.25"
+                        android:gravity="end"
+                        android:text="0 votes" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/cbOneView"
+                    android:layout_width="300dp"
+                    android:layout_height="38dp"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginTop="6dp"
+                    android:background="@drawable/rectangle_border_radio_blue_filled"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/llCheckBoxTwo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/fugu_padding_5"
+                    android:background="@drawable/rectangle_border_radio_gray"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/cbTwo"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.75"
+                        android:minHeight="40dp"
+                        android:singleLine="true"
+                        android:text="Yes" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/cbTwoVotes"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="4dp"
+                        android:layout_weight="0.25"
+                        android:gravity="end"
+                        android:text="0 votes" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/cbTwoView"
+                    android:layout_width="300dp"
+                    android:layout_height="38dp"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginTop="6dp"
+                    android:background="@drawable/rectangle_border_radio_blue_filled"
+                    android:visibility="gone" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="10dp">
+
+            <TextView
+                android:id="@+id/btnViewMore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginStart="@dimen/fugu_padding_5"
+                android:layout_marginTop="@dimen/fugu_margin_5"
+                android:layout_weight="0.5"
+                android:gravity="start"
+                android:text="View"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textAppearance="@style/CustomTextAppearance.TitilliumWeb"
+                android:textAllCaps="false" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTotalVotes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginEnd="@dimen/fugu_padding_5"
+                android:layout_marginStart="@dimen/fugu_padding_5"
+                android:layout_marginTop="@dimen/fugu_margin_5"
+                android:layout_weight="0.5"
+                android:gravity="end"
+                android:textAppearance="@style/CustomTextAppearance.TitilliumWeb"
+                android:textColor="@color/white"
+                android:text="Total Votes: 0"
+                android:textAllCaps="false" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/fugu_secondary_text_msg_you" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/fugu_padding_3"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvExpiryTime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginEnd="@dimen/fugu_padding_5"
+                android:layout_marginStart="@dimen/fugu_padding_5"
+                android:layout_marginTop="@dimen/fugu_padding_3"
+                android:layout_weight="0.8"
+                android:gravity="start"
+                android:paddingBottom="@dimen/fugu_padding_5"
+                android:text="Poll Expired"
+                android:textAppearance="@style/CustomTextAppearance.TitilliumWeb"
+                android:textColor="@color/red"
+                android:textAllCaps="false"
+                android:textSize="14sp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/fugu_padding_5"
+                android:layout_marginStart="@dimen/fugu_padding_5"
+                android:layout_weight="0.2"
+                android:gravity="bottom"
+                android:paddingBottom="@dimen/fugu_padding_5"
+                android:text="6:05 PM"
+                android:textAllCaps="false"
+                android:layout_marginTop="@dimen/fugu_margin_10"
+                android:textAppearance="@style/CustomTextAppearance.TitilliumWeb"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

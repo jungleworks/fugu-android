@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvAlreadyRegistered"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/fugu_margin_30"
+        android:gravity="center"
+        android:padding="@dimen/fugu_margin_10"
+        android:visibility="gone"
+        android:textColor="@color/colorPrimary"
+        android:textSize="14sp"
+        android:text="You are already registered with us. Please enter your password to continue." />
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/etPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginEnd="@dimen/spacing_small"
+        android:layout_marginStart="@dimen/spacing_small"
+        android:background="@color/transparent"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:paddingStart="@dimen/spacing_tiny"
+        android:singleLine="true"
+        android:textColor="@color/gray_dark"
+        android:textColorHint="@color/gray_dark"
+        android:textSize="@dimen/font_xxlarge"
+        app:met_floatingLabel="highlight"
+        app:met_floatingLabelText="@string/your_domain_password"
+        app:met_hideUnderline="true"
+        app:met_underlineColor="@color/transparent" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etPassword"
+        android:layout_marginLeft="@dimen/spacing_small"
+        android:layout_marginStart="@dimen/spacing_small"
+        android:layout_marginTop="@dimen/spacing_tiny"
+        android:paddingLeft="@dimen/spacing_tiny"
+        android:paddingStart="@dimen/spacing_tiny"
+        android:text="Your Workspace Password" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnResetPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/btnSignIn"
+        android:layout_margin="@dimen/spacing_small"
+        android:layout_marginTop="@dimen/spacing_medium"
+        android:background="@drawable/curved_button_empty"
+        android:text="@string/reset_password"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSignIn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/spacing_small"
+        android:layout_marginTop="@dimen/spacing_medium"
+        android:background="@drawable/curved_button"
+        android:text="@string/sign_in"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+</RelativeLayout>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/normal_bg_color"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/spacing_medium"
+            android:paddingRight="@dimen/spacing_medium"
+            android:paddingTop="@dimen/font_large">
+
+            <ImageView
+                android:id="@+id/sign_in_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingEnd="@dimen/spacing_large"
+                android:paddingStart="@dimen/spacing_large"
+                android:paddingTop="@dimen/spacing_xxxlarge"
+                android:layout_centerHorizontal="true"
+                app:srcCompat="@drawable/ic_fugu_bg" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                app:srcCompat="@drawable/ic_fugu_avatar"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/img"
+                android:layout_marginTop="@dimen/spacing_small"
+                android:gravity="center"
+                android:textAppearance="@style/CustomTextAppearance.TitilliumWeb"
+                android:text="@string/welcome_message"
+                android:textColor="#333333"
+                android:textSize="@dimen/font_large" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_very_tiny"
+                android:layout_marginLeft="@dimen/spacing_normal"
+                android:layout_marginStart="@dimen/spacing_normal"
+                android:layout_marginTop="@dimen/spacing_large"
+                android:text="Email Address/Phone Number"
+                android:visibility="gone"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_rectangle_border_layout"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                >
+
+                <com.hbb20.CountryCodePicker
+                    android:id="@+id/etCountryCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/fugu_margin_8"
+                    android:layout_marginStart="@dimen/fugu_margin_8"
+                    android:layout_marginTop="-9dp"
+                    android:visibility="gone"
+                    app:ccp_autoDetectCountry="true"
+                    app:ccp_showFlag="false"
+                    app:ccp_showNameCode="false" />
+
+                <EditText
+                    android:id="@+id/etEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/transparent"
+                    android:hint="Email Address/Phone Number"
+                    android:inputType="textEmailAddress"
+                    android:paddingBottom="@dimen/fugu_margin_7"
+                    android:paddingEnd="@dimen/fugu_margin_7"
+                    android:paddingLeft="@dimen/fugu_margin_15"
+                    android:paddingRight="@dimen/fugu_margin_7"
+                    android:paddingStart="@dimen/fugu_margin_15"
+                    android:paddingTop="@dimen/fugu_margin_7"
+                    />
+            </LinearLayout>
+
+
+            <EditText
+                android:id="@+id/etPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_rectangle_border"
+                android:hint="Your Password"
+                android:layout_marginTop="20dp"
+                android:inputType="textPassword"
+                android:paddingLeft="@dimen/spacing_medium"
+                android:paddingStart="@dimen/spacing_medium" />
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnSignIn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_xlarge"
+                android:textAppearance="@style/CustomTextAppearance.TitilliumWebSemiBold"
+                android:background="@drawable/curved_chiku_button"
+                android:text="Sign In"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_xlarge" />
+
+            <TextView
+                android:id="@+id/tvForgot"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_small"
+                android:layout_marginLeft="@dimen/spacing_small"
+                android:layout_marginStart="@dimen/spacing_small"
+                android:layout_marginTop="@dimen/spacing_small"
+                android:gravity="center"
+                android:textAppearance="@style/CustomTextAppearance.TitilliumWebSemiBold"
+                android:text=" Forgot your password?"
+                android:textColor="@color/colorPrimary" />
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

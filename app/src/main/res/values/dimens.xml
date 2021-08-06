@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="detail_backdrop_height">350dp</dimen>
+    <dimen name="backdrop_title">30dp</dimen>
+    <dimen name="backdrop_subtitle">18dp</dimen>
+    <dimen name="header_view_start_margin_left">16dp</dimen>
+    <dimen name="header_view_end_margin_left">55dp</dimen>
+    <dimen name="header_view_end_margin_right">14dp</dimen>
+    <dimen name="header_view_start_margin_bottom">14dp</dimen>
+    <dimen name="header_view_start_text_size">32sp</dimen>
+    <dimen name="header_view_end_text_size">18sp</dimen>
+    <!-- font sizes -->
+    <dimen name="font_xxxlarge">24sp</dimen>
+    <dimen name="font_xxlarge">20sp</dimen>
+    <dimen name="font_xlarge">18sp</dimen>
+    <dimen name="font_large">16sp</dimen>
+    <dimen name="font_normal">14sp</dimen>
+
+
+    <!-- typical spacing between two views -->
+    <dimen name="spacing_xxxlarge">80dp</dimen>
+    <dimen name="spacing_xxxxlarge">80dp</dimen>
+    <dimen name="spacing_xxlarge">60dp</dimen>
+    <dimen name="spacing_xlarge">40dp</dimen>
+    <dimen name="spacing_large">24dp</dimen>
+    <dimen name="spacing_slarge">30dp</dimen>
+    <dimen name="spacing_medium">20dp</dimen>
+    <dimen name="spacing_normal">14dp</dimen>
+    <dimen name="spacing_small">10dp</dimen>
+    <dimen name="spacing_xsmall">8dp</dimen>
+    <dimen name="spacing_tiny">4dp</dimen>
+    <dimen name="spacing_very_tiny">2dp</dimen>
+
+
+    <!-- Custom views dimen -->
+    <dimen name="toolbar_elevation">4dp</dimen>
+    <dimen name="recycler_progress_dimen">50dp</dimen>
+
+    <!--met editext-->
+    <dimen name="default_padding_top">8dp</dimen>
+    <dimen name="default_padding_bottom">8dp</dimen>
+    <dimen name="inner_padding_left">0dp</dimen>
+    <dimen name="inner_padding_right">0dp</dimen>
+    <dimen name="floating_label_text_size">12sp</dimen>
+    <dimen name="bottom_text_size">12sp</dimen>
+    <dimen name="inner_components_spacing">8dp</dimen>
+    <dimen name="bottom_ellipsis_height">4dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="fugu_margin_25">25dp</dimen>
+
+    <dimen name="fugu_elevation_4">4dp</dimen>
+
+    <dimen name="fugu_text_size_tiny">10sp</dimen>
+    <dimen name="fugu_text_size_small">12sp</dimen>
+    <dimen name="fugu_text_size_normal">16sp</dimen>
+    <dimen name="fugu_text_size_large">18sp</dimen>
+    <dimen name="fugu_text_size_very_large">20sp</dimen>
+    <dimen name="fugu_text_size_intermediate">14sp</dimen>
+
+    <dimen name="fugu_margin_2">2dp</dimen>
+    <dimen name="fugu_margin_3">3dp</dimen>
+    <dimen name="fugu_margin_5">5dp</dimen>
+    <dimen name="fugu_margin_4">4dp</dimen>
+    <dimen name="fugu_margin_6">6dp</dimen>
+    <dimen name="fugu_margin_7">7dp</dimen>
+    <dimen name="fugu_margin_8">8dp</dimen>
+    <dimen name="fugu_margin_10">10dp</dimen>
+    <dimen name="fugu_margin_12">12dp</dimen>
+    <dimen name="fugu_margin_11">11dp</dimen>
+    <dimen name="fugu_margin_15">15dp</dimen>
+    <dimen name="fugu_margin_17">17dp</dimen>
+    <dimen name="fugu_margin_20">20dp</dimen>
+    <dimen name="fugu_margin_30">30dp</dimen>
+    <dimen name="fugu_margin_35">35dp</dimen>
+
+    <dimen name="fugu_padding_3">3dp</dimen>
+    <dimen name="fugu_padding_5">5dp</dimen>
+    <dimen name="fugu_padding_10">10dp</dimen>
+    <dimen name="fugu_padding_11">11dp</dimen>
+    <dimen name="fugu_padding_12">12dp</dimen>
+    <dimen name="fugu_padding_15">15dp</dimen>
+    <dimen name="fugu_padding_20">20dp</dimen>
+    <dimen name="fugu_padding_25">25dp</dimen>
+    <dimen name="fugu_padding_35">35dp</dimen>
+
+    <dimen name="fugu_size_20">20dp</dimen>
+    <dimen name="fugu_size_70">70dp</dimen>
+    <dimen name="fugu_size_2">2dp</dimen>
+    <dimen name="fugu_message_corner_radius_normal">7.5dp</dimen>
+    <dimen name="fugu_message_corner_radius_small">5dp</dimen>
+    <dimen name="fugu_border_width">1dp</dimen>
+    <dimen name="fugu_dp_1">1dp</dimen>
+    <dimen name="fugu_dp_6">6dp</dimen>
+    <dimen name="fugu_dp_60">60dp</dimen>
+    <dimen name="fugu_dp_17">17dp</dimen>
+    <dimen name="height_ll_time">70dp</dimen>
+    <dimen name="fugu_dp_8">8dp</dimen>
+    <dimen name="fugu_dp_55">55dp</dimen>
+    <dimen name="fugu_padding_4">4dp</dimen>
+    <dimen name="fugu_padding_7">7dp</dimen>
+
+    <!-- Fugu custom action -->
+    <dimen name="fugu_custom_action_image_height">150dp</dimen>
+    <dimen name="fugu_card_inset">0dp</dimen>
+    <dimen name="fugu_action_divider_size">0.5dp</dimen>
+    <dimen name="dropshadow_width">2dp</dimen>
+    <dimen name="button_corner_radius">3dp</dimen>
+    <dimen name="font_tiny">10sp</dimen>
+    <dimen name="messaging_profile_pic_size">44dp</dimen>
+    <dimen name="messaging_profile_pic_half_size">22dp</dimen>
+    <color name="white_50">#80FFFFFF</color>
+    <dimen name="editor_size">35dp</dimen>
+    <dimen name="normal_margin">8dp</dimen>
+    <dimen name="large_margin">16dp</dimen>
+    <dimen name="list_item_spacing">16dp</dimen>
+    <dimen name="list_item_spacing_half">8dp</dimen>
+</resources>
